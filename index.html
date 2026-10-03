@@ -190,17 +190,17 @@
 
   /* 技能 */
   .skill-table { background: var(--surface); }
-  .skill-row { display: flex; align-items: baseline; border-bottom: 1px solid var(--line); }
+  .skill-row { display: flex; align-items: flex-start; border-bottom: 1px solid var(--line); }
   .skill-row:last-child { border-bottom: none; }
   .skill-row .k {
-    flex: 0 0 100px; padding: 16px 18px 16px 0;
+    flex: 0 0 100px; padding: 18px 18px 18px 0;
     font-size: .88rem; font-weight: 800; color: var(--navy-deep);
   }
-  .skill-row .v { flex: 1; padding: 14px 0 14px 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .skill-row .v { flex: 1; padding: 16px 0 16px 18px; display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-start; }
   .skill-row .v span {
-    display: inline-block; padding: 4px 12px; font-size: .84rem; color: var(--ink);
+    display: inline-block; padding: 6px 14px; font-size: .84rem; color: var(--ink);
     background: var(--navy-wash); border: 1px solid color-mix(in srgb, var(--navy) 18%, transparent);
-    border-radius: 4px; font-weight: 500;
+    border-radius: 4px; font-weight: 500; white-space: nowrap;
   }
 
   /* 教育 · 联系 */
@@ -270,8 +270,8 @@
     .ft-row { grid-template-columns: 74px 1fr 68px; gap: 10px; }
     .themes { grid-template-columns: 1fr; }
     .skill-row { flex-direction: column; }
-    .skill-row .k { padding: 12px 0 4px; }
-    .skill-row .v { padding: 0 0 14px 0; }
+    .skill-row .k { padding: 12px 0 6px; }
+    .skill-row .v { padding: 0 0 16px 0; }
     .stamp { width: 82px; height: 82px; }
     .stamp .s1 { font-size: .7rem; }
     .stamp .s2 { font-size: .48rem; }
