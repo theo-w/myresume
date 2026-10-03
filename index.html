@@ -82,6 +82,7 @@
 
   .wrap { max-width: 1060px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 56px); }
   section { padding: clamp(56px, 8vw, 92px) 0 0; }
+  #updates { padding-top: clamp(36px, 5vw, 56px); }
   .sec-head {
     display: flex; align-items: baseline; justify-content: space-between;
     border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 8px;
@@ -180,9 +181,9 @@
   .skill-row { display: grid; grid-template-columns: 140px 1fr; border-bottom: 1px solid var(--line); }
   .skill-row:last-child { border-bottom: none; }
   .skill-row .k { padding: 14px 18px; font-size: .9rem; font-weight: 800; color: var(--navy-deep); border-right: 1px solid var(--line); background: var(--navy-wash); }
-  .skill-row .v { padding: 12px 18px; font-size: .9rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 0; }
-  .skill-row .v span::after { content: " /"; color: var(--line); padding: 0 6px; }
-  .skill-row .v span:last-child::after { content: ""; padding: 0; }
+  .skill-row .v { padding: 12px 18px; font-size: .9rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0 18px; }
+  .skill-row .v span { position: relative; }
+  .skill-row .v span:not(:last-child)::after { content: "·"; position: absolute; right: -12px; color: var(--faint); }
 
   /* 教育 · 联系 */
   .edu-ct { border: 1px solid var(--line); border-top: none; background: var(--surface); padding: clamp(20px, 3.5vw, 32px); }
@@ -205,11 +206,13 @@
   }
   .loc { display: inline-flex; align-items: center; gap: 7px; color: var(--muted); font-size: .9rem; font-weight: 700; }
 
-  .update-list { display: flex; flex-direction: column; gap: 16px; }
+  .update-list { display: flex; flex-direction: column; gap: 0; }
   .update-item {
     display: grid; grid-template-columns: 80px 1fr; gap: 16px;
-    padding: 16px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+    padding: 18px 20px; background: var(--surface);
+    border-bottom: 1px solid var(--line);
   }
+  .update-item:first-child { border-top: 1px solid var(--line); }
   .update-date {
     font-family: var(--mono); font-size: .82rem; color: var(--muted);
     padding-top: 2px; white-space: nowrap;
@@ -279,10 +282,10 @@
 <nav class="nav" aria-label="站内导航">
   <a class="wordmark" href="#top">王乐意 · 档案</a>
   <ul>
+    <li><a href="#updates">近期动态</a></li>
     <li><a href="#about">摘要</a></li>
     <li><a href="#exp">经历</a></li>
     <li><a href="#projects">验收项目</a></li>
-    <li><a href="#updates">近期动态</a></li>
     <li><a href="#skills">技能</a></li>
     <li><a href="#contact">联系</a></li>
   </ul>
@@ -534,11 +537,12 @@
 <footer>
   <div class="wrap">
     <span>© 2026 王乐意 · AI 产品经理</span>
-    <span>UPDATED 2026.09 · SHENZHEN</span>
+    <span>UPDATED 2026.10 · SHENZHEN</span>
   </div>
 </footer>
 
 <script>
+  // 邮箱复制
   const copyBtn = document.getElementById('copyEmail');
   const fallbackCopy = text => {
     const ta = document.createElement('textarea');
@@ -560,6 +564,37 @@
     copyBtn.textContent = ok ? '已复制' : '请手动复制';
     setTimeout(() => { copyBtn.textContent = '复制'; }, 2000);
   });
+
+  // 导航滚动高亮
+  (function () {
+    const navLinks = document.querySelectorAll('.nav ul a');
+    const sections = Array.from(navLinks).map(link =>
+      document.getElementById(link.getAttribute('href').slice(1))
+    ).filter(Boolean);
+
+    function highlight() {
+      const scrollY = window.scrollY;
+      const offset = window.innerHeight * 0.35;
+      let current = null;
+      for (let i = sections.length - 1; i >= 0; i--) {
+        if (sections[i].offsetTop - offset <= scrollY) {
+          current = i;
+          break;
+        }
+      }
+      navLinks.forEach((link, i) => {
+        link.style.color = (current === null && i === 0) || i === current
+          ? 'var(--ink)'
+          : '';
+        link.style.borderBottomColor = (current === null && i === 0) || i === current
+          ? 'var(--navy)'
+          : '';
+      });
+    }
+
+    window.addEventListener('scroll', highlight, { passive: true });
+    highlight();
+  })();
 </script>
 </body>
 </html>
