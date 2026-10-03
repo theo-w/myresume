@@ -58,6 +58,10 @@
     border-right: 1px solid var(--line);
   }
   .dh-name h1 { font-size: clamp(2rem, 4.5vw, 2.9rem); font-weight: 800; letter-spacing: .06em; line-height: 1.2; }
+  .dh-name .tagline {
+    font-size: clamp(.92rem, 1.6vw, 1.08rem); color: var(--navy); font-weight: 600;
+    margin-top: 6px; max-width: 36em;
+  }
   .dh-name .ref { font-family: var(--mono); font-size: .72rem; color: var(--faint); letter-spacing: .12em; margin-top: 8px; }
   .dh-fields { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); }
   .dh-field { padding: 26px clamp(14px, 2.4vw, 28px); border-right: 1px solid var(--line); display: flex; flex-direction: column; justify-content: center; gap: 3px; }
@@ -86,9 +90,15 @@
   .sec-head {
     display: flex; align-items: baseline; justify-content: space-between;
     border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 8px;
+    position: relative;
   }
   .sec-head h2 { font-size: clamp(1.25rem, 2.6vw, 1.6rem); font-weight: 800; letter-spacing: .04em; }
   .sec-head .code { font-family: var(--mono); font-size: .74rem; color: var(--faint); letter-spacing: .12em; }
+  /* section 标题左侧色条 */
+  .sec-head::before {
+    content: ''; position: absolute; left: -20px; bottom: -2px;
+    width: 3px; height: calc(100% + 2px); background: var(--navy); border-radius: 2px;
+  }
 
   /* 摘要 */
   .summary { background: var(--surface); border: 1px solid var(--line); border-top: none; padding: clamp(22px, 4vw, 34px); }
@@ -98,12 +108,12 @@
   .summary .big em { font-style: normal; color: var(--navy); }
   .summary p { color: var(--muted); max-width: 46em; margin-bottom: 12px; }
   .summary p strong { color: var(--ink); font-weight: 600; }
-  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); margin-top: 22px; }
-  .kpi { padding: 16px 18px; border-right: 1px solid var(--line); }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); margin-top: 22px; background: var(--navy-wash); }
+  .kpi { padding: 18px 18px; border-right: 1px solid var(--line); }
   .kpi:last-child { border-right: none; }
-  .kpi .v { font-size: 1.45rem; font-weight: 800; color: var(--navy); letter-spacing: -.01em; }
+  .kpi .v { font-size: 1.5rem; font-weight: 800; color: var(--navy); letter-spacing: -.02em; }
   .kpi .v small { font-size: .85rem; color: var(--muted); font-weight: 600; }
-  .kpi .l { font-size: .76rem; color: var(--muted); margin-top: 2px; }
+  .kpi .l { font-size: .76rem; color: var(--muted); margin-top: 4px; }
   .kpi-src { font-size: .74rem; color: var(--faint); margin-top: 8px; font-family: var(--mono); letter-spacing: .04em; }
 
   /* 漏斗（表格化） */
@@ -167,7 +177,9 @@
     position: absolute; top: 18px; right: 20px;
     width: 96px; height: 96px; border: 3px double var(--red); border-radius: 50%;
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;
-    color: var(--red); transform: rotate(8deg); background: color-mix(in srgb, var(--red) 4%, transparent);
+    color: var(--red); transform: rotate(8deg);
+    background: color-mix(in srgb, var(--red) 6%, transparent);
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--red) 10%, transparent);
     overflow: hidden;
   }
   .stamp .s1 { font-size: .84rem; font-weight: 800; letter-spacing: .12em; text-indent: .12em; white-space: nowrap; }
@@ -177,13 +189,19 @@
   .metric .l { font-size: .76rem; color: var(--muted); }
 
   /* 技能 */
-  .skill-table { border: 1px solid var(--line); border-top: none; background: var(--surface); }
-  .skill-row { display: grid; grid-template-columns: 140px 1fr; border-bottom: 1px solid var(--line); }
+  .skill-table { background: var(--surface); }
+  .skill-row { display: flex; align-items: baseline; border-bottom: 1px solid var(--line); }
   .skill-row:last-child { border-bottom: none; }
-  .skill-row .k { padding: 14px 18px; font-size: .9rem; font-weight: 800; color: var(--navy-deep); border-right: 1px solid var(--line); background: var(--navy-wash); }
-  .skill-row .v { padding: 12px 18px; font-size: .9rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0 18px; }
-  .skill-row .v span { position: relative; }
-  .skill-row .v span:not(:last-child)::after { content: "·"; position: absolute; right: -12px; color: var(--faint); }
+  .skill-row .k {
+    flex: 0 0 100px; padding: 16px 18px 16px 0;
+    font-size: .88rem; font-weight: 800; color: var(--navy-deep);
+  }
+  .skill-row .v { flex: 1; padding: 14px 0 14px 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .skill-row .v span {
+    display: inline-block; padding: 4px 12px; font-size: .84rem; color: var(--ink);
+    background: var(--navy-wash); border: 1px solid color-mix(in srgb, var(--navy) 18%, transparent);
+    border-radius: 4px; font-weight: 500;
+  }
 
   /* 教育 · 联系 */
   .edu-ct { border: 1px solid var(--line); border-top: none; background: var(--surface); padding: clamp(20px, 3.5vw, 32px); }
@@ -209,15 +227,16 @@
   .update-list { display: flex; flex-direction: column; gap: 0; }
   .update-item {
     display: grid; grid-template-columns: 80px 1fr; gap: 16px;
-    padding: 18px 20px; background: var(--surface);
+    padding: 18px 20px 18px 22px; background: var(--surface);
     border-bottom: 1px solid var(--line);
+    border-left: 3px solid var(--navy);
   }
   .update-item:first-child { border-top: 1px solid var(--line); }
   .update-date {
-    font-family: var(--mono); font-size: .82rem; color: var(--muted);
+    font-family: var(--mono); font-size: .82rem; color: var(--navy); font-weight: 700;
     padding-top: 2px; white-space: nowrap;
   }
-  .update-body b { display: block; font-size: 1rem; margin-bottom: 4px; }
+  .update-body b { display: block; font-size: 1rem; margin-bottom: 4px; color: var(--ink); }
   .update-body p { font-size: .9rem; color: var(--muted); margin-bottom: 6px; }
   .update-link {
     display: inline-block; font-size: .84rem; font-weight: 600; color: var(--navy);
@@ -225,11 +244,16 @@
   }
   .update-link:hover { text-decoration: underline; }
 
-  footer { padding: 34px 0 46px; font-size: .8rem; color: var(--faint); font-family: var(--mono); letter-spacing: .04em; }
-  footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+  footer {
+    padding: 24px 0 36px; font-size: .78rem; color: var(--faint);
+    font-family: var(--mono); letter-spacing: .04em;
+    border-top: 1px solid var(--line); margin-top: 0;
+  }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; align-items: center; }
 
 
   @media (max-width: 920px) {
+    .sec-head::before { left: -14px; }
     .dh-fields { grid-template-columns: 1fr 1fr; }
     .dh-name { border-right: none; border-bottom: 1px solid var(--line); padding-right: 0; }
     .dh-field { border-right: none; border-bottom: 1px solid var(--line); padding: 16px clamp(14px, 3vw, 24px); }
@@ -245,8 +269,9 @@
     .kpis { grid-template-columns: 1fr 1fr; }
     .ft-row { grid-template-columns: 74px 1fr 68px; gap: 10px; }
     .themes { grid-template-columns: 1fr; }
-    .skill-row { grid-template-columns: 1fr; }
-    .skill-row .k { border-right: none; border-bottom: 1px solid var(--line); }
+    .skill-row { flex-direction: column; }
+    .skill-row .k { padding: 12px 0 4px; }
+    .skill-row .v { padding: 0 0 14px 0; }
     .stamp { width: 82px; height: 82px; }
     .stamp .s1 { font-size: .7rem; }
     .stamp .s2 { font-size: .48rem; }
@@ -260,7 +285,8 @@
   <div class="wrap">
     <div class="dh-name">
       <h1>王乐意</h1>
-      <p class="ref">REF: WL-2026-SZ · 客服产品 → AI 产品</p>
+      <p class="tagline">15 年客服业务 × 2 个上线产品 · 从一线坐席到 AI 产品经理</p>
+      <p class="ref">REF: WL-2026-SZ</p>
     </div>
     <div class="dh-fields">
       <div class="dh-field">
