@@ -488,6 +488,28 @@
     }
   }
 
+
+  /* v4：明确栏目顺序；桌面端从 701px 起保持双栏 */
+  @media (min-width: 701px) {
+    main.resume-layout {
+      display: grid !important;
+      grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.7fr) !important;
+      gap: clamp(20px, 2.5vw, 36px) !important;
+      width: auto !important;
+      max-width: 1240px !important;
+      margin: 0 auto !important;
+      padding: 30px 24px 72px !important;
+      align-items: start !important;
+    }
+    main.resume-layout > aside.resume-sidebar { display:block !important; width:auto !important; min-width:0 !important; position:sticky; top:76px; }
+    main.resume-layout > div.resume-main { display:block !important; width:auto !important; min-width:0 !important; }
+  }
+  @media (max-width: 700px) {
+    main.resume-layout { display:flex !important; flex-direction:column !important; gap:0 !important; padding:24px 18px 56px !important; }
+    main.resume-layout > aside.resume-sidebar, main.resume-layout > div.resume-main { width:100% !important; }
+    main.resume-layout > aside.resume-sidebar { position:static !important; }
+  }
+
 </style>
 </head>
 <body>
@@ -530,7 +552,7 @@
 </nav>
 
 <main class="wrap resume-layout" id="top">
-  <aside class="resume-sidebar" aria-label="个人简介与能力">
+  <aside class="resume-sidebar" aria-label="个人摘要">
     <section id="about">
     <div class="sec-head">
       <h2>摘要 · 关于我</h2>
@@ -583,84 +605,8 @@
       </div>
     </div>
   </section>
-    <section id="skills">
-    <div class="sec-head">
-      <h2>技能清单</h2>
-      <span class="code">SEC-04</span>
-    </div>
-    <div class="skill-table">
-      <div class="skill-row">
-        <div class="k">产品</div>
-        <div class="v"><span>PRD</span><span>用户旅程</span><span>流程图</span><span>版本规划</span><span>需求评审</span></div>
-      </div>
-      <div class="skill-row">
-        <div class="k">AI 产品</div>
-        <div class="v"><span>大模型应用</span><span>AI 智能客服</span><span>意图识别</span><span>模型效果评估</span><span>人工反馈闭环</span><span>Agent 工作流</span></div>
-      </div>
-      <div class="skill-row">
-        <div class="k">工具</div>
-        <div class="v"><span>TAPD</span><span>Power BI</span><span>SQL</span><span>Python</span><span>Excel 透视表</span><span>Xmind</span><span>Visio</span></div>
-      </div>
-      <div class="skill-row">
-        <div class="k">业务</div>
-        <div class="v"><span>SLA 管理</span><span>首解率 / 满意度漏斗</span><span>Case 库与 SOP 沉淀</span><span>BPO 团队管理</span></div>
-      </div>
-    </div>
-  </section>
-    <section id="contact">
-    <div class="sec-head">
-      <h2>教育 · 联系</h2>
-      <span class="code">SEC-05</span>
-    </div>
-    <div class="edu-ct">
-      <div class="edu-row">
-        <b>西班牙武康大学</b><span>工商管理（MBA）</span><span class="deg">硕士</span>
-      </div>
-      <div class="edu-row">
-        <b>郑州轻工业大学</b><span>信息与计算科学（数学 / 计算机交叉）· CET-4</span><span class="deg">本科 · 统招</span>
-      </div>
-
-      <p class="closing">想找一个能长期把<em>AI 产品</em>做厚做深的平台。</p>
-
-      <div class="contact-row">
-        <a class="contact-chip" href="tel:18123777416">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          181-2377-7416
-        </a>
-        <span class="contact-chip">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-          44727383@qq.com
-          <button class="copy" type="button" id="copyEmail" aria-label="复制邮箱地址">复制</button>
-        </span>
-        <span class="loc">深圳</span>
-      </div>
-    </div>
-  </section>
   </aside>
   <div class="resume-main">
-    <section id="updates">
-    <div class="sec-head">
-      <h2>近期动态</h2>
-      <span class="code">SEC-00.5</span>
-    </div>
-    <div class="update-list">
-      <div class="update-item">
-        <div class="update-date">2026.10<br><span class="update-tag">系统方向</span></div>
-        <div class="update-body">
-          <b>数字分身 / 数字员工：让目标形成可验收的执行闭环</b>
-          <p><strong>目标理解 → 动态规划 → 执行反馈 → 证据核验 → 结果验收</strong>。坚持单 Agent 优先，按任务需要组织能力；重点验证状态监控、失败恢复与可评估的递归自我改进。</p>
-          <a class="update-link" href="https://github.com/theo-w/my-ai-worker" target="_blank" rel="noopener">查看项目 →</a>
-        </div>
-      </div>
-      <div class="update-item">
-        <div class="update-date">2026.10<br><span class="update-tag">验证场景</span></div>
-        <div class="update-body">
-          <b>AI 原生游戏：先验证价值，再决定是否开发</b>
-          <p><strong>玩家痛点与市场信号 → AI 对核心玩法的增量 → 技术 / 成本 / 风险评估 → 原型与 Playtest</strong>。聚焦 AI 是否带来真实、可验证的新体验。</p>
-        </div>
-      </div>
-    </div>
-  </section>
     <section id="exp">
     <div class="sec-head">
       <h2>工作经历</h2>
@@ -783,6 +729,82 @@
         <div class="metric"><div class="v">CSV / 飞书</div><div class="l">报告导出与协作</div></div>
       </div>
     </article>
+  </section>
+    <section id="updates">
+    <div class="sec-head">
+      <h2>近期动态</h2>
+      <span class="code">SEC-00.5</span>
+    </div>
+    <div class="update-list">
+      <div class="update-item">
+        <div class="update-date">2026.10<br><span class="update-tag">系统方向</span></div>
+        <div class="update-body">
+          <b>数字分身 / 数字员工：让目标形成可验收的执行闭环</b>
+          <p><strong>目标理解 → 动态规划 → 执行反馈 → 证据核验 → 结果验收</strong>。坚持单 Agent 优先，按任务需要组织能力；重点验证状态监控、失败恢复与可评估的递归自我改进。</p>
+          <a class="update-link" href="https://github.com/theo-w/my-ai-worker" target="_blank" rel="noopener">查看项目 →</a>
+        </div>
+      </div>
+      <div class="update-item">
+        <div class="update-date">2026.10<br><span class="update-tag">验证场景</span></div>
+        <div class="update-body">
+          <b>AI 原生游戏：先验证价值，再决定是否开发</b>
+          <p><strong>玩家痛点与市场信号 → AI 对核心玩法的增量 → 技术 / 成本 / 风险评估 → 原型与 Playtest</strong>。聚焦 AI 是否带来真实、可验证的新体验。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section id="skills">
+    <div class="sec-head">
+      <h2>技能清单</h2>
+      <span class="code">SEC-04</span>
+    </div>
+    <div class="skill-table">
+      <div class="skill-row">
+        <div class="k">产品</div>
+        <div class="v"><span>PRD</span><span>用户旅程</span><span>流程图</span><span>版本规划</span><span>需求评审</span></div>
+      </div>
+      <div class="skill-row">
+        <div class="k">AI 产品</div>
+        <div class="v"><span>大模型应用</span><span>AI 智能客服</span><span>意图识别</span><span>模型效果评估</span><span>人工反馈闭环</span><span>Agent 工作流</span></div>
+      </div>
+      <div class="skill-row">
+        <div class="k">工具</div>
+        <div class="v"><span>TAPD</span><span>Power BI</span><span>SQL</span><span>Python</span><span>Excel 透视表</span><span>Xmind</span><span>Visio</span></div>
+      </div>
+      <div class="skill-row">
+        <div class="k">业务</div>
+        <div class="v"><span>SLA 管理</span><span>首解率 / 满意度漏斗</span><span>Case 库与 SOP 沉淀</span><span>BPO 团队管理</span></div>
+      </div>
+    </div>
+  </section>
+    <section id="contact">
+    <div class="sec-head">
+      <h2>教育 · 联系</h2>
+      <span class="code">SEC-05</span>
+    </div>
+    <div class="edu-ct">
+      <div class="edu-row">
+        <b>西班牙武康大学</b><span>工商管理（MBA）</span><span class="deg">硕士</span>
+      </div>
+      <div class="edu-row">
+        <b>郑州轻工业大学</b><span>信息与计算科学（数学 / 计算机交叉）· CET-4</span><span class="deg">本科 · 统招</span>
+      </div>
+
+      <p class="closing">想找一个能长期把<em>AI 产品</em>做厚做深的平台。</p>
+
+      <div class="contact-row">
+        <a class="contact-chip" href="tel:18123777416">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          181-2377-7416
+        </a>
+        <span class="contact-chip">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          44727383@qq.com
+          <button class="copy" type="button" id="copyEmail" aria-label="复制邮箱地址">复制</button>
+        </span>
+        <span class="loc">深圳</span>
+      </div>
+    </div>
   </section>
   </div>
 </main>
