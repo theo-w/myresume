@@ -304,6 +304,102 @@
     .stamp .s2 { font-size: .48rem; }
     .sheet-top { padding-right: 94px; }
   }
+
+  /* 结构改版 v2：优先信息层级与移动端阅读效率 */
+  .dossier-head { background: #0B1D3A; border-bottom: 3px solid #24B8F2; }
+  .dossier-head::after { content: none; }
+  .dh-name { border-right: 0; }
+  .dh-name h1 { letter-spacing: .01em; }
+  .dh-fields { border-top: 1px solid rgba(255,255,255,.2); }
+  .dh-field { border-right-color: rgba(255,255,255,.16); }
+  .nav { justify-content: flex-start; gap: 28px; }
+  .nav ul { flex: 1; min-width: 0; overflow-x: auto; justify-content: flex-start; scrollbar-width: none; }
+  .nav ul::-webkit-scrollbar { display: none; }
+  section { padding-top: 56px; }
+  #updates { padding-top: 32px; }
+  .sec-head { margin-bottom: 14px; }
+  .summary, .job, .sheet, .edu-ct { box-shadow: 0 3px 14px rgba(16,45,99,.045); }
+  .summary { border-top: 3px solid var(--navy); }
+  .job, .sheet { border-top: 3px solid #8BB8FF; }
+  .sheet { position: relative; padding: clamp(20px, 3vw, 30px); }
+  .sheet-top { padding-right: 0; padding-bottom: 8px; }
+  .sheet-top h3 { max-width: 100%; }
+  .stamp { width: 72px; height: 72px; top: 18px; right: 18px; }
+  .sheet-top { padding-right: 86px; min-height: 62px; }
+  .sheet .meta { margin: 10px 0 14px; }
+  .sheet > p:not(.meta) { line-height: 1.75; }
+  .metrics { margin-top: 20px; }
+  .metric .v { letter-spacing: -.03em; }
+  .update-item { border-radius: 0 10px 10px 0; box-shadow: 0 2px 12px rgba(16,45,99,.04); }
+  .update-body b { line-height: 1.5; }
+  .update-body p { line-height: 1.7; }
+  @media (min-width: 621px) {
+    .dossier-head .wrap { align-items: center; padding-top: 24px; padding-bottom: 24px; }
+    .dh-name { flex: 1.25; padding: 10px 30px 10px 0; }
+    .dh-fields { flex: 1; border-top: 0; }
+    .dh-field { padding: 18px 16px; }
+  }
+  @media (max-width: 620px) {
+    body { font-size: 15px; line-height: 1.68; }
+    .wrap { padding-left: 18px; padding-right: 18px; }
+    .dossier-head .wrap { display: block; padding-top: 22px; padding-bottom: 18px; }
+    .dh-name { padding: 0; }
+    .dh-name h1 { font-size: 2rem; }
+    .dh-name .tagline { max-width: 28em; font-size: .88rem; line-height: 1.55; margin-top: 8px; }
+    .dh-name .ref { margin-top: 7px; font-size: .65rem; }
+    .dossier-head .dh-name > p[style] { margin-top: 8px !important; font-size: .86rem !important; line-height: 1.55; }
+    .dh-fields { grid-template-columns: repeat(3,minmax(0,1fr)); margin-top: 16px; border-top: 1px solid rgba(255,255,255,.2); }
+    .dh-field { padding: 10px 8px 8px 0; border-right: 0; justify-content: flex-start; }
+    .dh-field .k { font-size: .63rem; letter-spacing: .06em; }
+    .dh-field .v { font-size: .82rem; line-height: 1.45; }
+    .dh-field .v.open { color: #B6A4FF; }
+    .nav { position: sticky; top: 0; padding: 9px 18px; gap: 14px; min-height: 48px; }
+    .nav .wordmark { font-size: .82rem; letter-spacing: 0; }
+    .nav ul { gap: 18px; padding: 1px 0 3px; }
+    .nav ul a { font-size: .82rem; }
+    section { padding-top: 38px; }
+    #updates { padding-top: 26px; }
+    .sec-head { padding-bottom: 8px; margin-bottom: 10px; }
+    .sec-head h2 { font-size: 1.22rem; }
+    .sec-head .code { font-size: .62rem; }
+    .sec-head::before { left: -10px; }
+    .summary { padding: 18px; }
+    .summary .big { font-size: 1.08rem; line-height: 1.6; margin-bottom: 12px; }
+    .positioning-grid { grid-template-columns: 1fr; gap: 10px; }
+    .positioning-card { padding: 13px 14px; }
+    .kpis { margin-top: 16px; }
+    .kpi { padding: 12px 10px; }
+    .kpi .v { font-size: 1.28rem; }
+    .kpi .l { font-size: .72rem; line-height: 1.45; }
+    .funnel-table { padding: 14px 12px; }
+    .ft-row { grid-template-columns: 70px minmax(0,1fr) 44px; gap: 7px; }
+    .ft-stage { font-size: .72rem; }
+    .ft-val { font-size: .78rem; }
+    .ft-fill.ai, .ft-fill.human, .ft-fill.all { font-size: .66rem; padding-left: 5px; }
+    .job { padding: 17px; }
+    .job-top { gap: 4px 8px; }
+    .job-top h3 { font-size: 1.08rem; }
+    .job-top .role, .job-top .period { font-size: .78rem; }
+    .job-lead { line-height: 1.65; }
+    .themes { gap: 10px; }
+    .theme { padding: 12px; }
+    .sheet { padding: 17px; }
+    .sheet-top { padding-right: 0; padding-top: 0; min-height: 0; display: block; }
+    .sheet-top h3 { font-size: 1.16rem; line-height: 1.45; padding-right: 72px; }
+    .sheet-top .ref { display: block; margin-top: 5px; font-size: .68rem; }
+    .stamp { width: 62px; height: 62px; top: 16px; right: 14px; border-width: 2px; }
+    .stamp .s1 { font-size: .62rem; }
+    .stamp .s2 { font-size: .43rem; }
+    .sheet .meta { font-size: .8rem; line-height: 1.55; margin: 12px 0; }
+    .sheet > p:not(.meta) { font-size: .9rem; line-height: 1.7; }
+    .metrics { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0; }
+    .metric { padding: 12px 8px; min-width: 0; }
+    .metric .v { font-size: 1.02rem; line-height: 1.35; overflow-wrap: anywhere; }
+    .metric .l { font-size: .68rem; line-height: 1.45; }
+    .skill-row .k { padding-top: 10px; }
+    .edu-ct { padding: 17px; }
+  }
+
 </style>
 </head>
 <body>
