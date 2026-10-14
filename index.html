@@ -108,7 +108,13 @@
   .summary .big em { font-style: normal; color: var(--navy); }
   .summary p { color: var(--muted); max-width: 46em; margin-bottom: 12px; }
   .summary p strong { color: var(--ink); font-weight: 600; }
-  .summary .positioning { color: var(--ink); font-size: 1.02rem; max-width: 48em; padding: 14px 18px; border-left: 3px solid var(--navy); background: var(--navy-wash); margin: 0 0 16px; }
+  .positioning-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 18px; }
+  .positioning-card { background: var(--navy-wash); border-top: 3px solid var(--navy); padding: 16px 18px; }
+  .positioning-card.future { background: #F7F0E8; border-top-color: var(--red); }
+  .positioning-label { display: block; font-family: var(--mono); font-size: .74rem; font-weight: 800; letter-spacing: .05em; color: var(--navy-deep); margin-bottom: 7px; }
+  .positioning-card.future .positioning-label { color: var(--red); }
+  .positioning-card p { color: var(--muted); margin: 0; font-size: .94rem; }
+  .positioning-card p strong { color: var(--ink); font-weight: 700; }
   .kpis { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); margin-top: 22px; background: var(--navy-wash); }
   .kpi { padding: 18px 18px; border-right: 1px solid var(--line); }
   .kpi:last-child { border-right: none; }
@@ -237,6 +243,7 @@
     font-family: var(--mono); font-size: .82rem; color: var(--navy); font-weight: 700;
     padding-top: 2px; white-space: nowrap;
   }
+  .update-tag { display: inline-block; margin-top: 6px; padding: 2px 6px; background: var(--navy-wash); color: var(--navy-deep); font-family: var(--sans); font-size: .7rem; font-weight: 700; letter-spacing: 0; }
   .update-body b { display: block; font-size: 1rem; margin-bottom: 4px; color: var(--ink); }
   .update-body p { font-size: .9rem; color: var(--muted); margin-bottom: 6px; }
   .update-link {
@@ -262,6 +269,7 @@
     .kpi:nth-child(2) { border-right: none; }
     .kpi:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
     .themes { grid-template-columns: 1fr; }
+    .positioning-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 620px) {
     body { font-size: 15px; }
@@ -327,18 +335,18 @@
     </div>
     <div class="update-list">
       <div class="update-item">
-        <div class="update-date">2026.10</div>
+        <div class="update-date">2026.10<br><span class="update-tag">系统方向</span></div>
         <div class="update-body">
-          <b>AI Workforce · 数字分身与数字员工协作系统</b>
-          <p>持续推进 JARVIS：围绕目标理解、动态任务分配、员工状态与双向反馈、证据核验和结果验收，探索可迁移的 AI 工作系统。当前重点是验证任务闭环、失败恢复与递归自我改进机制，而非预设固定岗位或默认多 Agent 协作。</p>
-          <a class="update-link" href="https://github.com/theo-w/my-ai-worker" target="_blank" rel="noopener">查看项目与开发记录 →</a>
+          <b>数字分身 / 数字员工：让目标形成可验收的执行闭环</b>
+          <p><strong>目标理解 → 动态规划 → 执行反馈 → 证据核验 → 结果验收</strong>。坚持单 Agent 优先，按任务需要组织能力；重点验证状态监控、失败恢复与可评估的递归自我改进。</p>
+          <a class="update-link" href="https://github.com/theo-w/my-ai-worker" target="_blank" rel="noopener">查看项目 →</a>
         </div>
       </div>
       <div class="update-item">
-        <div class="update-date">2026.10</div>
+        <div class="update-date">2026.10<br><span class="update-tag">验证场景</span></div>
         <div class="update-body">
-          <b>AI 原生游戏 · 玩法可行性研究</b>
-          <p>以 AI 原生游戏作为重点验证场景，研究玩家需求、市场机会、AI 对核心玩法的实际价值，以及技术、成本与风险；在证据支持决策后，再进入原型开发与 Playtest。</p>
+          <b>AI 原生游戏：先验证价值，再决定是否开发</b>
+          <p><strong>玩家痛点与市场信号 → AI 对核心玩法的增量 → 技术 / 成本 / 风险评估 → 原型与 Playtest</strong>。聚焦 AI 是否带来真实、可验证的新体验。</p>
         </div>
       </div>
     </div>
@@ -351,11 +359,18 @@
     </div>
     <div class="summary">
       <p class="big">带过 50 人客服团队，也把 <em>2 个产品</em>从需求跟到了上线指标。</p>
-      <p class="positioning"><strong>现在，我把这套业务与产品经验带入 AI：</strong>探索能理解目标、动态组织智能、执行任务并验证结果的数字分身与数字员工系统；同时研究 AI 原生游戏的新玩法是否有真实需求与可行路径。</p>
+      <div class="positioning-grid">
+        <div class="positioning-card">
+          <span class="positioning-label">过往经历 · 可迁移能力</span>
+          <p><strong>15 年客服运营与团队管理，带过 50 人团队。</strong>从一线业务到智能客服总监，深度参与智能客服、舆情监控产品的需求定义、PRD、流程设计、验收与模型效果评估；擅长把真实业务问题转成产品方案，并用数据持续迭代。</p>
+        </div>
+        <div class="positioning-card future">
+          <span class="positioning-label">未来方向 · AI 产品</span>
+          <p><strong>构建能把目标推进到结果的 AI 系统。</strong>探索数字分身与数字员工如何理解目标、动态组织智能、持续执行并独立验证结果；以 AI 原生游戏为重点场景，评估真实需求与玩法价值，再决定是否进入原型和 Playtest。</p>
+        </div>
+      </div>
       <p>
-        做了 15 年客服：在冰川网络从一线坐席做到智能客服总监。智能客服、舆情监控两个上线产品的需求侧都有我的位置——
-        <strong>PRD、流程图、验收标准到上线后的模型效果评估，全程跟到底</strong>；模型与技术方案由算法团队主导。
-        本科数学、硕士 MBA，<strong>数据是底子，产品是主动选择的方向</strong>——习惯用召回率、精确率、F1 说清楚一个模型好不好，而不是凭感觉。
+        本科数学、硕士 MBA，<strong>数据是底子，产品是主动选择的方向</strong>。我既理解一线业务、团队效率与服务质量，也有从需求到上线后效果评估的产品实践；希望把这套跨业务、产品与数据的经验迁移到 AI 产品探索中。
       </p>
       <div class="kpis">
         <div class="kpi"><div class="v">94<small>%</small></div><div class="l">意图识别准确率（自 82%）</div></div>
