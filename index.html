@@ -79,7 +79,7 @@
     backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--line);
   }
-  .nav .wordmark { font-weight: 800; font-size: 1rem; letter-spacing: .1em; text-decoration: none; }
+  .nav .wordmark { font-weight: 800; font-size: 1rem; letter-spacing: .1em; text-decoration: none; white-space: nowrap; flex: none; }
   .nav ul { display: flex; gap: clamp(14px, 3vw, 30px); list-style: none; }
   .nav ul a { text-decoration: none; font-size: .9rem; color: var(--muted); padding: 4px 2px; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
   .nav ul a:hover { color: var(--ink); border-bottom-color: var(--navy); }
@@ -273,8 +273,9 @@
   }
   @media (max-width: 620px) {
     body { font-size: 15px; }
-    .nav ul { gap: 12px; }
-    .nav ul a { font-size: .84rem; }
+    .nav { gap: 16px; }
+    .nav ul { flex: 1; min-width: 0; gap: 16px; overflow-x: auto; white-space: nowrap; justify-content: flex-start; padding: 2px 0 6px; scrollbar-width: thin; }
+    .nav ul a { flex: none; font-size: .84rem; }
     .kpis { grid-template-columns: 1fr 1fr; }
     .ft-row { grid-template-columns: 74px 1fr 68px; gap: 10px; }
     .themes { grid-template-columns: 1fr; }
@@ -358,7 +359,7 @@
       <span class="code">SEC-01</span>
     </div>
     <div class="summary">
-      <p class="big">带过 50 人客服团队，也把 <em>2 个产品</em>从需求跟到了上线指标。</p>
+      <p class="big">从业务现场到 <em>AI 产品交付</em>：参与智能客服大模型升级与上线效果优化，并完成游戏舆情产品从 0 到 1 的需求侧交付。</p>
       <div class="positioning-grid">
         <div class="positioning-card">
           <span class="positioning-label">最近一段产品经历 · 游戏舆情监测</span>
@@ -379,27 +380,28 @@
         <div class="kpi"><div class="v">120<small>+</small></div><div class="l">日均节省人工工时（小时）</div></div>
         <div class="kpi"><div class="v">−25<small>%</small></div><div class="l">人工工单量</div></div>
       </div>
-      <p class="kpi-src">SRC: 冰川网络智能客服项目 · 2022–2024</p>
+      <p class="kpi-src">统计来源：冰川网络智能客服项目 · 2022–2024；指标为项目阶段复盘数据，按当时业务统计口径记录。</p>
 
       <div style="margin-top: 26px;">
+        <p style="font-weight:800; margin:0 0 8px; color:var(--ink);">客服处理分流</p>
         <div class="funnel-table">
           <div class="ft-row">
-            <span class="ft-stage">用户对话</span>
+            <span class="ft-stage">进入系统</span>
             <div class="ft-track"><div class="ft-fill all" style="width: 100%;">全量进入</div></div>
             <span class="ft-val">100%</span>
           </div>
           <div class="ft-row">
-            <span class="ft-stage">AI 预筛</span>
+            <span class="ft-stage">AI 自动解决</span>
             <div class="ft-track"><div class="ft-fill ai" style="width: 85%;">自动解决</div></div>
             <span class="ft-val">85%</span>
           </div>
           <div class="ft-row">
-            <span class="ft-stage">人工专席</span>
+            <span class="ft-stage">转人工复核</span>
             <div class="ft-track"><div class="ft-fill human" style="width: 15%; min-width: 34px;"></div></div>
             <span class="ft-val">15%</span>
           </div>
         </div>
-        <p class="ft-note">我亲手跑通的客服漏斗：<b>15% 疑难对话</b>经人工专席复核后，误判清单按周反哺模型迭代——漏斗越收越窄，模型越跑越准。</p>
+        <p class="ft-note">处理分流示意：约 <b>85% 对话由 AI 自动解决，约 15% 转人工专席复核</b>；人工复核中发现的误判与漏判按周整理，反哺模型迭代。比例为项目阶段统计值。</p>
       </div>
     </div>
   </section>
@@ -498,7 +500,7 @@
     <div class="sheet-gap"></div>
 
     <article class="sheet">
-      <div class="stamp" aria-hidden="true"><span class="s1">已验证</span><span class="s2">2026.08–09</span></div>
+      <div class="stamp" aria-hidden="true"><span class="s1">需求交付</span><span class="s2">2026.08–09</span></div>
       <div class="sheet-top">
         <h3>游戏舆情产品设计</h3>
         <span class="ref">PRJ-02</span>
