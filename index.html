@@ -108,6 +108,7 @@
   .summary .big em { font-style: normal; color: var(--navy); }
   .summary p { color: var(--muted); max-width: 46em; margin-bottom: 12px; }
   .summary p strong { color: var(--ink); font-weight: 600; }
+  .summary .positioning { color: var(--ink); font-size: 1.02rem; max-width: 48em; padding: 14px 18px; border-left: 3px solid var(--navy); background: var(--navy-wash); margin: 0 0 16px; }
   .kpis { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); margin-top: 22px; background: var(--navy-wash); }
   .kpi { padding: 18px 18px; border-right: 1px solid var(--line); }
   .kpi:last-child { border-right: none; }
@@ -326,56 +327,18 @@
     </div>
     <div class="update-list">
       <div class="update-item">
-        <div class="update-date">2026.10.14</div>
+        <div class="update-date">2026.10</div>
         <div class="update-body">
-          <b>AI 产品方向更新 · 数字分身、数字员工与 AI 原生游戏玩法可行性研究</b>
-          <p>当前个人探索聚焦于一套可迁移的 AI 工作系统：数字分身负责目标理解、优先级调整、任务重规划与结果把关；数字员工按任务动态组合，执行调研、分析、原型验证等工作，并通过状态、输入输出、证据与独立验收形成反馈闭环。设计原则是单代理优先、按任务复杂度决定是否协作，避免固定岗位和多 Agent 编制成为负担。</p>
-          <p>AI 原生游戏是当前重点验证场景之一：研究玩家需求、市场机会、核心玩法是否真正需要 AI、技术与成本风险，再决定是否进入原型开发和 Playtest。递归自我改进也纳入设计方向，但必须建立在可观测、可评估、可回滚的改进闭环上；不把尚未完成的自动化能力描述为已验证成果。</p>
-          <p><strong>职业适应性：</strong>希望将过往客服运营、团队管理、产品需求、模型效果评估与游戏业务经验迁移到 AI 产品经理、Agent / AI Workforce 产品、AI 游戏玩法研究等方向。优势在于能从业务问题出发，跨业务、产品、数据与研发协作，把模糊目标拆成流程、指标、验收标准和可验证的迭代任务。</p>
-          <a class="update-link" href="https://github.com/theo-w/my-ai-worker" target="_blank" rel="noopener">查看数字分身与数字员工项目 →</a>
+          <b>AI Workforce · 数字分身与数字员工协作系统</b>
+          <p>持续推进 JARVIS：围绕目标理解、动态任务分配、员工状态与双向反馈、证据核验和结果验收，探索可迁移的 AI 工作系统。当前重点是验证任务闭环、失败恢复与递归自我改进机制，而非预设固定岗位或默认多 Agent 协作。</p>
+          <a class="update-link" href="https://github.com/theo-w/my-ai-worker" target="_blank" rel="noopener">查看项目与开发记录 →</a>
         </div>
       </div>
       <div class="update-item">
         <div class="update-date">2026.10</div>
         <div class="update-body">
-          <b>JARVIS · Digital Twin × Digital Workforce — 任务分配与双向反馈闭环</b>
-          <p>研发优先级聚焦数字分身持续管理数字员工：新增持久化任务登记与状态跟踪、员工按能力领取任务、提交完成结果或阻塞原因、分身向员工回传反馈、审批门禁，以及任务租约超时后的有界重试与审计事件记录。</p>
-          <p><strong>里程碑边界：</strong>任务队列、协作 API、监督循环及测试已提交至 JARVIS 开发分支；CI 与线上部署仍需验证。尚不将其表述为已验证的 24/7 自主团队，下一步将验证任务分配、反馈、失败恢复和重启后的持久化闭环。</p>
-          <a class="update-link" href="https://github.com/theo-w/my-ai-worker/commits/feat/autonomous-twin-project-loop" target="_blank" rel="noopener">查看 JARVIS 开发记录 →</a>
-        </div>
-      </div>
-      <div class="update-item">
-        <div class="update-date">2026.10</div>
-        <div class="update-body">
-          <b>JARVIS · Digital Twin + Digital Workforce — v0.6 研究基础完成</b>
-          <p>把“数字分身”明确为 AI CEO / 决策层：负责意图、优先级、决策风格与审批边界；Digital Workforce 根据业务目标动态形成最小相关团队。完整链路为：自然语言目标 → Digital Twin → Digital Workers → Evidence → Quality Gate → Business Decision → Prototype。</p>
-          <p><strong>最新进展：</strong>新增 provider-neutral Research Adapter、来源 URL / 摘要 / 置信度 provenance，以及 Evidence Quality Gate；模拟 Evidence 可用于 Demo，但不能通过真实研究质量门禁。下一阶段接入真实 Web Research + LLM Synthesis，并连接 Prototype Coding / Playtest Workers。</p>
-          <a class="update-link" href="https://github.com/theo-w/my-ai-worker" target="_blank" rel="noopener">查看 Digital Workforce GitHub →</a>
-        </div>
-      </div>
-
-      <div class="update-item">
-        <div class="update-date">2026.10</div>
-        <div class="update-body">
-          <b>AI 原生游戏 · Digital Workforce 首个业务 Domain Pack</b>
-          <p>正在把 AI 原生游戏作为 Digital Workforce 的首个业务 Domain Pack：先由 Digital Twin 判断“是否值得做”，再临时组建市场、玩家、竞品、AI 技术与游戏设计 Worker 团队完成可行性评估；决策通过后进入 Prototype Sprint。</p>
-          <p>目标不是做一个固定的“游戏 Agent”，而是验证可迁移的 AI Workforce OS：换一个业务目标，就能重新组合角色、工具、工作流与执行团队。</p>
-        </div>
-      </div>
-
-      <div class="update-item">
-        <div class="update-date">2026.10</div>
-        <div class="update-body">
-          <b>AI Workforce OS · 从数字分身到数字员工团队</b>
-          <p>持续把 JARVIS 从单一 Agent 升级为可迁移的 AI Workforce OS：Digital Twin 负责“我想做什么”，Digital Workers 负责“谁来把它做成”，通过团队编排、Evidence、Decision 与 Prototype / Execution 形成完整业务闭环。</p>
-        </div>
-      </div>
-
-      <div class="update-item">
-        <div class="update-date">2026.09</div>
-        <div class="update-body">
-          <b>AI 原生游戏 · 可行性评估与 Prototype 工作流</b>
-          <p>围绕 AI 原生游戏建立从机会判断、市场与玩家研究、AI 技术可行性、游戏设计到 Prototype Sprint 的产品工作流，并将其作为 Digital Workforce 的首个业务验证场景。</p>
+          <b>AI 原生游戏 · 玩法可行性研究</b>
+          <p>以 AI 原生游戏作为重点验证场景，研究玩家需求、市场机会、AI 对核心玩法的实际价值，以及技术、成本与风险；在证据支持决策后，再进入原型开发与 Playtest。</p>
         </div>
       </div>
     </div>
@@ -388,6 +351,7 @@
     </div>
     <div class="summary">
       <p class="big">带过 50 人客服团队，也把 <em>2 个产品</em>从需求跟到了上线指标。</p>
+      <p class="positioning"><strong>现在，我把这套业务与产品经验带入 AI：</strong>探索能理解目标、动态组织智能、执行任务并验证结果的数字分身与数字员工系统；同时研究 AI 原生游戏的新玩法是否有真实需求与可行路径。</p>
       <p>
         做了 15 年客服：在冰川网络从一线坐席做到智能客服总监。智能客服、舆情监控两个上线产品的需求侧都有我的位置——
         <strong>PRD、流程图、验收标准到上线后的模型效果评估，全程跟到底</strong>；模型与技术方案由算法团队主导。
