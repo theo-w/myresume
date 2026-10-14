@@ -20,17 +20,17 @@
 </script>
 <style>
   :root {
-    --bg: #F1F3F6;
+    --bg: #F4F7FC;
     --surface: #FFFFFF;
     --ink: #182635;
     --muted: #5A6B7C;
     --faint: #8C9AA8;
     --line: #D4DCE4;
-    --navy: #1E4FA3;
-    --navy-deep: #163A78;
-    --navy-wash: #E7EDF7;
-    --red: #C2402A;
-    --red-wash: #F9ECE8;
+    --navy: #1768E8;
+    --navy-deep: #102D63;
+    --navy-wash: #EAF2FF;
+    --red: #7655E8;
+    --red-wash: #F1EDFF;
     --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
     --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "HarmonyOS Sans SC", "MiSans", "Microsoft YaHei", "Segoe UI", sans-serif;
   }
@@ -49,25 +49,29 @@
   ::selection { background: var(--navy-wash); }
 
   /* 档案头 */
-  .dossier-head {
-    background: var(--surface); border-bottom: 2px solid var(--ink);
+   .dossier-head {
+    position: relative; overflow: hidden; color: #fff;
+    background: radial-gradient(circle at 85% 20%, rgba(63,139,255,.38), transparent 26%), linear-gradient(120deg, #071A3B 0%, #123B82 68%, #1768E8 100%);
+    border-bottom: 3px solid #36C7FF;
   }
+  .dossier-head::after { content: 'AI'; position: absolute; right: 5%; top: -48px; font-size: clamp(10rem, 28vw, 19rem); line-height: 1; font-weight: 900; color: rgba(255,255,255,.055); letter-spacing: -.1em; pointer-events: none; }
+  .dossier-head .wrap { position: relative; z-index: 1; }
   .dossier-head .wrap { display: flex; flex-wrap: wrap; align-items: stretch; gap: 0; }
   .dh-name {
     padding: 34px clamp(20px, 4vw, 44px) 30px 0;
     border-right: 1px solid var(--line);
   }
   .dh-name h1 { font-size: clamp(2rem, 4.5vw, 2.9rem); font-weight: 800; letter-spacing: .06em; line-height: 1.2; }
-  .dh-name .tagline {
-    font-size: clamp(.92rem, 1.6vw, 1.08rem); color: var(--navy); font-weight: 600;
+   .dh-name .tagline {
+    font-size: clamp(.92rem, 1.6vw, 1.08rem); color: #8DDAFF; font-weight: 600;
     margin-top: 6px; max-width: 36em;
   }
-  .dh-name .ref { font-family: var(--mono); font-size: .72rem; color: var(--faint); letter-spacing: .12em; margin-top: 8px; }
+   .dh-name .ref { font-family: var(--mono); font-size: .72rem; color: #A9C6F5; letter-spacing: .12em; margin-top: 8px; }
   .dh-fields { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); }
   .dh-field { padding: 26px clamp(14px, 2.4vw, 28px); border-right: 1px solid var(--line); display: flex; flex-direction: column; justify-content: center; gap: 3px; }
   .dh-field:last-child { border-right: none; }
-  .dh-field .k { font-size: .74rem; color: var(--faint); letter-spacing: .18em; }
-  .dh-field .v { font-size: 1.02rem; font-weight: 700; }
+   .dh-field .k { font-size: .74rem; color: #B6C9E9; letter-spacing: .18em; }
+   .dh-field .v { font-size: 1.02rem; font-weight: 700; color: #fff; }
   .dh-field .v.open { color: var(--red); }
   .dh-field .v.open::before { content: "● "; font-size: .7em; vertical-align: .12em; }
 
@@ -99,6 +103,19 @@
     content: ''; position: absolute; left: -20px; bottom: -2px;
     width: 3px; height: calc(100% + 2px); background: var(--navy); border-radius: 2px;
   }
+
+  /* AI 视觉强化 */
+  .summary, .job, .sheet, .edu-ct { border-radius: 12px; box-shadow: 0 8px 28px rgba(25,77,151,.055); }
+  .summary { border-top: 3px solid var(--navy); }
+  .job, .sheet { border-top: 3px solid #8BB8FF; }
+  .sec-head { border-bottom-color: #C9D9F3; }
+  .sec-head h2 { color: #102D63; }
+  .positioning-card { border-radius: 10px; background: linear-gradient(135deg,#EAF2FF,#F7FAFF); }
+  .positioning-card.future { background: linear-gradient(135deg,#F1EDFF,#FBFAFF); }
+  .kpis { border-radius: 10px; overflow: hidden; }
+  .ft-track { border-radius: 5px; overflow: hidden; }
+  .ft-fill.ai { background: linear-gradient(90deg,#1768E8,#22B8F0); }
+  .ft-fill.human { background: linear-gradient(90deg,#7655E8,#A18AFF); }
 
   /* 摘要 */
   .summary { background: var(--surface); border: 1px solid var(--line); border-top: none; padding: clamp(22px, 4vw, 34px); }
@@ -295,7 +312,8 @@
   <div class="wrap">
     <div class="dh-name">
       <h1>王乐意</h1>
-      <p class="tagline">AI Product Manager · Digital Twin · Digital Workforce · AI-native Game</p>
+      <p class="tagline">AI 产品经理 · 大模型应用 · AI 智能客服 · 数字员工 · AI 原生游戏</p>
+      <p style="margin-top:12px;max-width:38em;color:#E1ECFF;font-size:.94rem;">从业务问题出发，连接 <strong>AI 能力、产品设计与交付验证</strong>；关注可衡量的业务价值，而非为了 AI 而 AI。</p>
       <p class="ref">REF: WL-2026-SZ</p>
     </div>
     <div class="dh-fields">
@@ -438,12 +456,12 @@
         <span class="period">2010.06 – 2024.08 · 深圳</span>
       </div>
       <p class="job-lead">
-        14 年，从一线坐席到智能客服总监。<strong>深度参与智能客服、舆情监控两个上线产品的需求与效果优化</strong>，
+        14 年，从一线客服运营到智能客服与客服管理。<strong>核心工作聚焦 AI 智能客服、客服运营管理与服务流程优化</strong>，
         带过最大 50 人的团队，通过产品化与流程优化累计年化节省成本超 50 万。
       </p>
       <div class="themes">
         <div class="theme">
-          <h4>智能客服</h4>
+          <h4>AI 智能客服 · 大模型应用</h4>
           <ul>
             <li>作为业务方深度参与<strong>规则引擎 → 大模型</strong>的产品升级：需求、PRD、流程图、验收标准出自我手，从小样本验证到多产品线铺开全程跟进；模型与技术方案由算法团队主导</li>
             <li>设计<strong>「AI 预筛 + 人工专席复核」</strong>机制，AI 自动处理高频场景，人工工单量降 25%，日均节省工时 120+ 小时</li>
@@ -451,11 +469,11 @@
           </ul>
         </div>
         <div class="theme">
-          <h4>舆情监控</h4>
+          <h4>客服管理 · 运营体系</h4>
           <ul>
-            <li>在研发提供的监控平台上，按场景配置关键词规则（充值 / 违规 / 舆情 / 合规），关键规则与算法共同 review</li>
-            <li>沉淀 <strong>200+ 条关键词规则</strong>，召回、精确、F1 多轮调优，覆盖合规话术、重大舆情、违规禁词</li>
-            <li>以白名单避免误伤正常玩家，误判率显著下降</li>
+            <li>围绕<strong>客服管理</strong>搭建服务质量与效率管理机制，结合工单、SOP、知识库和业务复盘持续改善流程</li>
+            <li>以<strong>效率、质量、成本</strong>为核心管理维度，跟踪处理量、服务质量与人工成本，推动运营流程标准化</li>
+            <li>主笔 <strong>21 项核心 SOP</strong>，沉淀 Case 库与知识库，让一线问题反馈进入业务改进闭环</li>
           </ul>
         </div>
         <div class="theme">
@@ -484,13 +502,13 @@
     </div>
 
     <article class="sheet">
-      <div class="stamp" aria-hidden="true"><span class="s1">已验证</span><span class="s2">2022–2024</span></div>
+      <div class="stamp" aria-hidden="true"><span class="s1">业务落地</span><span class="s2">2022–2024</span></div>
       <div class="sheet-top">
-        <h3>智能客服大模型升级</h3>
+        <h3>AI 智能客服与客服管理升级</h3>
         <span class="ref">PRJ-01</span>
       </div>
       <p class="meta">深圳冰川网络 · 2022 – 2024 · 角色：<b>业务方 · 需求与效果侧</b> · 5 个月上线</p>
-      <p>从规则引擎到大模型的客服系统升级。我作为业务方输出 <strong>需求、PRD 与验收标准</strong>，上线后主导效果评估——盯「命中率—解决率—满意度」漏斗，把误判 case 整理成清单反哺算法迭代；模型与架构由算法团队主导。</p>
+      <p>围绕<strong>AI 智能客服与客服管理</strong>推进业务侧升级：参与从规则引擎到大模型的需求梳理，输出业务流程、需求与验收标准；上线后跟踪意图识别、自动解决率与人工复核反馈，整理误判 case 反哺模型迭代。模型与底层架构由算法团队主导。</p>
       <div class="metrics">
         <div class="metric"><div class="v">82% → 94%</div><div class="l">意图识别准确率</div></div>
         <div class="metric"><div class="v">85%</div><div class="l">AI 自动解决率</div></div>
@@ -542,8 +560,8 @@
         <div class="v"><span>PRD</span><span>用户旅程</span><span>流程图</span><span>版本规划</span><span>需求评审</span></div>
       </div>
       <div class="skill-row">
-        <div class="k">AI 与数据</div>
-        <div class="v"><span>数据标注</span><span>意图识别</span><span>正则表达式</span><span>模型效果评估</span><span>召回 / 精确 / F1</span></div>
+        <div class="k">AI 产品</div>
+        <div class="v"><span>大模型应用</span><span>AI 智能客服</span><span>意图识别</span><span>模型效果评估</span><span>人工反馈闭环</span><span>Agent 工作流</span></div>
       </div>
       <div class="skill-row">
         <div class="k">工具</div>
