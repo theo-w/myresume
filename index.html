@@ -446,6 +446,48 @@
     .resume-main .update-item { grid-template-columns: 78px minmax(0,1fr); }
   }
 
+
+  /* v3 修正：明确桌面端双栏优先级，并统一导航阅读顺序 */
+  @media (min-width: 900px) {
+    main.resume-layout {
+      display: grid !important;
+      grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1.65fr) !important;
+      align-items: start;
+      gap: 30px;
+      width: min(100% - 48px, 1240px);
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 34px 0 72px;
+    }
+    main.resume-layout > aside.resume-sidebar {
+      display: block;
+      width: auto;
+      min-width: 0;
+      position: sticky;
+      top: 76px;
+    }
+    main.resume-layout > .resume-main {
+      display: block;
+      width: auto;
+      min-width: 0;
+    }
+  }
+  @media (min-width: 701px) and (max-width: 899px) {
+    main.resume-layout {
+      display: grid !important;
+      grid-template-columns: minmax(220px, .78fr) minmax(0, 1.45fr) !important;
+      gap: 18px;
+    }
+  }
+  @media (max-width: 700px) {
+    main.resume-layout {
+      display: flex !important;
+      flex-direction: column;
+      gap: 0;
+      width: auto;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -478,10 +520,10 @@
 <nav class="nav" aria-label="站内导航">
   <a class="wordmark" href="#top">王乐意 · 档案</a>
   <ul>
+    <li><a href="#about">个人摘要</a></li>
+    <li><a href="#exp">工作经历</a></li>
+    <li><a href="#projects">AI 项目</a></li>
     <li><a href="#updates">近期动态</a></li>
-    <li><a href="#about">摘要</a></li>
-    <li><a href="#exp">经历</a></li>
-    <li><a href="#projects">验收项目</a></li>
     <li><a href="#skills">技能</a></li>
     <li><a href="#contact">联系</a></li>
   </ul>
