@@ -510,6 +510,11 @@
     main.resume-layout > aside.resume-sidebar { position:static !important; }
   }
 
+  /* 修复桌面端摘要栏过高时 sticky 无法完整滚动的问题：两列随整页自然滚动 */
+  @media (min-width: 701px) {
+    main.resume-layout > aside.resume-sidebar { position: static !important; top: auto !important; }
+  }
+
 </style>
 </head>
 <body>
