@@ -515,6 +515,64 @@
     main.resume-layout > aside.resume-sidebar { position: static !important; top: auto !important; }
   }
 
+
+  /* v5：阅读层级与注意力优化 */
+  .summary .big { font-size: clamp(1.22rem, 1.8vw, 1.55rem); line-height: 1.42; margin-bottom: 12px; }
+  .summary-intro { font-size: .94rem; line-height: 1.75; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+  .summary-points { display: grid; gap: 14px; margin: 16px 0; }
+  .summary-point { display: grid; grid-template-columns: 30px minmax(0,1fr); gap: 10px; align-items: start; }
+  .summary-index { color: var(--navy); font: 800 .76rem/1.8 var(--mono); letter-spacing: .02em; }
+  .summary-point strong { display: block; font-size: .94rem; line-height: 1.5; margin-bottom: 2px; }
+  .summary-point p, .summary-direction p { color: var(--muted); font-size: .86rem; line-height: 1.65; margin: 0; }
+  .summary-direction { background: var(--navy-wash); border-left: 3px solid var(--navy); padding: 13px 14px; border-radius: 0 8px 8px 0; margin-top: 16px; }
+  .summary-direction .positioning-label { margin-bottom: 5px; }
+  .summary-direction p strong { color: var(--ink); }
+  .summary-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+  .summary-meta span { border: 1px solid var(--line); border-radius: 999px; padding: 3px 8px; color: var(--muted); font-size: .72rem; line-height: 1.6; }
+  .evidence-note { margin-top: 14px !important; padding-top: 12px; border-top: 1px dashed var(--line); color: var(--muted); font-size: .76rem !important; line-height: 1.65; }
+  .evidence-note strong { color: var(--ink); }
+  .sec-head { margin-bottom: 14px; padding-bottom: 9px; }
+  .sec-head h2 { letter-spacing: .015em; }
+  .job, .sheet { padding: clamp(20px, 2.4vw, 30px); }
+  .job-top { margin-bottom: 10px; }
+  .job-top h3, .sheet-top h3 { line-height: 1.4; letter-spacing: -.015em; }
+  .job-lead { border-left: 3px solid var(--navy); padding: 2px 0 2px 13px; margin: 10px 0 16px; line-height: 1.75; }
+  .job ul li { line-height: 1.72; padding: 9px 0; }
+  .theme h4 { border-bottom: 1px solid var(--line); padding-bottom: 6px; margin-bottom: 6px; }
+  .theme ul li { line-height: 1.7; padding: 7px 0; }
+  .sheet p { line-height: 1.78; }
+  .sheet > ul { list-style: none; margin-top: 10px; }
+  .sheet > ul li { position: relative; padding: 7px 0 7px 17px; color: var(--muted); font-size: .9rem; line-height: 1.72; border-bottom: 1px dashed var(--line); }
+  .sheet > ul li:last-child { border-bottom: 0; }
+  .sheet > ul li::before { content: "→"; position: absolute; left: 0; color: var(--navy); font-weight: 800; }
+  .sheet > ul li strong { color: var(--ink); }
+  .sheet .metrics { gap: 12px 24px; margin-top: 16px; }
+  .metric { min-width: 105px; }
+  .metric .v { line-height: 1.4; }
+  .update-item { padding: 18px 20px; }
+  .update-body b { line-height: 1.5; }
+  .update-body p { line-height: 1.75; }
+  .skill-row .k { font-weight: 800; color: var(--navy-deep); }
+  .skill-row .v span { padding: 5px 10px; border-radius: 6px; }
+  .edu-ct { padding: clamp(18px, 2.4vw, 28px); }
+  .closing { font-size: 1rem; font-weight: 700; margin: 18px 0; }
+  @media (min-width: 900px) and (min-height: 760px) {
+    main.resume-layout > aside.resume-sidebar { position: sticky !important; top: 76px !important; }
+    .resume-sidebar .summary { padding: 20px; }
+  }
+  @media (min-width: 701px) and (max-width: 899px), (max-height: 759px) {
+    main.resume-layout > aside.resume-sidebar { position: static !important; top: auto !important; }
+  }
+  @media (max-width: 700px) {
+    .summary-points { gap: 12px; }
+    .summary-point p, .summary-direction p { font-size: .84rem; }
+    .job, .sheet { padding: 18px; }
+    .job ul li { padding: 8px 0; }
+    .sheet .metrics { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+    .metric { min-width: 0; }
+    .update-item { padding: 15px; }
+  }
+
 </style>
 </head>
 <body>
@@ -564,25 +622,32 @@
       <span class="code">SEC-01</span>
     </div>
     <div class="summary">
-      <p class="big">从业务现场到 <em>AI 产品交付</em>：参与智能客服大模型升级与上线效果优化，并完成游戏舆情产品从 0 到 1 的需求侧交付。</p>
-      <div class="positioning-grid">
-        <div class="positioning-card">
-          <span class="positioning-label">最近一段产品经历 · 游戏舆情监测</span>
-          <p><strong>2026.08–09｜深圳赛刻智能科技｜产品执行经理（短期项目合作）。</strong>负责游戏舆情监测产品从 0 到 1 的需求侧交付：梳理预警、热点、竞品、口碑四大场景，完成 PRD、用户旅程、验收标准与多源数据链路设计；强调原始数据留存与来源追踪，确保清洗、分类结果可回溯、可校对；明确规则处理确定性数据、LLM 辅助区分语义相近内容，并规划低置信度复核机制。</p>
-          <p style="margin-top:10px"><strong>此前的业务与 AI 实践。</strong>在深圳冰川网络任职 14 年，负责客服运营与团队管理，带过 50 人团队；作为业务方深度参与智能客服从规则引擎到大模型的升级，并跟进模型效果评估和上线后优化。</p>
+      <p class="big">业务理解 + 产品交付 + <em>AI 应用落地</em></p>
+      <p class="summary-intro">14 年客服运营与团队管理经验，参与 AI 智能客服从规则引擎向大模型升级；近期完成游戏舆情产品从 0 到 1 的需求侧交付。</p>
+      <div class="summary-points">
+        <div class="summary-point">
+          <span class="summary-index">01</span>
+          <div><strong>AI 产品实践</strong><p>业务需求、流程设计、验收标准、模型效果评估与上线后优化。</p></div>
         </div>
-        <div class="positioning-card future">
-          <span class="positioning-label">未来方向 · AI 产品</span>
-          <p><strong>构建能把目标推进到结果的 AI 系统。</strong>探索数字分身与数字员工如何理解目标、动态组织智能、持续执行并独立验证结果；以 AI 原生游戏为重点场景，评估真实需求与玩法价值，再决定是否进入原型和 Playtest。</p>
+        <div class="summary-point">
+          <span class="summary-index">02</span>
+          <div><strong>复杂业务梳理</strong><p>客服管理、服务质量与成本优化；擅长把一线问题转化为产品机制。</p></div>
+        </div>
+        <div class="summary-point">
+          <span class="summary-index">03</span>
+          <div><strong>从需求到验证</strong><p>PRD、用户旅程、数据链路、验收标准；重视证据溯源与结果复核。</p></div>
         </div>
       </div>
-      <p>
-        本科为<strong>信息与计算科学</strong>（数学与计算机交叉学科），硕士为 MBA。<strong>数据是底子，产品是主动选择的方向</strong>。我既理解一线业务、团队效率与服务质量，也有从需求到上线后效果评估的产品实践；希望把这套跨业务、产品与数据的经验迁移到 AI 产品探索中。
-      </p>
-            <div class="evidence-note" style="margin-top:22px;padding:14px 16px;border-left:3px solid var(--navy);background:var(--navy-wash);font-size:.9rem;color:var(--muted);">
-        <strong style="color:var(--ink);">经历与项目的证据边界</strong><br>
-        业务成果以过往项目阶段复盘口径呈现；个人项目分别标明代码 / 文档可查看、原型研究或在线 Demo 状态，不将设计方案等同于已验证的用户价值。
+      <div class="summary-direction">
+        <span class="positioning-label">当前探索方向</span>
+        <p><strong>数字分身与数字员工</strong>：构建目标驱动、可观察、可验收的 AI 执行闭环；以<strong> AI 原生游戏</strong>作为重点应用场景，先验证玩家需求与玩法价值，再决定是否开发。</p>
       </div>
+      <div class="summary-meta">
+        <span>本科 · 信息与计算科学</span>
+        <span>MBA · 硕士</span>
+        <span>深圳 · AI 产品经理</span>
+      </div>
+      <p class="evidence-note"><strong>项目状态透明：</strong>区分过往业务成果、当前代码 / Demo 与尚待验证的研究假设，不把方案设计等同于已验证效果。</p>
     </div>
   </section>
   </aside>
