@@ -6,14 +6,24 @@
 <title>王乐意｜AI 产品经理</title>
 <meta name="description" content="王乐意，AI 产品经理。14 年客服运营与团队管理经验，具备 AI 智能客服、大模型业务应用、游戏舆情产品和 AI Agent 工作流实践。">
 <style>
-:root{--ink:#202733;--muted:#5c6675;--line:#d8dde5;--accent:#2458a6;--paper:#fff;--bg:#f2f4f7}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+:root{--ink:#202733;--muted:#5c6675;--line:#d8dde5;--accent:#2458a6;--paper:#fff;--bg:#eef2f7;--soft:#f5f8fc}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:18px}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.58 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-.resume{width:min(100% - 32px,900px);margin:24px auto;background:var(--paper);padding:38px 48px 34px;box-shadow:0 3px 18px rgba(20,35,55,.07)}
-header{border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:20px}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.resume{width:min(100% - 32px,1120px);margin:24px auto;background:var(--paper);padding:34px 40px 30px;box-shadow:0 8px 32px rgba(20,35,55,.08);border:1px solid #e5e9ef}
+header{border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:14px}
+.top-actions{display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+.action-btn,.filter-btn{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:7px;padding:7px 11px;font:inherit;font-size:12px;cursor:pointer}
+.action-btn:hover,.filter-btn:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.quick-nav{display:flex;gap:8px;flex-wrap:wrap;padding:0 0 15px;margin:0 0 4px;border-bottom:1px solid var(--line)}
+.quick-nav a{font-size:12px;color:var(--muted);padding:5px 9px;border-radius:6px}.quick-nav a:hover{background:var(--soft);color:var(--accent);text-decoration:none}
+.content-grid{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(250px,.85fr);gap:30px;align-items:start}
+.main-column,.side-column{min-width:0}.side-column{background:var(--soft);border:1px solid #e6ebf2;border-radius:10px;padding:18px 18px 12px}
+.side-column section:first-child{margin-top:0}.side-column h2{font-size:15px}.side-column .education-row{grid-template-columns:1fr;gap:1px}.side-column .education-row span{text-align:left}
+.project-tools{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 12px}
+.project-filters{display:flex;gap:6px;flex-wrap:wrap}.filter-btn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.project[hidden]{display:none}.project details{margin-top:5px}.project summary{cursor:pointer;color:var(--accent);font-size:12px;font-weight:650;list-style-position:inside}.project details[open] summary{margin-bottom:5px}
+.side-callout{font-size:12px;color:var(--muted);padding:10px 11px;background:#fff;border-left:3px solid var(--accent);border-radius:0 6px 6px 0;margin-top:12px}.print-hint{font-size:11px;color:var(--muted)}
 .header-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
 h1{font-size:30px;line-height:1.2;letter-spacing:.02em;margin:0 0 6px;font-weight:800}
 .headline{font-size:16px;font-weight:650;color:var(--accent)}
@@ -27,7 +37,7 @@ p{margin:5px 0}
 .summary{font-size:14px;margin:0}
 .highlights{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:13px;border:1px solid var(--line)}
 .highlight{padding:10px 12px;border-right:1px solid var(--line)}
-.highlight:last-child{border-right:0}
+.highlight:last-child{border-right:0}.highlight{background:linear-gradient(180deg,#fff,var(--soft))}.highlight strong{letter-spacing:-.03em}
 .highlight strong{display:block;font-size:19px;line-height:1.25;color:var(--accent)}
 .highlight span{display:block;font-size:11px;color:var(--muted);margin-top:4px;line-height:1.4}
 .entry{margin-top:13px;break-inside:avoid}
@@ -56,7 +66,7 @@ footer{display:flex;justify-content:space-between;gap:10px;border-top:1px solid 
 .copy{border:0;background:transparent;color:var(--accent);font:inherit;padding:0;cursor:pointer}
 @media(max-width:640px){
  body{font-size:14px;background:var(--paper)}
- .resume{width:100%;margin:0;padding:24px 20px 28px;box-shadow:none}
+ .resume{width:100%;margin:0;padding:22px 18px 26px;box-shadow:none;border:0}.content-grid{grid-template-columns:1fr;gap:22px}.side-column{padding:16px;background:#fff}.top-actions{justify-content:flex-start}.quick-nav{position:sticky;top:0;background:#fff;z-index:3;padding:8px 0;box-shadow:0 3px 8px rgba(20,35,55,.04)}
  .header-top{display:block}
  h1{font-size:27px}
  .status{display:inline-block;margin-top:10px}
@@ -70,9 +80,9 @@ footer{display:flex;justify-content:space-between;gap:10px;border-top:1px solid 
  section{margin-top:20px}
 }
 @media print{
- @page{size:A4;margin:12mm}
+ @page{size:A4;margin:10mm}
  body{background:#fff;font-size:10pt;line-height:1.42;color:#111}
- .resume{width:auto;max-width:none;margin:0;padding:0;box-shadow:none}
+.resume{width:auto;max-width:none;margin:0;padding:0;box-shadow:none;border:0}.top-actions,.quick-nav,.project-tools,.print-hint{display:none!important}.content-grid{grid-template-columns:minmax(0,1.7fr) minmax(220px,.8fr);gap:18px}.side-column{background:#fff;border:0;padding:0}.side-column h2{font-size:11pt}.side-column section{margin-top:10px}
  header{padding-bottom:10px;margin-bottom:12px}
  h1{font-size:23pt}
  .headline{font-size:11pt}
@@ -106,6 +116,7 @@ footer{display:flex;justify-content:space-between;gap:10px;border-top:1px solid 
     <div class="status">求职意向：AI 产品经理</div>
   </div>
   <p class="pitch">14 年客服运营与团队管理经验，近年聚焦 AI 产品实践。擅长从真实业务问题出发，完成需求拆解、流程设计、跨团队协作与效果验收；关注 AI 能否带来可衡量的业务价值。</p>
+  <div class="top-actions"><button class="action-btn" type="button" onclick="window.print()">打印 / 保存 PDF</button><button class="action-btn" type="button" id="copyEmail">复制邮箱</button></div>
   <div class="contacts">
     <span>深圳</span>
     <a href="tel:18123777416">181-2377-7416</a>
@@ -114,6 +125,7 @@ footer{display:flex;justify-content:space-between;gap:10px;border-top:1px solid 
     <span>MBA 硕士</span>
   </div>
 </header>
+<nav class="quick-nav" aria-label="简历快速导航"><a href="#summary">核心优势</a><a href="#experience">工作经历</a><a href="#projects">代表项目</a><a href="#skills">专业技能</a><a href="#education">教育背景</a></nav>
 
 <section id="summary">
   <h2>核心优势 <span>SUMMARY</span></h2>
@@ -126,6 +138,7 @@ footer{display:flex;justify-content:space-between;gap:10px;border-top:1px solid 
   </div>
 </section>
 
+<div class="content-grid"><div class="main-column">
 <section id="experience">
   <h2>工作经历 <span>EXPERIENCE</span></h2>
   <article class="entry">
@@ -157,15 +170,16 @@ footer{display:flex;justify-content:space-between;gap:10px;border-top:1px solid 
 
 <section id="projects">
   <h2>代表项目 <span>SELECTED PROJECTS</span></h2>
-  <article class="project">
+  <div class="project-tools"><div class="project-filters" role="group" aria-label="筛选项目"><button type="button" class="filter-btn" data-filter="all" aria-pressed="true">全部项目</button><button type="button" class="filter-btn" data-filter="agent" aria-pressed="false">Agent / AI</button><button type="button" class="filter-btn" data-filter="game" aria-pressed="false">游戏产品</button></div><span class="print-hint">可筛选项目 · 展开查看细节</span></div>
+  <article class="project" data-category="agent">
     <div><span class="project-title">数字分身与数字员工执行底座</span><span class="project-meta">个人项目 · MVP 迭代中</span></div>
     <p>GitHub：<a href="https://github.com/theo-w/my-ai-worker">theo-w/my-ai-worker</a></p>
     <ul>
       <li>围绕目标、规划、执行、反馈、证据核验与验收构建 AI Agent 工作流：分身管理任务，员工反馈进度、阻塞与结果，关键结果需独立验证。</li>
       <li>坚持单 Agent 优先，按任务收益动态组织能力；记录状态、心跳、输入输出与事件历史。本地演示流程可运行，生产稳定性和事实正确率仍需持续测试。</li>
-    </ul>
+    </ul><details><summary>展开评估方法</summary><p>先验证玩家是否感知到 AI 带来的体验增量，再评估推理成本、延迟、内容安全与可重复性；以小规模原型测试决定是否继续投入。</p></details>
   </article>
-  <article class="project">
+  <article class="project" data-category="game">
     <div><span class="project-title">AI 原生游戏玩法可行性研究</span><span class="project-meta">研究与工作流设计阶段</span></div>
     <p>复用数字分身与数字员工底座，评估 AI 对核心玩法是否带来真实增量，而非只在游戏中加入大模型。</p>
     <ul>
@@ -173,7 +187,7 @@ footer{display:flex;justify-content:space-between;gap:10px;border-top:1px solid 
       <li>目前尚无真实玩家测试结论；后续以可玩原型、玩家反馈及明确的继续 / 停止阈值验证。</li>
     </ul>
   </article>
-  <article class="project">
+  <article class="project" data-category="game">
     <div><span class="project-title">游戏舆情竞品分析平台</span><span class="project-meta">个人项目 · 在线 Demo</span></div>
     <p>Demo：<a href="https://game-analyzer-eq8i.onrender.com/">game-analyzer-eq8i.onrender.com</a></p>
     <ul>
@@ -182,6 +196,7 @@ footer{display:flex;justify-content:space-between;gap:10px;border-top:1px solid 
     </ul>
   </article>
 </section>
+</div><aside class="side-column" aria-label="补充信息">
 
 <section id="skills">
   <h2>专业技能 <span>SKILLS</span></h2>
@@ -197,9 +212,13 @@ footer{display:flex;justify-content:space-between;gap:10px;border-top:1px solid 
   <h2>教育背景 <span>EDUCATION</span></h2>
   <div class="education-row"><div><strong>西班牙武康大学</strong> · 工商管理（MBA）</div><span>硕士</span></div>
   <div class="education-row"><div><strong>郑州轻工业大学</strong> · 信息与计算科学 · CET-4</div><span>本科 · 统招</span></div>
-</section>
+</section><div class="side-callout">产品判断原则：从真实需求出发，用数据与证据验证 AI 价值；明确能力边界，不夸大未完成的验证。</div>
+</aside></div>
 
 <footer><span>王乐意 · AI 产品经理</span><span>更新于 2026.10 · 深圳</span></footer>
 </main>
+<script>
+(function(){const buttons=document.querySelectorAll('[data-filter]');const projects=document.querySelectorAll('.project[data-category]');buttons.forEach(function(button){button.addEventListener('click',function(){const filter=button.dataset.filter;buttons.forEach(function(item){item.setAttribute('aria-pressed',String(item===button));});projects.forEach(function(project){project.hidden=filter!=='all'&&project.dataset.category!==filter;});});});const copyButton=document.getElementById('copyEmail');if(copyButton){copyButton.addEventListener('click',async function(){const email='44727383@qq.com';try{await navigator.clipboard.writeText(email);copyButton.textContent='邮箱已复制';}catch(e){window.location.href='mailto:'+email;copyButton.textContent='打开邮件应用';}});}})();
+</script>
 </body>
 </html>
