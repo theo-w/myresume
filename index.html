@@ -50,7 +50,28 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.resu
 @media(max-width:620px){.project-grid{grid-template-columns:1fr}.project.research{grid-column:auto}.project{padding:16px}.project-desc{min-height:0}.project:hover{transform:none}.project-side a{display:inline-flex}}
 @media print{@page{size:A4 landscape;margin:8mm}.project-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.project{padding:9px;gap:7px;box-shadow:none;transform:none}.project:hover{transform:none;box-shadow:none}.project-title{font-size:8.5pt}.project-desc,.project li{font-size:7.5pt;min-height:0}.project-side{font-size:7pt}.project-side a{padding:3px 4px;font-size:7pt}.project details{display:none}.project-state{font-size:6.5pt;padding:2px 5px}}
 
-</style>
+
+/* Navigation to each of the three portfolio tracks */
+.nav{align-items:center;gap:6px}
+.nav .nav-project{border:1px solid var(--line);background:#fff;font-weight:750;color:var(--ink)}
+.nav .nav-agent{border-color:#bdeee3;background:#f0fcf8;color:#087c68}
+.nav .nav-platform{border-color:#cfe2ff;background:#f0f6ff;color:#1769df}
+.nav .nav-research{border-color:#e2d5ff;background:#f7f1ff;color:#7145bf}
+.project[id]{scroll-margin-top:22px}
+@media(min-width:1001px){
+  .resume{width:min(100% - 40px,1440px);grid-template-columns:250px minmax(0,1fr)}
+  .sidebar{padding:30px 22px}
+  .main{padding:30px 32px 26px}
+  .project-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .project{min-height:100%;padding:20px 18px 17px}
+  .project-desc{min-height:78px}
+  .project li{line-height:1.7}
+}
+@media(max-width:620px){
+  .nav{position:sticky;top:0;z-index:3;background:#fff;padding:8px 0 10px}
+  .nav .nav-project{font-size:11px}
+}
+\n</style>
 </head>
 <body>
 <main class="resume">
@@ -93,7 +114,7 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.resu
 </aside>
 <div class="main">
   <div class="actions"><button class="btn" type="button" onclick="window.print()">打印 / 保存 PDF</button><button class="btn" type="button" id="copyEmail">复制邮箱</button></div>
-  <nav class="nav" aria-label="简历快速导航"><a href="#about">关于我</a><a href="#experience">工作经历</a><a href="#projects">代表项目</a><a href="#project-relation">项目关系</a></nav>
+  <nav class="nav" aria-label="简历快速导航"><a href="#about">关于我</a><a href="#experience">工作经历</a><a href="#projects">代表项目</a><a class="nav-project nav-agent" href="#project-agent">01 数字分身 / 员工</a><a class="nav-project nav-platform" href="#project-platform">02 游戏舆情平台</a><a class="nav-project nav-research" href="#project-research">03 AI 游戏可行性</a><a href="#project-relation">项目关系</a></nav>
   <section id="about">
     <div class="intro">
       <div><h2 class="section-title"><span class="symbol">◎</span>关于我</h2><p>拥有 14 年客服运营与团队管理经验，近年聚焦 AI 产品实践。具备 AI 智能客服业务侧升级、游戏舆情产品需求交付，以及数字分身 / 数字员工工作流的持续迭代经验。重视需求价值、流程可执行性和结果证据；对仍处于研究或 MVP 阶段的项目，明确区分设计方案、可运行能力与尚待验证的结论。</p></div>
@@ -131,7 +152,7 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.resu
   <section class="section" id="projects">
     <div class="section-head"><h2 class="section-title"><span class="symbol">☆</span>代表项目</h2><span class="eyebrow">SELECTED WORK · 3 PROJECTS</span></div>
     <div class="project-grid">
-      <article class="project agent">
+      <article class="project agent" id="project-agent">
         <div class="number">01</div>
         <div>
           <div class="project-title">数字分身与数字员工执行底座 <span class="project-state">MVP 迭代中</span></div>
@@ -144,7 +165,7 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.resu
         </div>
         <aside class="project-side"><strong>项目状态</strong><div class="state-line"><span class="dot"></span><span>MVP 迭代中</span></div><strong>项目入口</strong><a href="https://jarvis-loophole-playtest.onrender.com/" target="_blank" rel="noopener noreferrer">在线工作台 ↗</a><a href="https://github.com/theo-w/my-ai-worker" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a></aside>
       </article>
-      <article class="project platform">
+      <article class="project platform" id="project-platform">
         <div class="number">02</div>
         <div>
           <div class="project-title">游戏舆情与竞品分析平台 <span class="project-state">在线 Demo</span></div>
@@ -157,7 +178,7 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.resu
         </div>
         <aside class="project-side"><strong>项目状态</strong><div class="state-line"><span class="dot"></span><span>在线 Demo</span></div><strong>项目入口</strong><a href="https://game-analyzer-eq8i.onrender.com/" target="_blank" rel="noopener noreferrer">在线 Demo ↗</a><a href="https://github.com/theo-w/game-analyzer" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a></aside>
       </article>
-      <article class="project research">
+      <article class="project research" id="project-research">
         <div class="number">03</div>
         <div>
           <div class="project-title">AI 原生游戏玩法可行性评估 <span class="project-state">研究与工作流设计</span></div>
