@@ -1,230 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>王乐意｜AI 产品经理</title>
-<meta name="description" content="王乐意，AI 产品经理。14 年客服运营与团队管理经验，具备 AI 智能客服、大模型业务应用、游戏舆情产品和 AI Agent 工作流实践。">
+<meta name="description" content="王乐意，AI 产品经理。14 年客服运营与团队管理经验，聚焦 AI 产品、业务流程优化、Agent 工作流与游戏产品研究。">
 <style>
-:root{--ink:#202733;--muted:#5c6675;--line:#d8dde5;--accent:#2458a6;--paper:#fff;--bg:#eef2f7;--soft:#f5f8fc}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:18px}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.58 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
-a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.resume{width:min(100% - 32px,1120px);margin:24px auto;background:var(--paper);padding:34px 40px 30px;box-shadow:0 8px 32px rgba(20,35,55,.08);border:1px solid #e5e9ef}
-header{border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:14px}
-.top-actions{display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
-.action-btn,.filter-btn{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:7px;padding:7px 11px;font:inherit;font-size:12px;cursor:pointer}
-.action-btn:hover,.filter-btn:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
-.quick-nav{display:flex;gap:8px;flex-wrap:wrap;padding:0 0 15px;margin:0 0 4px;border-bottom:1px solid var(--line)}
-.quick-nav a{font-size:12px;color:var(--muted);padding:5px 9px;border-radius:6px}.quick-nav a:hover{background:var(--soft);color:var(--accent);text-decoration:none}
-.content-grid{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(250px,.85fr);gap:30px;align-items:start}
-.main-column,.side-column{min-width:0}.side-column{background:var(--soft);border:1px solid #e6ebf2;border-radius:10px;padding:18px 18px 12px}
-.side-column section:first-child{margin-top:0}.side-column h2{font-size:15px}.side-column .education-row{grid-template-columns:1fr;gap:1px}.side-column .education-row span{text-align:left}
-.project-tools{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 12px}
-.project-filters{display:flex;gap:6px;flex-wrap:wrap}.filter-btn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
-.project[hidden]{display:none}.project details{margin-top:5px}.project summary{cursor:pointer;color:var(--accent);font-size:12px;font-weight:650;list-style-position:inside}.project details[open] summary{margin-bottom:5px}
-.side-callout{font-size:12px;color:var(--muted);padding:10px 11px;background:#fff;border-left:3px solid var(--accent);border-radius:0 6px 6px 0;margin-top:12px}.print-hint{font-size:11px;color:var(--muted)}
-.header-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
-h1{font-size:30px;line-height:1.2;letter-spacing:.02em;margin:0 0 6px;font-weight:800}
-.headline{font-size:16px;font-weight:650;color:var(--accent)}
-.status{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:4px 8px;white-space:nowrap}
-.pitch{margin:12px 0 10px;max-width:760px;font-size:14px}
-.contacts{display:flex;flex-wrap:wrap;gap:5px 18px;color:var(--muted);font-size:13px}
-section{margin-top:22px}
-h2{font-size:17px;line-height:1.3;margin:0 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line);font-weight:800;display:flex;align-items:baseline;gap:9px}
-h2 span{font-size:10px;color:#8993a1;font-weight:600;letter-spacing:.1em}
-p{margin:5px 0}
-.summary{font-size:14px;margin:0}
-.highlights{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:13px;border:1px solid var(--line)}
-.highlight{padding:10px 12px;border-right:1px solid var(--line)}
-.highlight:last-child{border-right:0}.highlight{background:linear-gradient(180deg,#fff,var(--soft))}.highlight strong{letter-spacing:-.03em}
-.highlight strong{display:block;font-size:19px;line-height:1.25;color:var(--accent)}
-.highlight span{display:block;font-size:11px;color:var(--muted);margin-top:4px;line-height:1.4}
-.entry{margin-top:13px;break-inside:avoid}
-.entry:first-of-type{margin-top:0}
-.entry-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;align-items:baseline}
-.entry-title{font-size:15px;font-weight:800}
-.entry-meta{font-size:12px;color:var(--muted);text-align:right}
-.role{font-size:13px;color:var(--muted);margin-top:1px}
-ul{margin:5px 0 0;padding-left:18px}
-li{padding:1px 0 2px 1px}
-li::marker{color:#7a8798}
-strong{font-weight:750}
-.project{padding:0 0 12px;margin:0 0 12px;border-bottom:1px solid #e9ecf0;break-inside:avoid}
-.project:last-child{border-bottom:0;padding-bottom:0;margin-bottom:0}
-.project-title{font-size:14px;font-weight:800}
-.project-meta{font-size:12px;color:var(--muted);margin-left:6px;font-weight:400}
-.project p,.project li{font-size:13px}
-.tags{color:var(--muted);font-size:12px;margin-top:4px}
-.skills{display:grid;grid-template-columns:90px 1fr;gap:5px 14px;font-size:13px}
-.skill-name{font-weight:750}
-.skill-detail{color:var(--muted)}
-.education-row{display:grid;grid-template-columns:1fr auto;gap:8px 16px;margin:8px 0;font-size:13px}
-.education-row strong{font-size:13px}
-.education-row span{color:var(--muted);text-align:right}
-footer{display:flex;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:10px;margin-top:24px;color:#8993a1;font-size:11px}
-.copy{border:0;background:transparent;color:var(--accent);font:inherit;padding:0;cursor:pointer}
-@media(max-width:640px){
- body{font-size:14px;background:var(--paper)}
- .resume{width:100%;margin:0;padding:22px 18px 26px;box-shadow:none;border:0}.content-grid{grid-template-columns:1fr;gap:22px}.side-column{padding:16px;background:#fff}.top-actions{justify-content:flex-start}.quick-nav{position:sticky;top:0;background:#fff;z-index:3;padding:8px 0;box-shadow:0 3px 8px rgba(20,35,55,.04)}
- .header-top{display:block}
- h1{font-size:27px}
- .status{display:inline-block;margin-top:10px}
- .pitch{font-size:13px}
- .highlights{grid-template-columns:repeat(2,minmax(0,1fr))}
- .highlight:nth-child(2){border-right:0}
- .highlight:nth-child(-n+2){border-bottom:1px solid var(--line)}
- .entry-head{grid-template-columns:1fr;gap:1px}
- .entry-meta{text-align:left}
- .skills{grid-template-columns:78px 1fr}
- section{margin-top:20px}
-}
-@media print{
- @page{size:A4;margin:10mm}
- body{background:#fff;font-size:10pt;line-height:1.42;color:#111}
-.resume{width:auto;max-width:none;margin:0;padding:0;box-shadow:none;border:0}.top-actions,.quick-nav,.project-tools,.print-hint{display:none!important}.content-grid{grid-template-columns:minmax(0,1.7fr) minmax(220px,.8fr);gap:18px}.side-column{background:#fff;border:0;padding:0}.side-column h2{font-size:11pt}.side-column section{margin-top:10px}
- header{padding-bottom:10px;margin-bottom:12px}
- h1{font-size:23pt}
- .headline{font-size:11pt}
- .pitch{font-size:9.5pt}
- .contacts{font-size:9pt}
- section{margin-top:14px}
- h2{font-size:12pt;margin-bottom:6px;padding-bottom:4px}
- .summary{font-size:9.5pt}
- .highlights{margin-top:8px}
- .highlight{padding:6px 8px}
- .highlight strong{font-size:14pt}
- .highlight span{font-size:8pt}
- .entry{margin-top:8px}
- .entry-title{font-size:10.5pt}
- .entry-meta,.role,.project-meta,.tags{font-size:8.5pt}
- li,.project p,.project li,.skills,.education-row{font-size:9pt}
- .project{padding-bottom:7px;margin-bottom:7px}
- a{color:inherit;text-decoration:none}
- footer{margin-top:12px}
-}
+:root{--ink:#17345f;--muted:#5c6d84;--line:#dce7f3;--blue:#1769df;--blue-soft:#edf5ff;--mint:#18a88b;--mint-soft:#eafaf5;--violet:#8655dc;--violet-soft:#f5efff;--amber:#c98312;--amber-soft:#fff6e6;--paper:#fff;--sidebar:#f2f7fd}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:18px}body{margin:0;background:#eaf0f7;color:var(--ink);font:14px/1.62 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.resume{width:min(100% - 32px,1240px);margin:24px auto;background:var(--paper);box-shadow:0 12px 40px #17345f12;border:1px solid #e3ebf4;display:grid;grid-template-columns:270px minmax(0,1fr);min-height:100vh}
+.sidebar{background:linear-gradient(180deg,var(--sidebar),#fff 88%);padding:28px 24px;border-right:1px solid var(--line)}.main{padding:28px 30px 24px;min-width:0}.identity{padding-bottom:20px;border-bottom:1px solid var(--line)}.avatar{width:76px;height:76px;border-radius:24px;background:linear-gradient(135deg,#c9e2ff,#e9f5ff);display:grid;place-items:center;color:var(--blue);font-size:30px;font-weight:850;margin-bottom:14px}.name{font-size:27px;line-height:1.2;margin:0 0 7px;letter-spacing:.01em}.roleline{font-weight:750;color:var(--blue);font-size:14px}.tagline{font-size:13px;color:var(--muted);margin-top:10px}.contact{display:grid;gap:8px;margin-top:15px;font-size:12px;overflow-wrap:anywhere}.side-section{margin-top:20px}.side-title{font-size:14px;font-weight:850;margin:0 0 9px;display:flex;gap:8px;align-items:center}.side-title:before{content:"";width:4px;height:15px;background:var(--blue);border-radius:4px}.chips{display:flex;flex-wrap:wrap;gap:6px}.chip{font-size:11px;color:#355b8b;border:1px solid #d7e6f8;background:#fff;border-radius:20px;padding:4px 8px}.side-copy{font-size:12px;color:var(--muted)}.edu{margin:9px 0}.edu strong{display:block;font-size:12px}.edu span{display:block;color:var(--muted);font-size:11px}.cert{font-size:12px;margin:8px 0}.cert small{display:block;color:var(--muted)}
+.actions{display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap;margin-bottom:8px}.btn{border:1px solid var(--line);border-radius:8px;padding:7px 11px;background:#fff;color:var(--ink);font:inherit;font-size:12px;cursor:pointer}.btn:hover{border-color:var(--blue);color:var(--blue)}.nav{display:flex;gap:7px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding:0 0 13px;margin-bottom:15px}.nav a{font-size:12px;color:var(--muted);padding:5px 9px;border-radius:7px}.nav a:hover{background:var(--blue-soft);text-decoration:none;color:var(--blue)}
+.intro{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:18px;align-items:start}.section-title{font-size:18px;margin:0 0 9px;font-weight:850;display:flex;gap:9px;align-items:center}.section-title .symbol{color:var(--blue);font-size:20px}.eyebrow{font-size:10px;letter-spacing:.12em;color:#91a0b4;font-weight:750}.intro p{margin:0;color:#425873;font-size:13px}.intent{background:var(--blue-soft);border:1px solid #dceaff;border-radius:12px;padding:13px;font-size:12px}.intent strong{display:block;margin-bottom:5px}.intent ul{margin:0;padding-left:17px}.section{margin-top:22px}.section-head{display:flex;align-items:baseline;gap:10px;margin-bottom:10px}.section-head .section-title{margin:0}.section-head .eyebrow{white-space:nowrap}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-top:14px}.metric{padding:11px 12px;background:linear-gradient(180deg,#fff,#f7faff);border-right:1px solid var(--line)}.metric:last-child{border-right:0}.metric strong{font-size:20px;line-height:1.2;display:block;color:var(--blue);letter-spacing:-.03em}.metric span{font-size:11px;color:var(--muted);display:block;margin-top:5px}
+.job{padding:0 0 14px;margin-bottom:13px;border-bottom:1px solid var(--line)}.job:last-child{border-bottom:0;padding-bottom:0;margin-bottom:0}.job-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline}.company{font-size:14px;font-weight:850}.date{font-size:11px;color:var(--muted);text-align:right;white-space:nowrap}.job-role{font-size:12px;color:var(--muted);margin:1px 0 6px}.job ul,.project ul{margin:5px 0 0;padding-left:18px}.job li{font-size:12px;padding:1px 0}
+.project-grid{display:grid;grid-template-columns:1fr;gap:11px}.project{border:1px solid var(--line);border-radius:12px;padding:14px 15px;background:#fff;display:grid;grid-template-columns:38px minmax(0,1fr) 132px;gap:12px;align-items:start;break-inside:avoid}.project.agent{border-color:#bdeee3;background:linear-gradient(105deg,#f7fffc,#fff 55%)}.project.platform{border-color:#cfe2ff;background:linear-gradient(105deg,#f8fbff,#fff 55%)}.project.research{border-color:#e2d5ff;background:linear-gradient(105deg,#fcfaff,#fff 55%)}.number{width:36px;height:40px;border-radius:10px;display:grid;place-items:center;background:var(--mint);color:#fff;font-size:18px;font-weight:850}.platform .number{background:var(--blue)}.research .number{background:var(--violet)}.project-title{font-size:14px;font-weight:850;line-height:1.4}.project-state{display:inline-block;margin-left:7px;font-size:10px;font-weight:750;padding:2px 7px;border-radius:20px;vertical-align:2px;background:var(--mint-soft);color:#07866f}.platform .project-state{background:var(--blue-soft);color:var(--blue)}.research .project-state{background:var(--amber-soft);color:var(--amber)}.project-desc{font-size:12px;color:#506680;margin:5px 0 7px}.project li{font-size:12px;padding:1px 0}.project-side{border-left:1px solid var(--line);padding-left:12px;font-size:11px;color:var(--muted);min-width:0}.project-side strong{display:block;color:var(--ink);font-size:11px;margin:0 0 4px}.project-side a{display:block;overflow-wrap:anywhere;margin-top:6px;font-weight:750}.project-side .state-line{display:flex;gap:6px;align-items:flex-start;margin-bottom:11px}.dot{width:7px;height:7px;border-radius:50%;background:var(--mint);margin-top:5px;flex:none}.platform .dot{background:var(--blue)}.research .dot{background:#e6a126}
+.project details{margin-top:6px}.project summary{cursor:pointer;color:var(--blue);font-size:11px;font-weight:750}.project details p{font-size:11px;color:var(--muted);margin:5px 0 0}.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini-panel{border:1px solid var(--line);border-radius:11px;padding:13px}.mini-panel h3{font-size:12px;margin:0 0 10px}.relation{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:center;text-align:center;font-size:11px}.relation .base{grid-column:1/-1;background:var(--blue);color:#fff;border-radius:9px;padding:8px}.relation .leaf{border-radius:9px;padding:8px;background:var(--mint-soft);border:1px solid #bdeee3;color:#167d6b}.relation .leaf:last-child{background:var(--violet-soft);border-color:#e2d5ff;color:#7145bf}.milestone{display:flex;gap:8px;margin:7px 0;font-size:11px;color:#506680}.milestone b{color:var(--blue);white-space:nowrap}.principle{font-size:11px;color:var(--muted);margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}footer{display:flex;justify-content:space-between;gap:10px;margin-top:20px;padding-top:10px;border-top:1px solid var(--line);color:#8a9bb0;font-size:10px}
+@media(max-width:820px){.resume{grid-template-columns:220px minmax(0,1fr)}.sidebar{padding:22px 17px}.main{padding:22px 19px}.intro{grid-template-columns:1fr}.intent{max-width:none}.project{grid-template-columns:34px minmax(0,1fr)}.project-side{grid-column:2;border-left:0;border-top:1px solid var(--line);padding:9px 0 0;display:flex;gap:14px;flex-wrap:wrap}.project-side .state-line{margin:0}.project-side a{display:inline-block;margin:0}}
+@media(max-width:620px){body{background:#fff}.resume{display:flex;flex-direction:column;width:100%;margin:0;border:0;box-shadow:none}.sidebar{border-right:0;border-bottom:1px solid var(--line);padding:20px 20px 16px}.identity{display:grid;grid-template-columns:60px minmax(0,1fr);column-gap:13px;align-items:center;padding-bottom:14px}.avatar{width:58px;height:58px;border-radius:18px;grid-row:1/4;margin:0;font-size:23px}.name{font-size:23px}.roleline{font-size:12px}.tagline{font-size:11px;margin-top:3px}.contact{grid-column:1/-1;grid-template-columns:1fr 1fr;gap:6px 12px}.side-section{margin-top:13px}.sidebar .side-section:not(#skills){display:none}.main{padding:19px 17px 22px}.actions{justify-content:flex-start}.nav{position:sticky;top:0;z-index:3;background:#fff}.section{margin-top:20px}.section-title{font-size:16px}.metrics{grid-template-columns:1fr 1fr}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}.metric strong{font-size:18px}.job-head{display:block}.date{text-align:left}.bottom-grid{grid-template-columns:1fr}.project{padding:12px;gap:9px}.project-title{font-size:13px}.project-desc,.project li,.job li{font-size:11px}.project-side{font-size:10px}.project-side strong{font-size:10px}footer{font-size:9px}}
+@media print{@page{size:A4;margin:8mm}body{background:#fff;font-size:9pt}.resume{width:auto;max-width:none;margin:0;box-shadow:none;border:0;grid-template-columns:205px minmax(0,1fr)}.sidebar{padding:16px 13px}.main{padding:16px 16px}.actions,.nav{display:none!important}.avatar{width:54px;height:54px}.name{font-size:21px}.section{margin-top:13px}.section-title{font-size:13pt}.intro{grid-template-columns:1fr 145px;gap:10px}.metrics{margin-top:8px}.metric{padding:6px 8px}.metric strong{font-size:14pt}.metric span{font-size:7pt}.job{padding-bottom:7px;margin-bottom:7px}.job li,.project li,.project-desc{font-size:8pt}.project-grid{gap:7px}.project{padding:8px;grid-template-columns:26px minmax(0,1fr) 100px;gap:7px}.number{width:26px;height:30px;font-size:13px}.project-title{font-size:9pt}.project-side{padding-left:7px;font-size:7pt}.project-state{font-size:7pt}.bottom-grid{gap:7px}.mini-panel{padding:8px}.side-section{margin-top:12px}.chip{font-size:7pt;padding:2px 5px}a{color:inherit}footer{margin-top:10px}}
 </style>
 </head>
 <body>
 <main class="resume">
-<header>
-  <div class="header-top">
-    <div>
-      <h1>王乐意</h1>
-      <div class="headline">AI 产品经理｜AI 应用落地 · 业务流程优化 · Agent 工作流</div>
+<aside class="sidebar" aria-label="个人信息">
+  <div class="identity">
+    <div class="avatar" aria-hidden="true">王</div>
+    <h1 class="name">王乐意</h1>
+    <div class="roleline">AI 产品经理</div>
+    <div class="tagline">从真实业务问题出发，推动 AI 产品落地与验证。</div>
+    <div class="contact">
+      <a href="tel:18123777416">☎ 181-2377-7416</a>
+      <a href="mailto:44727383@qq.com" id="emailLink">✉ 44727383@qq.com</a>
+      <span>⌖ 深圳</span>
+      <a href="https://github.com/theo-w" target="_blank" rel="noopener noreferrer">GitHub · theo-w ↗</a>
+      <a href="https://theo-w.github.io/myresume/" target="_blank" rel="noopener noreferrer">在线简历 ↗</a>
     </div>
-    <div class="status">求职意向：AI 产品经理</div>
   </div>
-  <p class="pitch">14 年客服运营与团队管理经验，近年聚焦 AI 产品实践。擅长从真实业务问题出发，完成需求拆解、流程设计、跨团队协作与效果验收；关注 AI 能否带来可衡量的业务价值。</p>
-  <div class="top-actions"><button class="action-btn" type="button" onclick="window.print()">打印 / 保存 PDF</button><button class="action-btn" type="button" id="copyEmail">复制邮箱</button></div>
-  <div class="contacts">
-    <span>深圳</span>
-    <a href="tel:18123777416">181-2377-7416</a>
-    <a href="mailto:44727383@qq.com">44727383@qq.com</a>
-    <span>本科：信息与计算科学</span>
-    <span>MBA 硕士</span>
-  </div>
-</header>
-<nav class="quick-nav" aria-label="简历快速导航"><a href="#summary">核心优势</a><a href="#experience">工作经历</a><a href="#projects">代表项目</a><a href="#skills">专业技能</a><a href="#certifications">专业证书</a><a href="#education">教育背景</a></nav>
-
-<section id="summary">
-  <h2>核心优势 <span>SUMMARY</span></h2>
-  <p class="summary">AI 智能客服从规则引擎向大模型升级的业务侧实践；游戏舆情产品从 0 到 1 的需求交付；持续构建数字分身与数字员工执行底座，并探索 AI 原生游戏玩法的可行性评估。能把复杂问题转化为产品流程、验收指标与可验证的迭代计划。</p>
-  <div class="highlights">
-    <div class="highlight"><strong>14 年</strong><span>客服运营与管理经验</span></div>
-    <div class="highlight"><strong>−50%</strong><span>AI 客服项目人力成本</span></div>
-    <div class="highlight"><strong>60% → 80%</strong><span>问题解决率提升</span></div>
-    <div class="highlight"><strong>50 人</strong><span>最大团队管理规模</span></div>
-  </div>
-</section>
-
-<div class="content-grid"><div class="main-column">
-<section id="experience">
-  <h2>工作经历 <span>EXPERIENCE</span></h2>
-  <article class="entry">
-    <div class="entry-head">
-      <div class="entry-title">深圳赛刻智能科技</div>
-      <div class="entry-meta">2026.08 – 2026.09 · 深圳</div>
+  <section class="side-section" id="skills">
+    <h2 class="side-title">核心能力</h2>
+    <div class="chips"><span class="chip">AI 产品设计</span><span class="chip">需求分析</span><span class="chip">流程优化</span><span class="chip">效果评估</span><span class="chip">跨团队交付</span><span class="chip">Agent 工作流</span><span class="chip">游戏舆情</span></div>
+  </section>
+  <section class="side-section">
+    <h2 class="side-title">工具与方法</h2>
+    <div class="chips"><span class="chip">TAPD</span><span class="chip">Power BI</span><span class="chip">SQL</span><span class="chip">Python</span><span class="chip">Excel</span><span class="chip">Xmind</span><span class="chip">Visio</span></div>
+    <p class="side-copy">规则处理明确、可确定的情况；LLM 辅助语义判断；保留原始数据以便追溯，低置信度结果需复核。</p>
+  </section>
+  <section class="side-section">
+    <h2 class="side-title">教育背景</h2>
+    <div class="edu"><strong>西班牙武康大学</strong><span>工商管理（MBA）· 硕士</span></div>
+    <div class="edu"><strong>郑州轻工业大学</strong><span>信息与计算科学 · 本科（统招）</span></div>
+  </section>
+  <section class="side-section">
+    <h2 class="side-title">专业证书</h2>
+    <div class="cert"><strong>IITC 工信人才专业知识测评证书</strong><small>Python 软件开发工程师 · 2026.04</small></div>
+    <div class="cert"><strong>IITC 工信人才岗位能力评价证书</strong><small>人工智能智能体应用工程师 — Vibe Coding 软件开发 · 2026.10</small></div>
+  </section>
+  <section class="side-section">
+    <h2 class="side-title">语言</h2><div class="side-copy">中文（母语） · 英语（工作交流）</div>
+  </section>
+</aside>
+<div class="main">
+  <div class="actions"><button class="btn" type="button" onclick="window.print()">打印 / 保存 PDF</button><button class="btn" type="button" id="copyEmail">复制邮箱</button></div>
+  <nav class="nav" aria-label="简历快速导航"><a href="#about">关于我</a><a href="#experience">工作经历</a><a href="#projects">代表项目</a><a href="#project-relation">项目关系</a></nav>
+  <section id="about">
+    <div class="intro">
+      <div><h2 class="section-title"><span class="symbol">◎</span>关于我</h2><p>拥有 14 年客服运营与团队管理经验，近年聚焦 AI 产品实践。具备 AI 智能客服业务侧升级、游戏舆情产品需求交付，以及数字分身 / 数字员工工作流的持续迭代经验。重视需求价值、流程可执行性和结果证据；对仍处于研究或 MVP 阶段的项目，明确区分设计方案、可运行能力与尚待验证的结论。</p></div>
+      <aside class="intent"><strong>求职方向</strong><ul><li>AI 产品经理</li><li>AI 应用与 Agent 工作流</li><li>游戏产品 / 游戏研究</li><li>海外市场与用户洞察</li></ul></aside>
     </div>
-    <div class="role">产品执行经理｜短期项目合作</div>
-    <ul>
-      <li>负责游戏舆情监测产品从 0 到 1 的需求侧交付，梳理预警、热点、竞品、口碑四大场景，完成 PRD、用户旅程、验收标准与 MVP 优先级。</li>
-      <li>设计多源数据采集与清洗方案，明确去重、格式归一、无效内容过滤、来源与原始记录留存；规划规则优先、LLM 辅助、低置信度复核的处理边界。</li>
-      <li>与算法、爬虫及前后端对齐需求和交付方案。项目完成需求侧设计与跨团队对齐，未将方案设计表述为产品已上线或已完成真实用户验证。</li>
-    </ul>
-  </article>
-  <article class="entry">
-    <div class="entry-head">
-      <div class="entry-title">深圳冰川网络</div>
-      <div class="entry-meta">2010.06 – 2024.08 · 深圳</div>
+    <div class="metrics">
+      <div class="metric"><strong>14 年</strong><span>客服运营与团队管理</span></div>
+      <div class="metric"><strong>−50%</strong><span>AI 客服项目人力成本</span></div>
+      <div class="metric"><strong>80%</strong><span>问题解决率（原 60%）</span></div>
+      <div class="metric"><strong>40%</strong><span>转人工率（原 70%）</span></div>
     </div>
-    <div class="role">智能客服总监 / 客服运营主管</div>
-    <ul>
-      <li>参与 AI 智能客服从规则引擎升级至大模型的业务侧产品工作，负责需求、流程设计、验收标准、指标跟踪与上线后优化；模型与底层技术由算法团队主导。</li>
-      <li>基于对话数据优化知识覆盖、常见问题引导和转人工门槛，问题解决率由 <strong>60% 提升至 80%</strong>，转人工率由 <strong>70% 降至 40%</strong>；人力成本较接入大模型前半年降低 <strong>50%</strong>，意图识别准确率由 <strong>82% 提升至 94%</strong>。</li>
-      <li>管理最大 50 人团队，人均日处理量提升 25%；主笔 21 项核心 SOP，新人上岗周期由 14 天缩短至 7 天。围绕效率、质量与成本，持续完善工单、知识库、Case 复盘和一线问题反馈闭环。</li>
-      <li>参与智能客服系统、工单自动化与 Power BI 看板从需求到上线，使用 TAPD 协同业务、研发与算法团队。</li>
-    </ul>
-  </article>
-</section>
-
-<section id="projects">
-  <h2>代表项目 <span>SELECTED PROJECTS</span></h2>
-  <div class="project-tools"><div class="project-filters" role="group" aria-label="筛选项目"><button type="button" class="filter-btn" data-filter="all" aria-pressed="true">全部项目</button><button type="button" class="filter-btn" data-filter="agent" aria-pressed="false">Agent / AI</button><button type="button" class="filter-btn" data-filter="game" aria-pressed="false">游戏产品</button></div><span class="print-hint">可筛选项目 · 展开查看细节</span></div>
-  <article class="project" data-category="agent">
-    <div><span class="project-title">数字分身与数字员工执行底座</span><span class="project-meta">个人项目 · MVP 迭代中</span></div>
-    <p>在线工作台：<a href="https://jarvis-loophole-playtest.onrender.com/" target="_blank" rel="noopener noreferrer">JARVIS 数字分身与员工工作台 ↗</a> · GitHub：<a href="https://github.com/theo-w/my-ai-worker" target="_blank" rel="noopener noreferrer">theo-w/my-ai-worker</a></p>
-    <ul>
-      <li>围绕目标、规划、执行、反馈、证据核验与验收构建 AI Agent 工作流：分身管理任务，员工反馈进度、阻塞与结果，关键结果需独立验证。</li>
-      <li>坚持单 Agent 优先，按任务收益动态组织能力；记录状态、心跳、输入输出与事件历史。本地演示流程可运行，生产稳定性和事实正确率仍需持续测试。</li>
-    </ul><details><summary>展开评估方法</summary><p>先验证玩家是否感知到 AI 带来的体验增量，再评估推理成本、延迟、内容安全与可重复性；以小规模原型测试决定是否继续投入。</p></details>
-  </article>
-  <article class="project" data-category="game">
-    <div><span class="project-title">AI 原生游戏玩法可行性研究</span><span class="project-meta">研究与工作流设计阶段</span></div>
-    <p>复用数字分身与数字员工底座，评估 AI 对核心玩法是否带来真实增量，而非只在游戏中加入大模型。</p>
-    <ul>
-      <li>评估路径：玩家痛点与竞品证据 → 玩法假设 → 技术、成本与安全风险 → 最小原型与 Playtest。</li>
-      <li>目前尚无真实玩家测试结论；后续以可玩原型、玩家反馈及明确的继续 / 停止阈值验证。</li>
-    </ul>
-  </article>
-  <article class="project" data-category="game">
-    <div><span class="project-title">游戏舆情竞品分析平台</span><span class="project-meta">个人项目 · 在线 Demo</span></div>
-    <p>Demo：<a href="https://game-analyzer-eq8i.onrender.com/">game-analyzer-eq8i.onrender.com</a></p>
-    <ul>
-      <li>独立搭建在线分析平台，输入游戏名或 AppID，基于 Steam、TapTap、Google Play 公开评论生成竞品口碑报告与 P0/P1 行动清单。</li>
-      <li>支持 CSV、飞书与 Jira 导出，尝试将玩家反馈整理为可供产品分析与跟进的行动项。</li>
-    </ul>
-  </article>
-</section>
-</div><aside class="side-column" aria-label="补充信息">
-
-<section id="skills">
-  <h2>专业技能 <span>SKILLS</span></h2>
-  <div class="skills">
-    <div class="skill-name">AI 产品</div><div class="skill-detail">大模型业务应用、AI 智能客服、意图识别、模型效果评估、人工反馈闭环、Agent 工作流</div>
-    <div class="skill-name">产品交付</div><div class="skill-detail">需求分析、PRD、用户旅程、流程图、版本规划、需求评审、验收标准、跨团队协作</div>
-    <div class="skill-name">业务运营</div><div class="skill-detail">客服运营、SLA、服务质量、成本优化、SOP、Case 库、知识库、团队管理</div>
-    <div class="skill-name">工具</div><div class="skill-detail">TAPD、Power BI、SQL、Python、Excel、Xmind、Visio</div>
+  </section>
+  <section class="section" id="experience">
+    <div class="section-head"><h2 class="section-title"><span class="symbol">▣</span>工作经历</h2><span class="eyebrow">EXPERIENCE</span></div>
+    <article class="job">
+      <div class="job-head"><div class="company">深圳赛刻智能科技</div><div class="date">2026.08 – 2026.09 · 深圳</div></div>
+      <div class="job-role">产品执行经理｜短期项目合作</div>
+      <ul>
+        <li>负责游戏舆情监测产品从 0 到 1 的需求侧交付，梳理预警、热点、竞品、口碑场景，完成 PRD、用户旅程、验收标准与 MVP 优先级。</li>
+        <li>设计多源数据采集与清洗方案，明确去重、格式归一、无效内容过滤、来源与原始记录留存；规划规则优先、LLM 辅助、低置信度复核的处理边界。</li>
+        <li>与算法、爬虫及前后端对齐需求和交付方案；如实区分需求设计与产品上线、真实用户验证状态。</li>
+      </ul>
+    </article>
+    <article class="job">
+      <div class="job-head"><div class="company">深圳冰川网络</div><div class="date">2010.06 – 2024.08 · 深圳</div></div>
+      <div class="job-role">智能客服总监 / 客服运营主管</div>
+      <ul>
+        <li>参与 AI 智能客服从规则引擎升级至大模型的业务侧产品工作，负责需求、流程设计、验收标准、指标跟踪与上线后优化；模型与底层技术由算法团队主导。</li>
+        <li>优化知识覆盖、常见问题引导与转人工门槛，问题解决率 <b>60% → 80%</b>、转人工率 <b>70% → 40%</b>、意图识别准确率 <b>82% → 94%</b>；人力成本较接入大模型前半年降低 <b>50%</b>。</li>
+        <li>管理最大 50 人团队，人均日处理量提升 25%；主笔 21 项核心 SOP，新人上岗周期由 14 天缩短至 7 天。</li>
+        <li>参与智能客服系统、工单自动化与 Power BI 看板从需求到上线，使用 TAPD 协同业务、研发与算法团队。</li>
+      </ul>
+    </article>
+  </section>
+  <section class="section" id="projects">
+    <div class="section-head"><h2 class="section-title"><span class="symbol">☆</span>代表项目</h2><span class="eyebrow">SELECTED WORK · 3 PROJECTS</span></div>
+    <div class="project-grid">
+      <article class="project agent">
+        <div class="number">01</div>
+        <div>
+          <div class="project-title">数字分身与数字员工执行底座 <span class="project-state">MVP 迭代中</span></div>
+          <p class="project-desc">个人项目 · 通用 AI 执行底座，探索分身管理任务、员工执行反馈与结果核验的闭环。</p>
+          <ul>
+            <li>围绕目标、规划、执行、反馈、证据核验与验收设计工作流；坚持单 Agent 优先，只有在收益明确时才拆分多角色任务。</li>
+            <li>将状态、心跳、输入输出与事件历史作为可靠性基础；本地演示流程可运行，生产稳定性和事实正确率仍需持续测试。</li>
+          </ul>
+          <details><summary>个人贡献与关键决策</summary><p>持续梳理分身与员工之间的任务分配、状态反馈和独立验证机制；目标是让系统可持续推进目标，而不是简单模拟固定岗位。当前仍按 MVP 迭代，不表述为已完成生产级自主运行。</p></details>
+        </div>
+        <aside class="project-side"><strong>项目状态</strong><div class="state-line"><span class="dot"></span><span>MVP 迭代中</span></div><strong>项目入口</strong><a href="https://jarvis-loophole-playtest.onrender.com/" target="_blank" rel="noopener noreferrer">在线工作台 ↗</a><a href="https://github.com/theo-w/my-ai-worker" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a></aside>
+      </article>
+      <article class="project platform">
+        <div class="number">02</div>
+        <div>
+          <div class="project-title">游戏舆情与竞品分析平台 <span class="project-state">在线 Demo</span></div>
+          <p class="project-desc">个人项目 · 将公开玩家评论整理为产品团队可跟进的竞品口碑分析与行动清单。</p>
+          <ul>
+            <li>支持输入游戏名或 AppID，基于 Steam、TapTap、Google Play 公开评论生成竞品口碑报告和 P0 / P1 行动清单。</li>
+            <li>支持 CSV、飞书与 Jira 导出，尝试打通从玩家反馈到产品跟进的工作链路。</li>
+          </ul>
+          <details><summary>个人贡献与关键决策</summary><p>将分析结果导向行动项，并保留数据清洗、来源追溯和规则 / LLM 分工的设计原则。在线 Demo 可供查看；简历不宣称未经证实的商业效果或规模化使用。</p></details>
+        </div>
+        <aside class="project-side"><strong>项目状态</strong><div class="state-line"><span class="dot"></span><span>在线 Demo</span></div><strong>项目入口</strong><a href="https://game-analyzer-eq8i.onrender.com/" target="_blank" rel="noopener noreferrer">在线 Demo ↗</a><a href="https://github.com/theo-w/game-analyzer" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a></aside>
+      </article>
+      <article class="project research">
+        <div class="number">03</div>
+        <div>
+          <div class="project-title">AI 原生游戏玩法可行性评估 <span class="project-state">研究与工作流设计</span></div>
+          <p class="project-desc">应用研究方向 · 评估 AI 是否能为核心玩法带来可感知、可持续且成本可控的体验增量。</p>
+          <ul>
+            <li>评估路径：玩家痛点与竞品证据 → 核心玩法假设 → 技术 / 成本 / 安全风险 → 最小原型与 Playtest。</li>
+            <li>将继续投入或停止的判断标准纳入评估；目前尚无真实玩家测试结论，不将假设表述为已验证成果。</li>
+          </ul>
+          <details><summary>完成标准与待验证证据</summary><p>最终需要多角度验证玩家需求、竞品差异、核心循环、实现成本、推理延迟与安全风险，并通过可玩原型及玩家反馈形成继续 / 停止建议。</p></details>
+        </div>
+        <aside class="project-side"><strong>项目状态</strong><div class="state-line"><span class="dot"></span><span>研究阶段</span></div><strong>验证重点</strong><span>用户需求 · 玩法增量 · 成本风险</span></aside>
+      </article>
+    </div>
+  </section>
+  <div class="bottom-grid section" id="project-relation">
+    <section class="mini-panel"><h3>项目关系 / 能力布局</h3><div class="relation"><div class="base">数字分身与数字员工<br>通用执行底座</div><div class="leaf">游戏舆情与竞品分析<br>独立产品交付</div><div class="leaf">AI 原生游戏可行性<br>应用研究方向</div></div><p class="side-copy">通用执行能力与具体产品案例分层呈现，避免重复描述同一套 Agent 能力。</p></section>
+    <section class="mini-panel"><h3>关键项目进展</h3><div class="milestone"><b>业务实践</b><span>AI 客服指标改善：解决率、转人工率、成本与意图识别准确率均有量化记录。</span></div><div class="milestone"><b>在线产品</b><span>游戏舆情竞品分析平台提供在线 Demo 入口。</span></div><div class="milestone"><b>持续迭代</b><span>数字分身 / 员工底座处于 MVP 迭代；游戏可行性评估处于研究与工作流设计阶段。</span></div></section>
   </div>
-</section>
-
-<section id="certifications">
-  <h2>专业证书 <span>CERTIFICATIONS</span></h2>
-  <div class="education-row"><div><strong>IITC 工信人才专业知识测评证书</strong><br><span>Python 软件开发工程师</span></div><span>2026.04</span></div>
-  <div class="education-row"><div><strong>IITC 工信人才岗位能力评价证书</strong><br><span>人工智能智能体应用工程师 — Vibe Coding 软件开发</span></div><span>2026.10</span></div>
-</section>
-
-<section id="education">
-  <h2>教育背景 <span>EDUCATION</span></h2>
-  <div class="education-row"><div><strong>西班牙武康大学</strong> · 工商管理（MBA）</div><span>硕士</span></div>
-  <div class="education-row"><div><strong>郑州轻工业大学</strong> · 信息与计算科学 · CET-4</div><span>本科 · 统招</span></div>
-</section><div class="side-callout">产品判断原则：从真实需求出发，用数据与证据验证 AI 价值；明确能力边界，不夸大未完成的验证。</div>
-</aside></div>
-
-<footer><span>王乐意 · AI 产品经理</span><span>更新于 2026.10 · 深圳</span></footer>
+  <div class="principle">产品判断原则：从真实需求出发，用数据与证据验证 AI 价值；明确能力边界，不夸大未完成的验证。</div>
+  <footer><span>王乐意 · AI 产品经理</span><span>更新于 2026.10 · 深圳</span></footer>
+</div>
 </main>
 <script>
-(function(){const buttons=document.querySelectorAll('[data-filter]');const projects=document.querySelectorAll('.project[data-category]');buttons.forEach(function(button){button.addEventListener('click',function(){const filter=button.dataset.filter;buttons.forEach(function(item){item.setAttribute('aria-pressed',String(item===button));});projects.forEach(function(project){project.hidden=filter!=='all'&&project.dataset.category!==filter;});});});const copyButton=document.getElementById('copyEmail');if(copyButton){copyButton.addEventListener('click',async function(){const email='44727383@qq.com';try{await navigator.clipboard.writeText(email);copyButton.textContent='邮箱已复制';}catch(e){window.location.href='mailto:'+email;copyButton.textContent='打开邮件应用';}});}})();
+(function(){const email='44727383@qq.com';const btn=document.getElementById('copyEmail');if(btn)btn.addEventListener('click',async function(){try{await navigator.clipboard.writeText(email);btn.textContent='邮箱已复制';}catch(e){window.location.href='mailto:'+email;btn.textContent='打开邮件应用';}});})();
 </script>
 </body>
 </html>
