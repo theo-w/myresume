@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231769df'/%3E%3Ctext x='32' y='45' font-size='32' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'%3E%E7%8E%8B%3C/text%3E%3C/svg%3E">
 <title>王乐意｜AI 产品经理</title>
-<meta name="description" content="王乐意，AI 产品经理。以 AI 智能客服业务成果为基础，持续构建数字分身与数字员工执行平台，并探索游戏舆情分析和 AI 原生游戏玩法可行性评估。">
+<meta name="description" content="王乐意，AI 产品经理。以 AI 智能客服业务成果为基础，持续构建数字分身与数字员工执行平台，探索游戏舆情与 AI 原生游戏可行性，并从零搭建可观察、可评测的 Mini Agent Harness 学习工程。">
 <style>
 :root{--ink:#17345f;--muted:#5c6d84;--line:#dce7f3;--blue:#1769df;--blue-soft:#edf5ff;--mint:#18a88b;--mint-soft:#eafaf5;--violet:#8655dc;--violet-soft:#f5efff;--amber:#c98312;--amber-soft:#fff6e6;--paper:#fff;--sidebar:#f2f7fd}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:18px}body{margin:0;background:#eaf0f7;color:var(--ink);font:14px/1.62 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
@@ -121,7 +122,7 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.resu
  .project details{display:none}.bottom-grid{gap:7px}.mini-panel{padding:8px}
  a{color:inherit}
 }
-</style>
+.project.harness{border-color:#d5e8f2;background:linear-gradient(100deg,#f4fbfe 0%,#fff 70%)}.project.harness:before{background:#0f8ca3}.thumb-harness span{background:#0f8ca3}.project.harness>.number{background:linear-gradient(145deg,#159bb0,#0a6078)}.project.harness .project-side a:first-of-type{color:#08768d}.project.harness .dot{background:#0f8ca3}.project.harness .project-state{background:#e9f8fc;color:#08768d}</style>
 </head>
 <body>
 <main class="resume">
@@ -136,12 +137,12 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.resu
       <a href="mailto:44727383@qq.com" id="emailLink">✉ 44727383@qq.com</a>
       <span>⌖ 深圳</span>
       <a href="https://github.com/theo-w" target="_blank" rel="noopener noreferrer">GitHub · theo-w ↗</a>
-      <a href="https://theo-w.github.io/myresume/" target="_blank" rel="noopener noreferrer">在线简历 ↗</a>
+      <a href="https://theo-resume.onrender.com/" target="_blank" rel="noopener noreferrer">在线简历 · Render ↗</a>
     </div>
   </div>
   <section class="side-section" id="skills">
     <h2 class="side-title">核心能力</h2>
-    <div class="chips"><span class="chip">AI 产品设计</span><span class="chip">需求分析</span><span class="chip">流程优化</span><span class="chip">效果评估</span><span class="chip">跨团队交付</span><span class="chip">Agent 工作流</span><span class="chip">游戏舆情</span></div>
+    <div class="chips"><span class="chip">AI 产品设计</span><span class="chip">需求分析</span><span class="chip">流程优化</span><span class="chip">效果评估</span><span class="chip">跨团队交付</span><span class="chip">Agent 工作流</span><span class="chip">Agent Harness</span><span class="chip">SDD</span><span class="chip">游戏舆情</span></div>
   </section>
   <section class="side-section">
     <h2 class="side-title">工具与方法</h2>
@@ -164,10 +165,10 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.resu
 </aside>
 <div class="main">
   <div class="actions"><button class="btn" type="button" onclick="window.print()">打印 / 保存 PDF</button><button class="btn" type="button" id="copyEmail">复制邮箱</button></div>
-  <nav class="nav" aria-label="简历快速导航"><a href="#about">关于我</a><a href="#experience">工作经历</a><a href="#projects">代表项目</a><a class="nav-project nav-agent" href="#project-agent">01 数字分身 / 员工</a><a class="nav-project nav-platform" href="#project-platform">02 游戏舆情平台</a><a class="nav-project nav-research" href="#project-research">03 AI 游戏可行性</a><a href="#project-relation">项目关系</a></nav>
+  <nav class="nav" aria-label="简历快速导航"><a href="#about">关于我</a><a href="#experience">工作经历</a><a href="#projects">代表项目</a><a class="nav-project nav-agent" href="#project-agent">01 数字分身 / 员工</a><a class="nav-project nav-platform" href="#project-platform">02 游戏舆情平台</a><a class="nav-project nav-research" href="#project-research">03 AI 游戏可行性</a><a class="nav-project nav-harness" href="#project-harness">04 Agent 工程实验</a><a href="#project-relation">项目关系</a></nav>
   <section id="about">
     <div class="intro">
-      <div><h2 class="section-title"><span class="symbol">◎</span>关于我</h2><p>拥有 14 年客服运营与团队管理经验，近年聚焦 AI 产品实践。具备 AI 智能客服业务侧升级、游戏舆情产品需求交付，以及数字分身 / 数字员工工作流的持续迭代经验。重视需求价值、流程可执行性和结果证据；对仍处于研究或 MVP 阶段的项目，明确区分设计方案、可运行能力与尚待验证的结论。</p></div>
+      <div><h2 class="section-title"><span class="symbol">◎</span>关于我</h2><p>拥有 14 年客服运营与团队管理经验，近年聚焦 AI 产品实践。具备 AI 智能客服业务侧升级、游戏舆情产品需求交付，以及数字分身 / 数字员工工作流的持续迭代经验；同时从零构建 Mini Agent Harness，用 SDD 和确定性测试理解工具、循环、护栏、Trace 与评测。重视需求价值、流程可执行性和结果证据；对仍处于研究或 MVP 阶段的项目，明确区分设计方案、可运行能力与尚待验证的结论。</p></div>
       <aside class="intent"><strong>求职方向</strong><ul><li>AI 产品经理</li><li>AI 应用与 Agent 工作流</li><li>游戏产品 / 游戏研究</li><li>海外市场与用户洞察</li></ul></aside>
     </div>
     <div class="metrics">
@@ -200,7 +201,7 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.resu
     </article>
   </section>
   <section class="section" id="projects">
-    <div class="section-head"><h2 class="section-title"><span class="symbol">☆</span>代表项目</h2><span class="eyebrow">三个方向 · 共同构成 AI 产品能力体系</span></div>
+    <div class="section-head"><h2 class="section-title"><span class="symbol">☆</span>代表项目</h2><span class="eyebrow">三个产品方向 · 一个工程学习实验</span></div>
     <div class="project-grid">
       <article class="project agent" id="project-agent">
         <div class="number project-thumb thumb-agent" aria-label="数字分身与数字员工工作台示意图"><span>01</span><svg viewBox="0 0 360 220" role="img" aria-label="分身与员工任务流程界面"><rect width="360" height="220" rx="10" fill="#102b4b"/><rect width="360" height="25" rx="10" fill="#173d62"/><circle cx="14" cy="12" r="3" fill="#ff7c72"/><circle cx="25" cy="12" r="3" fill="#f8c45b"/><circle cx="36" cy="12" r="3" fill="#5ad5a5"/><rect x="12" y="37" width="70" height="171" rx="5" fill="#0b2039"/><g fill="#4e789c"><rect x="22" y="49" width="46" height="5" rx="2"/><rect x="22" y="66" width="38" height="4" rx="2"/><rect x="22" y="80" width="43" height="4" rx="2"/><rect x="22" y="94" width="35" height="4" rx="2"/><rect x="22" y="108" width="40" height="4" rx="2"/></g><circle cx="218" cy="72" r="23" fill="#1c6a9b" stroke="#66d9ff" stroke-width="2"/><circle cx="218" cy="66" r="8" fill="#a8efff"/><path d="M203 83 Q218 67 233 83 L237 91 L199 91Z" fill="#75bfe8"/><g stroke="#56d9cb" stroke-width="2" fill="none"><path d="M218 96 V117 H140 V134"/><path d="M218 117 H290 V134"/><path d="M140 157 V174 H218 V184"/><path d="M290 157 V174 H218"/></g><g fill="#174c70" stroke="#4bcab9"><rect x="98" y="134" width="84" height="24" rx="5"/><rect x="248" y="134" width="84" height="24" rx="5"/><rect x="177" y="183" width="82" height="24" rx="5"/></g><g fill="#d5f7ff" font-size="10" font-family="sans-serif" text-anchor="middle"><text x="140" y="149">任务规划</text><text x="290" y="149">员工执行</text><text x="218" y="198">结果核验</text></g></svg></div>
@@ -241,14 +242,28 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.resu
         </div>
         <aside class="project-side"><strong>项目状态</strong><div class="state-line"><span class="dot"></span><span>研究与工作流迭代</span></div><strong>验证重点</strong><span>用户需求 · 玩法增量 · 成本风险</span><a href="https://jarvis-loophole-playtest.onrender.com/" target="_blank" rel="noopener noreferrer">在线评估工作台 ↗</a><a href="https://github.com/theo-w/my-ai-worker" target="_blank" rel="noopener noreferrer">执行底座源码 ↗</a></aside>
       </article>
+      <article class="project harness" id="project-harness">
+        <div class="number project-thumb thumb-harness" aria-label="Mini Agent Harness 零件与循环示意图"><span>04</span><svg viewBox="0 0 360 220" role="img" aria-label="可拆装 Agent Harness：模型、工具、循环、上下文、护栏、Trace、评测和 Skill"><rect width="360" height="220" rx="10" fill="#102b4b"/><rect width="360" height="25" rx="10" fill="#173d62"/><circle cx="14" cy="12" r="3" fill="#ff7c72"/><circle cx="25" cy="12" r="3" fill="#f8c45b"/><circle cx="36" cy="12" r="3" fill="#5ad5a5"/><text x="50" y="16" fill="#b9d6ef" font-size="9" font-family="monospace" letter-spacing="1">MINI AGENT HARNESS</text><g stroke="#244764" stroke-width="1" opacity=".65"><path d="M20 42H340M20 78H340M20 114H340M20 150H340M20 186H340"/><path d="M42 34V206M104 34V206M166 34V206M228 34V206M290 34V206"/></g><g fill="#c7e6f7" font-size="8" font-family="monospace"><text x="21" y="39">MODEL</text><text x="149" y="39">TOOL</text><text x="277" y="39">LOOP</text></g><g fill="#174c70" stroke="#4bcab9" stroke-width="1.4"><rect x="20" y="44" width="96" height="28" rx="6"/><rect x="130" y="44" width="96" height="28" rx="6"/><rect x="240" y="44" width="100" height="28" rx="6"/></g><g fill="#e7fbff" font-size="10" font-weight="700" text-anchor="middle"><text x="68" y="62">MODEL</text><text x="178" y="62">TOOL</text><text x="290" y="62">LOOP</text></g><g fill="#163e5f" stroke="#4e8fbd" stroke-width="1.2"><rect x="20" y="82" width="100" height="25" rx="5"/><rect x="130" y="82" width="100" height="25" rx="5"/><rect x="240" y="82" width="100" height="25" rx="5"/></g><g fill="#bce9ff" font-size="8.5" font-family="monospace" text-anchor="middle"><text x="70" y="98">CONTEXT</text><text x="180" y="98">GUARDRAIL</text><text x="290" y="98">TRACE</text></g><g fill="#194b5a" stroke="#46c6bc" stroke-width="1.2"><rect x="54" y="120" width="72" height="25" rx="5"/><rect x="144" y="120" width="72" height="25" rx="5"/><rect x="234" y="120" width="72" height="25" rx="5"/></g><g fill="#c9fff7" font-size="8.5" font-family="monospace" text-anchor="middle"><text x="90" y="136">EVAL</text><text x="180" y="136">SKILL</text><text x="270" y="136">MEMORY</text></g><g fill="none" stroke="#64d6e3" stroke-width="2"><path d="M116 58H130"/><path d="M226 58H240"/><path d="M340 64V106H180V120"/><path d="M180 145V171H90V156"/><path d="M180 171V145"/><path d="M340 106H290"/></g><g fill="#64d6e3"><path d="M130 55l6 3-6 3Z"/><path d="M240 55l6 3-6 3Z"/><path d="M180 119l4-6h-8Z"/></g><g fill="#8fb5d1" font-size="9" font-family="monospace"><text x="20" y="188">8 PARTS</text><text x="129" y="188">256 ASSEMBLIES</text><text x="270" y="188">DETERMINISTIC</text></g><g fill="#5ad5a5"><circle cx="78" cy="184" r="2.5"/><circle cx="246" cy="184" r="2.5"/><circle cx="338" cy="184" r="2.5"/></g><rect x="20" y="198" width="320" height="7" rx="3.5" fill="#173d62"/><rect x="20" y="198" width="228" height="7" rx="3.5" fill="#46c6bc"/></svg></div>
+        <div>
+          <div class="project-title">Mini Agent Harness · Agent 工程学习实验室 <span class="project-state">公开教学 Demo</span></div>
+          <p class="project-desc">个人学习项目 · 从最小 ReAct 循环出发，用失败驱动的方式理解每个 Agent 组件为什么出现。</p>
+          <ul>
+            <li>按“模型 → Tool → Loop → 上下文 → 护栏 → Trace / Eval → Skill”逐层迭代，并用 SDD 记录 M1.2–M1.10 的规格、计划、任务、实现与验证证据。</li>
+            <li>公开版提供 7 章从零建造课程与 8 零件、256 种组合的乐高实验，用任务完成、安全、证据三张结论卡对比“有 / 无组件”的差异。</li>
+            <li>95 项确定性测试覆盖 256 组合、A/B 归因与无执行通道；当前是教学模拟，不调用模型 API、不执行真实工具。</li>
+          </ul>
+          <details><summary>能力边界与验证说明</summary><p>这个项目用于学习 Agent 工程和做产品机制验证，不定位为生产级 Agent 平台。公开 Demo 的耗时、Token 与结论只解释确定性模拟中的机制关系，不代表真实模型或工具性能；真实 Trace 深挖视图只在本地数据就绪时开放。</p></details>
+        </div>
+        <aside class="project-side"><strong>项目状态</strong><div class="state-line"><span class="dot"></span><span>公开学习实验</span></div><strong>已验证</strong><span>95 项确定性测试 · 桌面 / 移动端验收</span><a href="https://mini-agent-harness.onrender.com/" target="_blank" rel="noopener noreferrer">在线体验 ↗</a><a href="https://github.com/theo-w/mini-claudecode" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a></aside>
+      </article>
     </div>
   </section>
   <div class="bottom-grid section" id="project-relation">
-    <section class="mini-panel"><h3>项目关系 / 能力布局</h3><div class="relation relation-diagram"><svg viewBox="0 0 520 220" role="img" aria-label="项目关系图：数字分身与数字员工是通用执行底座，游戏舆情平台是独立产品交付，AI 原生游戏可行性是应用研究方向" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow-rel" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0 0 L6 3.5 L0 7Z" fill="#7195c4"/></marker></defs><path d="M260 67 V89 H128 V120 M260 89 H392 V120" fill="none" stroke="#7195c4" stroke-width="2" marker-end="url(#arrow-rel)"/><path d="M180 165 H340" fill="none" stroke="#7195c4" stroke-width="2" marker-start="url(#arrow-rel)" marker-end="url(#arrow-rel)"/><rect x="142" y="10" width="236" height="58" rx="14" fill="#1769df"/><text x="260" y="34" font-size="16" font-weight="700" text-anchor="middle" fill="#fff">数字分身与数字员工</text><text x="260" y="53" font-size="12" text-anchor="middle" fill="#e4efff">通用执行底座</text><rect x="8" y="120" width="224" height="70" rx="13" fill="#e5f8f2" stroke="#69cbb7" stroke-width="1.5"/><text x="120" y="149" font-size="15" font-weight="700" text-anchor="middle" fill="#137866">游戏舆情与竞品分析</text><text x="120" y="170" font-size="12" text-anchor="middle" fill="#137866">独立产品交付</text><rect x="288" y="120" width="224" height="70" rx="13" fill="#f2eaff" stroke="#b89aef" stroke-width="1.5"/><text x="400" y="149" font-size="15" font-weight="700" text-anchor="middle" fill="#7045b9">AI 原生游戏可行性</text><text x="400" y="170" font-size="12" text-anchor="middle" fill="#7045b9">应用研究方向</text></svg></div><p class="side-copy">通用执行能力与具体产品案例分层呈现，避免重复描述同一套 Agent 能力。</p></section>
-    <section class="mini-panel"><h3>关键项目进展</h3><div class="milestone"><b>业务实践</b><span>AI 客服指标改善：解决率、转人工率、成本与意图识别准确率均有量化记录。</span></div><div class="milestone"><b>在线产品</b><span>游戏舆情竞品分析平台提供在线 Demo 入口。</span></div><div class="milestone"><b>线上迭代</b><span>数字分身 MVP 已部署来源角色与证据用途分类改动；完整启动、真实研究、失败恢复和端到端验收仍待复测。</span></div></section>
+    <section class="mini-panel"><h3>项目关系 / 能力布局</h3><div class="relation relation-diagram"><svg viewBox="0 0 520 220" role="img" aria-label="项目关系图：数字分身与数字员工是通用执行底座，游戏舆情平台是独立产品交付，AI 原生游戏可行性是应用研究方向" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow-rel" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0 0 L6 3.5 L0 7Z" fill="#7195c4"/></marker></defs><path d="M260 67 V89 H128 V120 M260 89 H392 V120" fill="none" stroke="#7195c4" stroke-width="2" marker-end="url(#arrow-rel)"/><path d="M180 165 H340" fill="none" stroke="#7195c4" stroke-width="2" marker-start="url(#arrow-rel)" marker-end="url(#arrow-rel)"/><rect x="142" y="10" width="236" height="58" rx="14" fill="#1769df"/><text x="260" y="34" font-size="16" font-weight="700" text-anchor="middle" fill="#fff">数字分身与数字员工</text><text x="260" y="53" font-size="12" text-anchor="middle" fill="#e4efff">通用执行底座</text><rect x="8" y="120" width="224" height="70" rx="13" fill="#e5f8f2" stroke="#69cbb7" stroke-width="1.5"/><text x="120" y="149" font-size="15" font-weight="700" text-anchor="middle" fill="#137866">游戏舆情与竞品分析</text><text x="120" y="170" font-size="12" text-anchor="middle" fill="#137866">独立产品交付</text><rect x="288" y="120" width="224" height="70" rx="13" fill="#f2eaff" stroke="#b89aef" stroke-width="1.5"/><text x="400" y="149" font-size="15" font-weight="700" text-anchor="middle" fill="#7045b9">AI 原生游戏可行性</text><text x="400" y="170" font-size="12" text-anchor="middle" fill="#7045b9">应用研究方向</text></svg></div><p class="side-copy">通用执行能力与具体产品案例分层呈现；Mini Agent Harness 作为独立的工程理解实验，不作为上线业务成果。</p></section>
+    <section class="mini-panel"><h3>关键项目进展</h3><div class="milestone"><b>业务实践</b><span>AI 客服指标改善：解决率、转人工率、成本与意图识别准确率均有量化记录。</span></div><div class="milestone"><b>在线产品</b><span>游戏舆情竞品分析平台提供在线 Demo 入口。</span></div><div class="milestone"><b>线上迭代</b><span>数字分身 MVP 已部署来源角色与证据用途分类改动；完整启动、真实研究、失败恢复和端到端验收仍待复测。</span></div><div class="milestone"><b>工程学习</b><span>Mini Agent Harness 已通过 95 项确定性测试并公开教学 Demo；不调用真实模型 API，不执行工具。</span></div></section>
   </div>
   <div class="principle">产品判断原则：从真实需求出发，用数据与证据验证 AI 价值；明确能力边界，不夸大未完成的验证。</div>
-  <footer><span>王乐意 · AI 产品经理</span><span>更新于 2026.10.26 · 深圳</span></footer>
+  <footer><span>王乐意 · AI 产品经理</span><span>更新于 2026.10.29 · 深圳</span></footer>
 </div>
 </main>
 <script>
