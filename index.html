@@ -1,273 +1,663 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231769df'/%3E%3Ctext x='32' y='45' font-size='32' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'%3E%E7%8E%8B%3C/text%3E%3C/svg%3E">
-<title>王乐意｜AI 产品经理</title>
-<meta name="description" content="王乐意，AI 产品经理。以 AI 智能客服业务成果为基础，持续构建数字分身与数字员工执行平台，探索游戏舆情与 AI 原生游戏可行性，并从零搭建可观察、可评测的 Mini Agent Harness 学习工程。">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>王乐意 · 智能客服产品经理 · 大模型 AI 应用 · 深圳</title>
+<meta name="description" content="王乐意，智能客服产品经理。14 年客服运营负责人，主导大模型智能客服从规则引擎到 LLM 的升级，问题解决率 60%→80%、人力成本降 50%、意图识别 82%→94%。具备舆情产品从 0 到 1 交付经验。求职意向：智能客服产品经理。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E4FA3'/%3E%3Ctext x='32' y='44' font-size='34' font-family='Songti SC,serif' font-weight='700' fill='white' text-anchor='middle'%3E乐%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "王乐意",
+  "jobTitle": "智能客服产品经理",
+  "email": "mailto:44727383@qq.com",
+  "telephone": "+86 18123777416",
+  "address": { "@type": "PostalAddress", "addressLocality": "深圳" },
+  "knowsAbout": ["智能客服", "大模型产品", "Agent 产品", "舆情监控", "游戏舆情", "PRD", "模型效果评估", "Badcase 分析", "AI 产品从 0 到 1"]
+}
+</script>
 <style>
-:root{--ink:#17345f;--muted:#5c6d84;--line:#dce7f3;--blue:#1769df;--blue-soft:#edf5ff;--mint:#18a88b;--mint-soft:#eafaf5;--violet:#8655dc;--violet-soft:#f5efff;--amber:#c98312;--amber-soft:#fff6e6;--paper:#fff;--sidebar:#f2f7fd}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:18px}body{margin:0;background:#eaf0f7;color:var(--ink);font:14px/1.62 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
-a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.resume{width:min(100% - 32px,1240px);margin:24px auto;background:var(--paper);box-shadow:0 12px 40px #17345f12;border:1px solid #e3ebf4;display:grid;grid-template-columns:270px minmax(0,1fr);min-height:100vh}
-.sidebar{background:linear-gradient(180deg,var(--sidebar),#fff 88%);padding:28px 24px;border-right:1px solid var(--line)}.main{padding:28px 30px 24px;min-width:0}.identity{padding-bottom:20px;border-bottom:1px solid var(--line)}.avatar{width:76px;height:76px;border-radius:24px;background:linear-gradient(135deg,#c9e2ff,#e9f5ff);display:grid;place-items:center;color:var(--blue);font-size:30px;font-weight:850;margin-bottom:14px}.name{font-size:27px;line-height:1.2;margin:0 0 7px;letter-spacing:.01em}.roleline{font-weight:750;color:var(--blue);font-size:14px}.tagline{font-size:13px;color:var(--muted);margin-top:10px}.contact{display:grid;gap:8px;margin-top:15px;font-size:12px;overflow-wrap:anywhere}.side-section{margin-top:20px}.side-title{font-size:14px;font-weight:850;margin:0 0 9px;display:flex;gap:8px;align-items:center}.side-title:before{content:"";width:4px;height:15px;background:var(--blue);border-radius:4px}.chips{display:flex;flex-wrap:wrap;gap:6px}.chip{font-size:11px;color:#355b8b;border:1px solid #d7e6f8;background:#fff;border-radius:20px;padding:4px 8px}.side-copy{font-size:12px;color:var(--muted)}.edu{margin:9px 0}.edu strong{display:block;font-size:12px}.edu span{display:block;color:var(--muted);font-size:11px}.cert{font-size:12px;margin:8px 0}.cert small{display:block;color:var(--muted)}
-.actions{display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap;margin-bottom:8px}.btn{border:1px solid var(--line);border-radius:8px;padding:7px 11px;background:#fff;color:var(--ink);font:inherit;font-size:12px;cursor:pointer}.btn:hover{border-color:var(--blue);color:var(--blue)}.nav{display:flex;gap:7px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding:0 0 13px;margin-bottom:15px}.nav a{font-size:12px;color:var(--muted);padding:5px 9px;border-radius:7px}.nav a:hover{background:var(--blue-soft);text-decoration:none;color:var(--blue)}
-.intro{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:18px;align-items:start}.section-title{font-size:18px;margin:0 0 9px;font-weight:850;display:flex;gap:9px;align-items:center}.section-title .symbol{color:var(--blue);font-size:20px}.eyebrow{font-size:10px;letter-spacing:.12em;color:#91a0b4;font-weight:750}.intro p{margin:0;color:#425873;font-size:13px}.intent{background:var(--blue-soft);border:1px solid #dceaff;border-radius:12px;padding:13px;font-size:12px}.intent strong{display:block;margin-bottom:5px}.intent ul{margin:0;padding-left:17px}.section{margin-top:22px}.section-head{display:flex;align-items:baseline;gap:10px;margin-bottom:10px}.section-head .section-title{margin:0}.section-head .eyebrow{white-space:nowrap}
-.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-top:14px}.metric{padding:11px 12px;background:linear-gradient(180deg,#fff,#f7faff);border-right:1px solid var(--line)}.metric:last-child{border-right:0}.metric strong{font-size:20px;line-height:1.2;display:block;color:var(--blue);letter-spacing:-.03em}.metric span{font-size:11px;color:var(--muted);display:block;margin-top:5px}
-.job{padding:0 0 14px;margin-bottom:13px;border-bottom:1px solid var(--line)}.job:last-child{border-bottom:0;padding-bottom:0;margin-bottom:0}.job-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline}.company{font-size:14px;font-weight:850}.date{font-size:11px;color:var(--muted);text-align:right;white-space:nowrap}.job-role{font-size:12px;color:var(--muted);margin:1px 0 6px}.job ul,.project ul{margin:5px 0 0;padding-left:18px}.job li{font-size:12px;padding:1px 0}
-.project-grid{display:grid;grid-template-columns:1fr;gap:11px}.project{border:1px solid var(--line);border-radius:12px;padding:14px 15px;background:#fff;display:grid;grid-template-columns:38px minmax(0,1fr) 132px;gap:12px;align-items:start;break-inside:avoid}.project.agent{border-color:#bdeee3;background:linear-gradient(105deg,#f7fffc,#fff 55%)}.project.platform{border-color:#cfe2ff;background:linear-gradient(105deg,#f8fbff,#fff 55%)}.project.research{border-color:#e2d5ff;background:linear-gradient(105deg,#fcfaff,#fff 55%)}.number{width:36px;height:40px;border-radius:10px;display:grid;place-items:center;background:var(--mint);color:#fff;font-size:18px;font-weight:850}.platform .number{background:var(--blue)}.research .number{background:var(--violet)}.project-title{font-size:14px;font-weight:850;line-height:1.4}.project-state{display:inline-block;margin-left:7px;font-size:10px;font-weight:750;padding:2px 7px;border-radius:20px;vertical-align:2px;background:var(--mint-soft);color:#07866f}.platform .project-state{background:var(--blue-soft);color:var(--blue)}.research .project-state{background:var(--amber-soft);color:var(--amber)}.project-desc{font-size:12px;color:#506680;margin:5px 0 7px}.project li{font-size:12px;padding:1px 0}.project-side{border-left:1px solid var(--line);padding-left:12px;font-size:11px;color:var(--muted);min-width:0}.project-side strong{display:block;color:var(--ink);font-size:11px;margin:0 0 4px}.project-side a{display:block;overflow-wrap:anywhere;margin-top:6px;font-weight:750}.project-side .state-line{display:flex;gap:6px;align-items:flex-start;margin-bottom:11px}.dot{width:7px;height:7px;border-radius:50%;background:var(--mint);margin-top:5px;flex:none}.platform .dot{background:var(--blue)}.research .dot{background:#e6a126}
-.project details{margin-top:6px}.project summary{cursor:pointer;color:var(--blue);font-size:11px;font-weight:750}.project details p{font-size:11px;color:var(--muted);margin:5px 0 0}.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini-panel{border:1px solid var(--line);border-radius:11px;padding:13px}.mini-panel h3{font-size:12px;margin:0 0 10px}.relation{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:center;text-align:center;font-size:11px}.relation .base{grid-column:1/-1;background:var(--blue);color:#fff;border-radius:9px;padding:8px}.relation .leaf{border-radius:9px;padding:8px;background:var(--mint-soft);border:1px solid #bdeee3;color:#167d6b}.relation .leaf:last-child{background:var(--violet-soft);border-color:#e2d5ff;color:#7145bf}.milestone{display:flex;gap:8px;margin:7px 0;font-size:11px;color:#506680}.milestone b{color:var(--blue);white-space:nowrap}.principle{font-size:11px;color:var(--muted);margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}footer{display:flex;justify-content:space-between;gap:10px;margin-top:20px;padding-top:10px;border-top:1px solid var(--line);color:#8a9bb0;font-size:10px}
-@media(max-width:820px){.resume{grid-template-columns:220px minmax(0,1fr)}.sidebar{padding:22px 17px}.main{padding:22px 19px}.intro{grid-template-columns:1fr}.intent{max-width:none}.project{grid-template-columns:34px minmax(0,1fr)}.project-side{grid-column:2;border-left:0;border-top:1px solid var(--line);padding:9px 0 0;display:flex;gap:14px;flex-wrap:wrap}.project-side .state-line{margin:0}.project-side a{display:inline-block;margin:0}}
-@media(max-width:620px){body{background:#fff}.resume{display:flex;flex-direction:column;width:100%;margin:0;border:0;box-shadow:none}.sidebar{border-right:0;border-bottom:1px solid var(--line);padding:20px 20px 16px}.identity{display:grid;grid-template-columns:60px minmax(0,1fr);column-gap:13px;align-items:center;padding-bottom:14px}.avatar{width:58px;height:58px;border-radius:18px;grid-row:1/4;margin:0;font-size:23px}.name{font-size:23px}.roleline{font-size:12px}.tagline{font-size:11px;margin-top:3px}.contact{grid-column:1/-1;grid-template-columns:1fr 1fr;gap:6px 12px}.side-section{margin-top:13px}.sidebar .side-section:not(#skills){display:none}.main{padding:19px 17px 22px}.actions{justify-content:flex-start}.nav{position:sticky;top:0;z-index:3;background:#fff}.section{margin-top:20px}.section-title{font-size:16px}.metrics{grid-template-columns:1fr 1fr}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}.metric strong{font-size:18px}.job-head{display:block}.date{text-align:left}.bottom-grid{grid-template-columns:1fr}.project{padding:12px;gap:9px}.project-title{font-size:13px}.project-desc,.project li,.job li{font-size:11px}.project-side{font-size:10px}.project-side strong{font-size:10px}footer{font-size:9px}}
-@media print{@page{size:A4;margin:8mm}body{background:#fff;font-size:9pt}.resume{width:auto;max-width:none;margin:0;box-shadow:none;border:0;grid-template-columns:205px minmax(0,1fr)}.sidebar{padding:16px 13px}.main{padding:16px 16px}.actions,.nav{display:none!important}.avatar{width:54px;height:54px}.name{font-size:21px}.section{margin-top:13px}.section-title{font-size:13pt}.intro{grid-template-columns:1fr 145px;gap:10px}.metrics{margin-top:8px}.metric{padding:6px 8px}.metric strong{font-size:14pt}.metric span{font-size:7pt}.job{padding-bottom:7px;margin-bottom:7px}.job li,.project li,.project-desc{font-size:8pt}.project-grid{gap:7px}.project{padding:8px;grid-template-columns:26px minmax(0,1fr) 100px;gap:7px}.number{width:26px;height:30px;font-size:13px}.project-title{font-size:9pt}.project-side{padding-left:7px;font-size:7pt}.project-state{font-size:7pt}.bottom-grid{gap:7px}.mini-panel{padding:8px}.side-section{margin-top:12px}.chip{font-size:7pt;padding:2px 5px}a{color:inherit}footer{margin-top:10px}}
+  :root {
+    --bg: #F1F3F6;
+    --surface: #FFFFFF;
+    --ink: #182635;
+    --muted: #5A6B7C;
+    --faint: #8C9AA8;
+    --line: #D4DCE4;
+    --navy: #1E4FA3;
+    --navy-deep: #163A78;
+    --navy-wash: #E7EDF7;
+    --red: #C2402A;
+    --red-wash: #F9ECE8;
+    --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "HarmonyOS Sans SC", "MiSans", "Microsoft YaHei", "Segoe UI", sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+  body {
+    font-family: var(--sans); background: var(--bg); color: var(--ink);
+    font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
+  ::selection { background: var(--navy-wash); }
 
-/* Reference-aligned desktop resume: sidebar + wide horizontal project cards */
-.project-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;align-items:stretch}
-.project{display:grid;grid-template-columns:190px minmax(0,1fr) 178px;gap:16px;align-items:stretch;padding:12px 14px 12px 10px;min-width:0;position:relative;overflow:hidden;box-shadow:none;transition:border-color .18s ease,box-shadow .18s ease}
-.project:hover{transform:none;box-shadow:0 5px 16px rgba(28,65,112,.07)}
-.project:before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:var(--mint)}
-.project.platform:before{background:var(--blue)}.project.research:before{background:var(--violet)}
-.project.agent{background:linear-gradient(100deg,#f4fcfa 0%,#fff 70%);border-color:#c8eee4}
-.project.platform{background:linear-gradient(100deg,#f4f8ff 0%,#fff 70%);border-color:#d5e5ff}
-.project.research{background:linear-gradient(100deg,#faf7ff 0%,#fff 70%);border-color:#e6d9ff}
-.project>.number{grid-column:1;grid-row:1;position:relative;width:100%;height:156px;border-radius:9px;display:flex;align-items:flex-start;justify-content:flex-start;padding:8px 10px;z-index:1;overflow:hidden;font-size:21px;box-shadow:none;background:linear-gradient(145deg,#16395f,#0b2345 65%,#1b5b78)}
-.project>.number:after{content:none}
-.project>.project-thumb{display:block;position:relative;padding:0;overflow:hidden;background:#eef5ff}
-.project-thumb svg{display:block;width:100%;height:100%;position:absolute;inset:0}
-.project-thumb span{position:absolute;z-index:2;left:8px;top:8px;display:grid;place-items:center;min-width:34px;height:32px;padding:0 7px;border-radius:8px;background:var(--mint);color:#fff;font-size:17px;font-weight:850;box-shadow:0 3px 10px #102b4b33}
-.thumb-platform span{background:var(--blue)}.thumb-research span{background:var(--violet)}
-.relation-diagram{display:block;width:100%;min-width:0}
-.relation-diagram svg{display:block;width:100%;height:auto;max-height:220px}
-@media(max-width:760px){.project>.project-thumb{height:130px}}
-@media(max-width:620px){.project>.project-thumb{height:145px}}
-.project.agent>.number{background:linear-gradient(145deg,#17a98d,#087c68)}
-.project.platform>.number{background:linear-gradient(145deg,#2784f5,#1455c8)}
-.project.research>.number{background:linear-gradient(145deg,#a26af1,#7145bf)}
-.project-title{font-size:15px;line-height:1.45;margin-top:1px}
-.project-state{margin-left:7px;display:inline-block;vertical-align:2px;font-size:10px;padding:3px 9px;border-radius:20px}
-.project-desc{font-size:12px;line-height:1.6;margin:5px 0 7px;min-height:0}
-.project ul{padding-left:17px;margin-top:7px}
-.project li{font-size:12px;line-height:1.6;margin-bottom:4px}
-.project details{border-top:1px solid #e5ebf3;margin-top:8px;padding-top:8px}
-.project summary{font-size:11px;cursor:pointer}
-.project details p{font-size:11px;line-height:1.6}
-.project-side{grid-column:3;grid-row:1;border-left:1px solid #dce7f3;border-top:0;padding:5px 0 5px 14px;margin:0;display:block;font-size:11px;color:var(--muted);min-width:0}
-.project-side strong{display:block;color:var(--ink);font-size:11px;margin:0 0 5px}
-.project-side .state-line{display:flex;gap:7px;align-items:flex-start;margin-bottom:13px}
-.project-side a{display:block;margin:6px 0 0;padding:0;border:0;background:transparent;font-size:11px;font-weight:750;overflow-wrap:anywhere}
-.project.agent .project-side a:first-of-type{color:#087c68}
-.project.platform .project-side a:first-of-type{color:var(--blue)}
-.project.research .project-side{min-height:0}
-.project.research .project-side>span{display:block;line-height:1.6}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--mint);margin-top:5px;flex:none}
-.platform .dot{background:var(--blue)}.research .dot{background:#e6a126}
-.bottom-grid{grid-template-columns:1fr 1.12fr;gap:12px}
-.mini-panel{background:#fcfdff}
-@media(max-width:1000px){
- .project{grid-template-columns:150px minmax(0,1fr) 145px;gap:12px}
- .project>.number{height:142px}
- .project-title{font-size:14px}
- .project li{font-size:11px}
- .project-side{padding-left:10px}
-}
-@media(max-width:760px){
- .resume{grid-template-columns:205px minmax(0,1fr)}
- .project{grid-template-columns:118px minmax(0,1fr);gap:12px;padding:10px}
- .project>.number{height:130px;grid-column:1;grid-row:1}
- .project>div:nth-child(2){grid-column:2;grid-row:1}
- .project-side{grid-column:1/-1;grid-row:2;border-left:0;border-top:1px solid var(--line);padding:9px 0 0;display:flex;gap:12px;flex-wrap:wrap}
- .project-side strong{margin-bottom:3px}
- .project-side .state-line{margin:0}
- .project-side a{display:inline-block;margin:0}
-}
-@media(max-width:620px){
- .resume{display:flex;flex-direction:column;width:100%;margin:0;border:0;box-shadow:none}
- .sidebar{border-right:0;border-bottom:1px solid var(--line);padding:20px 20px 16px}
- .identity{display:grid;grid-template-columns:60px minmax(0,1fr);column-gap:13px;align-items:center;padding-bottom:14px}
- .avatar{width:58px;height:58px;border-radius:18px;grid-row:1/4;margin:0;font-size:23px}
- .name{font-size:23px}.roleline{font-size:12px}.tagline{font-size:11px;margin-top:3px}
- .contact{grid-column:1/-1;grid-template-columns:1fr 1fr;gap:6px 12px}
- .side-section{margin-top:13px}.sidebar .side-section:not(#skills){display:none}
- .main{padding:19px 17px 22px}
- .actions{justify-content:flex-start}
- .nav{position:sticky;top:0;z-index:3;background:#fff;padding:8px 0 10px}
- .nav .nav-project{font-size:11px}
- .section{margin-top:20px}.section-title{font-size:16px}
- .metrics{grid-template-columns:1fr 1fr}
- .metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}
- .metric strong{font-size:18px}
- .job-head{display:block}.date{text-align:left}
- .bottom-grid{grid-template-columns:1fr}
- .project{grid-template-columns:1fr;gap:9px;padding:12px}
- .project>.number{height:130px;grid-column:1;grid-row:1}
- .project>div:nth-child(2){grid-column:1;grid-row:2}
- .project-side{grid-column:1;grid-row:3}
- .project-title{font-size:13px}.project-desc,.project li,.job li{font-size:11px}
- footer{font-size:9px}
-}
-@media print{
- @page{size:A4 landscape;margin:8mm}
- .resume{width:auto;max-width:none;margin:0;box-shadow:none;border:0;grid-template-columns:205px minmax(0,1fr)}
- .sidebar{padding:16px 13px}.main{padding:16px}
- .actions,.nav{display:none!important}
- .intro{grid-template-columns:1fr 145px;gap:10px}
- .metrics{margin-top:8px}.metric{padding:6px 8px}.metric strong{font-size:14pt}.metric span{font-size:7pt}
- .section{margin-top:13px}.section-title{font-size:13pt}
- .project-grid{grid-template-columns:1fr;gap:6px}
- .project{grid-template-columns:135px minmax(0,1fr) 120px;padding:7px;gap:8px;box-shadow:none;break-inside:avoid}
- .project>.number{height:94px;font-size:12pt}
- .project-title{font-size:8.5pt}.project-desc,.project li{font-size:7.5pt;line-height:1.35}
- .project-side{display:block;border-left:1px solid var(--line);border-top:0;padding-left:8px;font-size:7pt}
- .project-side a{display:block;font-size:7pt}
- .project details{display:none}.bottom-grid{gap:7px}.mini-panel{padding:8px}
- a{color:inherit}
-}
-.project.harness{border-color:#d5e8f2;background:linear-gradient(100deg,#f4fbfe 0%,#fff 70%)}.project.harness:before{background:#0f8ca3}.thumb-harness span{background:#0f8ca3}.project.harness>.number{background:linear-gradient(145deg,#159bb0,#0a6078)}.project.harness .project-side a:first-of-type{color:#08768d}.project.harness .dot{background:#0f8ca3}.project.harness .project-state{background:#e9f8fc;color:#08768d}</style>
+  /* 档案头 */
+  .dossier-head {
+    background: var(--surface); border-bottom: 2px solid var(--ink);
+  }
+  .dossier-head .wrap { display: flex; flex-wrap: wrap; align-items: stretch; gap: 0; }
+  .dh-name {
+    padding: 34px clamp(20px, 4vw, 44px) 30px 0;
+    border-right: 1px solid var(--line);
+  }
+  .dh-name h1 { font-size: clamp(2rem, 4.5vw, 2.9rem); font-weight: 800; letter-spacing: .06em; line-height: 1.2; }
+  .dh-name .tagline {
+    font-size: clamp(.92rem, 1.6vw, 1.08rem); color: var(--navy); font-weight: 600;
+    margin-top: 6px; max-width: 36em;
+  }
+  .dh-name .ref { font-family: var(--mono); font-size: .72rem; color: var(--faint); letter-spacing: .12em; margin-top: 8px; }
+  .dh-fields { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); }
+  .dh-field { padding: 26px clamp(14px, 2.4vw, 28px); border-right: 1px solid var(--line); display: flex; flex-direction: column; justify-content: center; gap: 3px; }
+  .dh-field:last-child { border-right: none; }
+  .dh-field .k { font-size: .74rem; color: var(--faint); letter-spacing: .18em; }
+  .dh-field .v { font-size: 1.02rem; font-weight: 700; }
+  .dh-field .v.open { color: var(--red); }
+  .dh-field .v.open::before { content: "● "; font-size: .7em; vertical-align: .12em; }
+
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px clamp(20px, 5vw, 56px);
+    background: color-mix(in srgb, var(--surface) 88%, transparent);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav .wordmark { font-weight: 800; font-size: 1rem; letter-spacing: .1em; text-decoration: none; }
+  .nav ul { display: flex; gap: clamp(14px, 3vw, 30px); list-style: none; }
+  .nav ul a { text-decoration: none; font-size: .9rem; color: var(--muted); padding: 4px 2px; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
+  .nav ul a:hover { color: var(--ink); border-bottom-color: var(--navy); }
+
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 56px); }
+  section { padding: clamp(56px, 8vw, 92px) 0 0; }
+  #updates { padding-top: clamp(36px, 5vw, 56px); }
+  .sec-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 8px;
+    position: relative;
+  }
+  .sec-head h2 { font-size: clamp(1.25rem, 2.6vw, 1.6rem); font-weight: 800; letter-spacing: .04em; }
+  .sec-head .code { font-family: var(--mono); font-size: .74rem; color: var(--faint); letter-spacing: .12em; }
+  /* section 标题左侧色条 */
+  .sec-head::before {
+    content: ''; position: absolute; left: -20px; bottom: -2px;
+    width: 3px; height: calc(100% + 2px); background: var(--navy); border-radius: 2px;
+  }
+
+  /* 摘要 */
+  .summary { background: var(--surface); border: 1px solid var(--line); border-top: none; padding: clamp(22px, 4vw, 34px); }
+  .summary .big {
+    font-size: clamp(1.15rem, 2.4vw, 1.5rem); font-weight: 800; line-height: 1.6; margin-bottom: 16px; max-width: 30em;
+  }
+  .summary .big em { font-style: normal; color: var(--navy); }
+  .summary p { color: var(--muted); max-width: 46em; margin-bottom: 12px; }
+  .summary p strong { color: var(--ink); font-weight: 600; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); margin-top: 22px; background: var(--navy-wash); }
+  .kpi { padding: 18px 18px; border-right: 1px solid var(--line); }
+  .kpi:last-child { border-right: none; }
+  .kpi .v { font-size: 1.5rem; font-weight: 800; color: var(--navy); letter-spacing: -.02em; }
+  .kpi .v small { font-size: .85rem; color: var(--muted); font-weight: 600; }
+  .kpi .l { font-size: .76rem; color: var(--muted); margin-top: 4px; }
+  .kpi-src { font-size: .74rem; color: var(--faint); margin-top: 8px; font-family: var(--mono); letter-spacing: .04em; }
+
+  /* 漏斗（表格化） */
+  .funnel-table { border: 1px solid var(--line); border-top: none; background: var(--surface); padding: 22px clamp(18px, 3vw, 30px) 20px; }
+  .ft-row { display: grid; grid-template-columns: 92px 1fr 86px; gap: 14px; align-items: center; padding: 9px 0; border-bottom: 1px dashed var(--line); }
+  .ft-row:last-of-type { border-bottom: none; }
+  .ft-stage { font-size: .84rem; font-weight: 700; color: var(--muted); }
+  .ft-track { height: 30px; background: var(--bg); border: 1px solid var(--line); position: relative; }
+  .ft-fill { height: 100%; display: flex; align-items: center; }
+  .ft-fill.ai { background: var(--navy); color: #fff; font-size: .78rem; font-weight: 600; padding-left: 10px; white-space: nowrap; }
+  .ft-fill.human { background: var(--red); color: #fff; font-size: .78rem; font-weight: 600; padding-left: 10px; white-space: nowrap; }
+  .ft-fill.all { background: var(--navy-wash); border-right: 2px solid var(--navy); color: var(--navy-deep); font-size: .78rem; font-weight: 600; padding-left: 10px; }
+  .ft-val { font-family: var(--mono); font-size: .95rem; font-weight: 700; text-align: right; }
+  .ft-note { font-size: .8rem; color: var(--muted); padding-top: 12px; }
+  .ft-note b { color: var(--red); font-weight: 700; }
+
+  /* 经历 */
+  .job { border: 1px solid var(--line); border-top: none; background: var(--surface); padding: clamp(20px, 3.5vw, 32px); }
+  .job + .job-gap { height: 14px; }
+  .job-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin-bottom: 4px; }
+  .job-top h3 { font-size: 1.25rem; font-weight: 800; }
+  .job-top .role { font-size: .92rem; color: var(--navy); font-weight: 700; }
+  .job-top .period { margin-left: auto; font-family: var(--mono); font-size: .78rem; color: var(--faint); }
+  .job-lead { color: var(--muted); font-size: .94rem; max-width: 46em; margin-bottom: 16px; }
+  .job-lead strong { color: var(--ink); font-weight: 600; }
+  .job ul { list-style: none; }
+  .job ul li {
+    display: flex; gap: 12px; align-items: baseline;
+    padding: 7px 0; border-bottom: 1px dashed var(--line);
+    color: var(--muted); font-size: .93rem;
+  }
+  .job ul li:last-child { border-bottom: none; }
+  .job ul li::before { content: "▸"; color: var(--navy); flex: none; font-size: .8em; }
+  .job ul li strong { color: var(--ink); font-weight: 600; }
+  .note {
+    margin-top: 16px; background: var(--red-wash);
+    border-left: 3px solid var(--red); padding: 12px 16px;
+    font-size: .88rem; color: var(--ink); max-width: 46em;
+  }
+  .note b { font-weight: 700; }
+  .themes { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 36px; margin-top: 6px; }
+  .theme h4 { font-size: .95rem; font-weight: 800; margin-bottom: 8px; color: var(--navy-deep); }
+  .theme ul { list-style: none; }
+  .theme ul li { display: flex; gap: 10px; align-items: baseline; padding: 6px 0; border-bottom: 1px dashed var(--line); font-size: .89rem; color: var(--muted); line-height: 1.65; }
+  .theme ul li:last-child { border-bottom: none; }
+  .theme ul li::before { content: "▸"; color: var(--navy); flex: none; font-size: .8em; }
+  .theme ul li strong { color: var(--ink); font-weight: 600; }
+
+  /* 项目验收单 */
+  .sheet { position: relative; border: 1px solid var(--line); border-top: none; background: var(--surface); padding: clamp(20px, 3.5vw, 32px); }
+  .sheet + .sheet-gap { height: 14px; }
+  .sheet-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-bottom: 10px; padding-right: 116px; }
+  .sheet-top h3 { font-size: 1.3rem; font-weight: 800; }
+  .sheet-top .ref { font-family: var(--mono); font-size: .74rem; color: var(--faint); letter-spacing: .08em; }
+  .sheet p { color: var(--muted); font-size: .93rem; max-width: 40em; margin-bottom: 14px; }
+  .sheet p strong { color: var(--ink); font-weight: 600; }
+  .sheet .meta { font-size: .85rem; color: var(--muted); margin-bottom: 10px; }
+  .sheet .meta b { color: var(--navy); font-weight: 700; }
+  .sheet .meta a { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  .stamp {
+    position: absolute; top: 18px; right: 20px;
+    width: 96px; height: 96px; border: 3px double var(--red); border-radius: 50%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;
+    color: var(--red); transform: rotate(8deg);
+    background: color-mix(in srgb, var(--red) 6%, transparent);
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--red) 10%, transparent);
+    overflow: hidden;
+  }
+  .stamp .s1 { font-size: .84rem; font-weight: 800; letter-spacing: .12em; text-indent: .12em; white-space: nowrap; }
+  .stamp .s2 { font-family: var(--mono); font-size: .54rem; letter-spacing: .04em; white-space: nowrap; }
+  .sheet .metrics { display: flex; flex-wrap: wrap; gap: 10px 28px; border-top: 1px dashed var(--line); padding-top: 14px; }
+  .metric .v { font-size: 1.15rem; font-weight: 800; color: var(--navy); }
+  .metric .l { font-size: .76rem; color: var(--muted); }
+
+  /* 技能 */
+  .skill-table { background: var(--surface); }
+  .skill-row { display: flex; align-items: flex-start; border-bottom: 1px solid var(--line); }
+  .skill-row:last-child { border-bottom: none; }
+  .skill-row .k {
+    flex: 0 0 100px; padding: 18px 16px 18px 0;
+    font-size: .88rem; font-weight: 800; color: var(--navy-deep);
+  }
+  .skill-row .v { flex: 1; padding: 16px 0 16px 18px; display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-start; }
+  .skill-row .v span {
+    display: inline-block; padding: 6px 14px; font-size: .84rem; color: var(--ink);
+    background: var(--navy-wash); border: 1px solid color-mix(in srgb, var(--navy) 18%, transparent);
+    border-radius: 4px; font-weight: 500; white-space: nowrap;
+  }
+
+  /* 教育 · 联系 */
+  .edu-ct { border: 1px solid var(--line); border-top: none; background: var(--surface); padding: clamp(20px, 3.5vw, 32px); }
+  .edu-ct .edu-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+  .edu-ct .edu-row b { font-size: 1rem; font-weight: 800; }
+  .edu-ct .edu-row span { color: var(--muted); font-size: .9rem; }
+  .edu-ct .edu-row .deg { margin-left: auto; font-family: var(--mono); font-size: .76rem; color: var(--faint); }
+  .closing { font-size: clamp(1.35rem, 3vw, 1.8rem); font-weight: 800; line-height: 1.5; max-width: 20em; margin: 36px 0 24px; }
+  .closing em { font-style: normal; color: var(--red); }
+  .contact-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 8px; }
+  .contact-chip {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--bg); border: 1px solid var(--line);
+    padding: 10px 20px; font-size: .93rem; font-weight: 700; text-decoration: none; transition: border-color .2s;
+  }
+  .contact-chip:hover { border-color: var(--navy); }
+  .contact-chip .copy {
+    border: none; background: var(--navy); color: #fff;
+    font-size: .74rem; font-weight: 600; padding: 3px 10px; cursor: pointer; font-family: var(--sans);
+  }
+  .loc { display: inline-flex; align-items: center; gap: 7px; color: var(--muted); font-size: .9rem; font-weight: 700; }
+
+  .update-list { display: flex; flex-direction: column; gap: 0; }
+  .update-item {
+    display: grid; grid-template-columns: 80px 1fr; gap: 16px;
+    padding: 18px 20px 18px 22px; background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    border-left: 3px solid var(--navy);
+  }
+  .update-item:first-child { border-top: 1px solid var(--line); }
+  .update-date {
+    font-family: var(--mono); font-size: .82rem; color: var(--navy); font-weight: 700;
+    padding-top: 2px; white-space: nowrap;
+  }
+  .update-body b { display: block; font-size: 1rem; margin-bottom: 4px; color: var(--ink); }
+  .update-body p { font-size: .9rem; color: var(--muted); margin-bottom: 6px; }
+  .update-link {
+    display: inline-block; font-size: .84rem; font-weight: 600; color: var(--navy);
+    text-decoration: none;
+  }
+  .update-link:hover { text-decoration: underline; }
+  .update-secondary { opacity: .65; }
+
+  footer {
+    padding: 24px 0 36px; font-size: .78rem; color: var(--faint);
+    font-family: var(--mono); letter-spacing: .04em;
+    border-top: 1px solid var(--line); margin-top: 0;
+  }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; align-items: center; }
+
+  /* 打印 / PDF 导出：隐藏装饰性元素 */
+  @media print {
+    .stamp { display: none !important; }
+    .update-secondary { display: none !important; }
+    .note { display: none !important; }
+  }
+
+
+  @media (max-width: 920px) {
+    .sec-head::before { left: -14px; }
+    .dh-fields { grid-template-columns: 1fr 1fr; }
+    .dh-name { border-right: none; border-bottom: 1px solid var(--line); padding-right: 0; }
+    .dh-field { border-right: none; border-bottom: 1px solid var(--line); padding: 16px clamp(14px, 3vw, 24px); }
+    .kpis { grid-template-columns: 1fr 1fr; }
+    .kpi:nth-child(2) { border-right: none; }
+    .kpi:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+    .themes { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 620px) {
+    body { font-size: 15px; }
+    .nav ul { gap: 12px; }
+    .nav ul a { font-size: .84rem; }
+    .kpis { grid-template-columns: 1fr 1fr; }
+    .ft-row { grid-template-columns: 74px 1fr 68px; gap: 10px; }
+    .themes { grid-template-columns: 1fr; }
+    .skill-row { flex-direction: column; }
+    .skill-row .k { padding: 12px 0 6px; }
+    .skill-row .v { padding: 0 0 16px 0; }
+    .stamp { width: 82px; height: 82px; }
+    .stamp .s1 { font-size: .7rem; }
+    .stamp .s2 { font-size: .48rem; }
+    .sheet-top { padding-right: 94px; }
+  }
+</style>
 </head>
 <body>
-<main class="resume">
-<aside class="sidebar" aria-label="个人信息">
-  <div class="identity">
-    <div class="avatar" aria-hidden="true">王</div>
-    <h1 class="name">王乐意</h1>
-    <div class="roleline">AI 产品经理</div>
-    <div class="tagline">从真实业务问题出发，推动 AI 产品落地与验证。</div>
-    <div class="contact">
-      <a href="tel:18123777416">☎ 181-2377-7416</a>
-      <a href="mailto:44727383@qq.com" id="emailLink">✉ 44727383@qq.com</a>
-      <span>⌖ 深圳</span>
-      <a href="https://github.com/theo-w" target="_blank" rel="noopener noreferrer">GitHub · theo-w ↗</a>
-      <a href="https://theo-resume.onrender.com/" target="_blank" rel="noopener noreferrer">在线简历 · Render ↗</a>
+
+<header class="dossier-head">
+  <div class="wrap">
+    <div class="dh-name">
+      <h1>王乐意</h1>
+      <p class="tagline">14 年客服运营负责人，主导大模型智能客服从规则引擎到 LLM 的升级，问题解决率 60%→80%、人力成本降 50%</p>
+      <p class="ref">REF: WL-2026-SZ</p>
+    </div>
+    <div class="dh-fields">
+      <div class="dh-field">
+        <span class="k">求职意向</span>
+        <span class="v">智能客服产品经理</span>
+      </div>
+      <div class="dh-field">
+        <span class="k">当前状态</span>
+        <span class="v open">正在看机会</span>
+      </div>
+      <div class="dh-field">
+        <span class="k">base 城市</span>
+        <span class="v">深圳</span>
+      </div>
     </div>
   </div>
-  <section class="side-section" id="skills">
-    <h2 class="side-title">核心能力</h2>
-    <div class="chips"><span class="chip">AI 产品设计</span><span class="chip">需求分析</span><span class="chip">流程优化</span><span class="chip">效果评估</span><span class="chip">跨团队交付</span><span class="chip">Agent 工作流</span><span class="chip">Agent Harness</span><span class="chip">SDD</span><span class="chip">游戏舆情</span></div>
+</header>
+
+<nav class="nav" aria-label="站内导航">
+  <a class="wordmark" href="#top">王乐意 · 档案</a>
+  <ul>
+    <li><a href="#updates">近期动态</a></li>
+    <li><a href="#about">摘要</a></li>
+    <li><a href="#exp">经历</a></li>
+    <li><a href="#projects">验收项目</a></li>
+    <li><a href="#skills">技能</a></li>
+    <li><a href="#contact">联系</a></li>
+  </ul>
+</nav>
+
+<main class="wrap" id="top">
+
+  <section id="updates">
+    <div class="sec-head">
+      <h2>近期动态</h2>
+      <span class="code">SEC-00.5</span>
+    </div>
+    <div class="update-list">
+      <div class="update-item update-secondary">
+        <div class="update-date">2026.10</div>
+        <div class="update-body">
+          <b>Game Lab · AI 原生游戏立项实验室 — MVP 可用</b>
+          <p>从玩家口碑到机制假设、可玩原型、对照实验与数据回流的完整验证流水线。当前 MVP 已上线，支持规则引擎分析与 Wilson 置信区间统计。</p>
+          <a class="update-link" href="https://github.com/theo-w/ga" target="_blank" rel="noopener">查看 GitHub 仓库 →</a>
+        </div>
+      </div>
+    </div>
   </section>
-  <section class="side-section">
-    <h2 class="side-title">工具与方法</h2>
-    <div class="chips"><span class="chip">TAPD</span><span class="chip">Power BI</span><span class="chip">SQL</span><span class="chip">Python</span><span class="chip">Excel</span><span class="chip">Xmind</span><span class="chip">Visio</span></div>
-    <p class="side-copy">规则处理明确、可确定的情况；LLM 辅助语义判断；保留原始数据以便追溯，低置信度结果需复核。</p>
-  </section>
-  <section class="side-section">
-    <h2 class="side-title">教育背景</h2>
-    <div class="edu"><strong>西班牙武康大学</strong><span>工商管理（MBA）· 硕士</span></div>
-    <div class="edu"><strong>郑州轻工业大学</strong><span>信息与计算科学 · 本科（统招）</span></div>
-  </section>
-  <section class="side-section">
-    <h2 class="side-title">专业证书</h2>
-    <div class="cert"><strong>IITC 工信人才专业知识测评证书</strong><small>Python 软件开发工程师 · 2026.04</small></div>
-    <div class="cert"><strong>IITC 工信人才岗位能力评价证书</strong><small>人工智能智能体应用工程师 — Vibe Coding 软件开发 · 2026.10</small></div>
-  </section>
-  <section class="side-section">
-    <h2 class="side-title">语言</h2><div class="side-copy">中文（母语） · 英语（工作交流）</div>
-  </section>
-</aside>
-<div class="main">
-  <div class="actions"><button class="btn" type="button" onclick="window.print()">打印 / 保存 PDF</button><button class="btn" type="button" id="copyEmail">复制邮箱</button></div>
-  <nav class="nav" aria-label="简历快速导航"><a href="#about">关于我</a><a href="#experience">工作经历</a><a href="#projects">代表项目</a><a class="nav-project nav-agent" href="#project-agent">01 数字分身 / 员工</a><a class="nav-project nav-platform" href="#project-platform">02 游戏舆情平台</a><a class="nav-project nav-research" href="#project-research">03 AI 游戏可行性</a><a class="nav-project nav-harness" href="#project-harness">04 Agent 工程实验</a><a href="#project-relation">项目关系</a></nav>
+
   <section id="about">
-    <div class="intro">
-      <div><h2 class="section-title"><span class="symbol">◎</span>关于我</h2><p>拥有 14 年客服运营与团队管理经验，近年聚焦 AI 产品实践。具备 AI 智能客服业务侧升级、游戏舆情产品需求交付，以及数字分身 / 数字员工工作流的持续迭代经验；同时从零构建 Mini Agent Harness，用 SDD 和确定性测试理解工具、循环、护栏、Trace 与评测。重视需求价值、流程可执行性和结果证据；对仍处于研究或 MVP 阶段的项目，明确区分设计方案、可运行能力与尚待验证的结论。</p></div>
-      <aside class="intent"><strong>求职方向</strong><ul><li>AI 产品经理</li><li>AI 应用与 Agent 工作流</li><li>游戏产品 / 游戏研究</li><li>海外市场与用户洞察</li></ul></aside>
+    <div class="sec-head">
+      <h2>摘要 · 关于我</h2>
+      <span class="code">SEC-01</span>
     </div>
-    <div class="metrics">
-      <div class="metric"><strong>14 年</strong><span>客服运营与团队管理</span></div>
-      <div class="metric"><strong>−50%</strong><span>AI 客服项目人力成本</span></div>
-      <div class="metric"><strong>80%</strong><span>问题解决率（原 60%）</span></div>
-      <div class="metric"><strong>40%</strong><span>转人工率（原 70%）</span></div>
+    <div class="summary">
+      <p class="big">14 年客服运营负责人，从一线坐席到智能客服总监——<em>最懂客服业务的 AI 产品人</em>。</p>
+      <p>
+        在冰川网络从一线坐席做到智能客服总监，主导大模型智能客服从规则引擎到 LLM 的产品升级。
+        智能客服、舆情监控两个上线产品的需求侧全程跟进——
+        <strong>PRD、流程图、验收标准到上线后的模型效果评估，闭环交付</strong>。
+        本科数学、硕士 MBA，<strong>数据是底子，产品是主动选择的方向</strong>——习惯用召回率、精确率、F1 说清楚一个模型好不好，而不是凭感觉。
+        习惯用 SQL / Python 做 Badcase 归因与 A/B 实验设计，用数据驱动产品迭代。
+      </p>
+      <div class="kpis">
+        <div class="kpi"><div class="v">60% → 80<small>%</small></div><div class="l">问题解决率</div></div>
+        <div class="kpi"><div class="v">70% → 40<small>%</small></div><div class="l">转人工率</div></div>
+        <div class="kpi"><div class="v">82% → 94<small>%</small></div><div class="l">意图识别准确率</div></div>
+        <div class="kpi"><div class="v">−50<small>%</small></div><div class="l">人力成本</div></div>
+      </div>
+      <p class="kpi-src">SRC: 冰川网络智能客服项目 · 2022–2024</p>
+
+      <div style="margin-top: 26px;">
+        <div class="funnel-table">
+          <div class="ft-row">
+            <span class="ft-stage">用户对话</span>
+            <div class="ft-track"><div class="ft-fill all" style="width: 100%;">全量进入</div></div>
+            <span class="ft-val">100%</span>
+          </div>
+          <div class="ft-row">
+            <span class="ft-stage">AI 预筛</span>
+            <div class="ft-track"><div class="ft-fill ai" style="width: 85%;">自动解决</div></div>
+            <span class="ft-val">85%</span>
+          </div>
+          <div class="ft-row">
+            <span class="ft-stage">人工专席</span>
+            <div class="ft-track"><div class="ft-fill human" style="width: 15%; min-width: 34px;"></div></div>
+            <span class="ft-val">15%</span>
+          </div>
+        </div>
+        <p class="ft-note">跑通的客服漏斗：疑难对话经人工专席复核后，误判清单按周反哺模型迭代——漏斗越收越窄，模型越跑越准。</p>
+      </div>
     </div>
   </section>
-  <section class="section" id="experience">
-    <div class="section-head"><h2 class="section-title"><span class="symbol">▣</span>工作经历</h2><span class="eyebrow">EXPERIENCE</span></div>
+
+  <section id="exp">
+    <div class="sec-head">
+      <h2>工作经历</h2>
+      <span class="code">SEC-02</span>
+    </div>
+
     <article class="job">
-      <div class="job-head"><div class="company">深圳赛刻智能科技</div><div class="date">2026.08 – 2026.09 · 深圳</div></div>
-      <div class="job-role">产品执行经理｜短期项目合作</div>
+      <div class="job-top">
+        <h3>深圳赛刻智能科技</h3>
+        <span class="role">产品设计 Owner · 项目制合作</span>
+        <span class="period">2026.08 – 2026.09 · 深圳</span>
+      </div>
+      <p class="job-lead">游戏舆情监测产品从 0 到 1，1 个月内完成需求侧全流程交付。</p>
       <ul>
-        <li>负责游戏舆情监测产品从 0 到 1 的需求侧交付，梳理预警、热点、竞品、口碑场景，完成 PRD、用户旅程、验收标准与 MVP 优先级。</li>
-        <li>设计多源数据采集与清洗方案，明确去重、格式归一、无效内容过滤、来源与原始记录留存；规划规则优先、LLM 辅助、低置信度复核的处理边界。</li>
-        <li>与算法、爬虫及前后端对齐需求和交付方案；如实区分需求设计与产品上线、真实用户验证状态。</li>
+        <li>梳理<strong>预警、热点、竞品、口碑</strong>四大核心场景，交付完整 PRD、用户旅程图与验收标准</li>
+        <li>设计<strong>多源公网数据采集方案</strong>，覆盖社区、贴吧、微博、应用商店评论，规划清洗与聚合链路</li>
+        <li>完成需求分层与优先级排序，圈定 MVP 范围，与算法、爬虫、前后端对齐技术方案</li>
+      </ul>
+      <p class="note">
+        <b>合作说明：</b>项目制合作，按项目周期签约。个人舆情项目与赛刻项目验证了相似的产品方法论，形成互相印证。
+      </p>
+    </article>
+    <div class="job-gap"></div>
+
+    <article class="job">
+      <div class="job-top">
+        <h3>独立产品实践 & 能力升级</h3>
+        <span class="role">MBA · AI 产品技能构建 · 个人产品孵化</span>
+        <span class="period">2024.08 – 2026.08 · 深圳</span>
+      </div>
+      <p class="job-lead">
+        离开冰川网络后，系统性完成从客服运营到 AI 产品经理的能力升级。
+        这段时间是一条清晰的学习线：<strong>数学底子 → MBA 商业思维 → Python 开发能力 → AI Agent 产品能力</strong>。
+      </p>
+      <ul>
+        <li>完成 <strong>IITC 工信人才 Python 软件开发工程师</strong> 认证（2026.04），掌握 Python 数据分析与自动化能力</li>
+        <li>完成 <strong>IITC 工信人才 AI 智能体应用工程师</strong> 认证（2026.10），系统学习 Agent 架构、工作流设计与 Vibe Coding</li>
+        <li>独立开发并上线<strong>游戏舆情竞品分析平台</strong>（在线 Demo），从需求到开发全流程交付</li>
+        <li>持续迭代<strong>数字分身 / 数字员工执行底座</strong> MVP，探索 AI Agent 通用执行能力</li>
+        <li>构建 <strong>Mini Agent Harness</strong> 学习实验，用 SDD 方法理解 Agent 工程各组件</li>
       </ul>
     </article>
+    <div class="job-gap"></div>
+
     <article class="job">
-      <div class="job-head"><div class="company">深圳冰川网络</div><div class="date">2010.06 – 2024.08 · 深圳</div></div>
-      <div class="job-role">智能客服总监 / 客服运营主管</div>
-      <ul>
-        <li>参与 AI 智能客服从规则引擎升级至大模型的业务侧产品工作，负责需求、流程设计、验收标准、指标跟踪与上线后优化；模型与底层技术由算法团队主导。</li>
-        <li>优化知识覆盖、常见问题引导与转人工门槛，问题解决率 <b>60% → 80%</b>、转人工率 <b>70% → 40%</b>、意图识别准确率 <b>82% → 94%</b>；人力成本较接入大模型前半年降低 <b>50%</b>。</li>
-        <li>管理最大 50 人团队，人均日处理量提升 25%；主笔 21 项核心 SOP，新人上岗周期由 14 天缩短至 7 天。</li>
-        <li>参与智能客服系统、工单自动化与 Power BI 看板从需求到上线，使用 TAPD 协同业务、研发与算法团队。</li>
-      </ul>
+      <div class="job-top">
+        <h3>深圳冰川网络</h3>
+        <span class="role">智能客服总监 / 客服运营主管</span>
+        <span class="period">2010.06 – 2024.08 · 深圳</span>
+      </div>
+      <p class="job-lead">
+        14 年，从一线坐席到智能客服总监。<strong>推动智能客服、舆情监控两个上线产品的需求与效果优化</strong>，
+        带过最大 50 人的团队，通过产品化与流程优化累计年化节省成本超 50 万。
+      </p>
+      <div class="themes">
+        <div class="theme">
+          <h4>智能客服</h4>
+          <ul>
+            <li>主导<strong>规则引擎 → 大模型</strong>的产品升级：需求、PRD、流程图、验收标准出自我手，从小样本验证到多产品线铺开全程跟进</li>
+            <li>设计<strong>「AI 预筛 + 人工专席复核」</strong>机制，AI 自动处理高频场景，人工工单量降 25%，日均节省工时 120+ 小时</li>
+            <li>上线后盯「命中率—解决率—满意度」漏斗，整理误判漏判清单反哺模型：意图识别 <strong>82% → 94%</strong>，未知问题识别率降 38%</li>
+          </ul>
+        </div>
+        <div class="theme">
+          <h4>舆情监控</h4>
+          <ul>
+            <li>在研发提供的监控平台上，按场景配置关键词规则（充值 / 违规 / 舆情 / 合规），关键规则与算法共同 review</li>
+            <li>沉淀 <strong>200+ 条关键词规则</strong>，召回、精确、F1 多轮调优，覆盖合规话术、重大舆情、违规禁词</li>
+            <li>以白名单避免误伤正常玩家，误判率显著下降</li>
+          </ul>
+        </div>
+        <div class="theme">
+          <h4>团队与 SOP</h4>
+          <ul>
+            <li>以<strong>「效率—质量—成本」</strong>三维模型管理 50 人团队，人均日处理量提升 25%</li>
+            <li>主笔 <strong>21 项核心 SOP</strong>（含重大舆情、合规指南），新人上岗周期从 14 天缩到 7 天</li>
+            <li>重构语雀知识库，建立 Case 库沉淀机制，一线 SOP 反哺客服系统，业务与产品形成闭环</li>
+          </ul>
+        </div>
+        <div class="theme">
+          <h4>跨部门协作</h4>
+          <ul>
+            <li>TAPD 全流程跟项目，智能客服系统、<strong>Power BI 看板</strong>、工单自动化从需求到上线全程参与</li>
+            <li>业务、研发、算法三方对齐顺畅，需求评审一次通过率高</li>
+          </ul>
+        </div>
+      </div>
     </article>
   </section>
-  <section class="section" id="projects">
-    <div class="section-head"><h2 class="section-title"><span class="symbol">☆</span>代表项目</h2><span class="eyebrow">三个产品方向 · 一个工程学习实验</span></div>
-    <div class="project-grid">
-      <article class="project agent" id="project-agent">
-        <div class="number project-thumb thumb-agent" aria-label="数字分身与数字员工工作台示意图"><span>01</span><svg viewBox="0 0 360 220" role="img" aria-label="分身与员工任务流程界面"><rect width="360" height="220" rx="10" fill="#102b4b"/><rect width="360" height="25" rx="10" fill="#173d62"/><circle cx="14" cy="12" r="3" fill="#ff7c72"/><circle cx="25" cy="12" r="3" fill="#f8c45b"/><circle cx="36" cy="12" r="3" fill="#5ad5a5"/><rect x="12" y="37" width="70" height="171" rx="5" fill="#0b2039"/><g fill="#4e789c"><rect x="22" y="49" width="46" height="5" rx="2"/><rect x="22" y="66" width="38" height="4" rx="2"/><rect x="22" y="80" width="43" height="4" rx="2"/><rect x="22" y="94" width="35" height="4" rx="2"/><rect x="22" y="108" width="40" height="4" rx="2"/></g><circle cx="218" cy="72" r="23" fill="#1c6a9b" stroke="#66d9ff" stroke-width="2"/><circle cx="218" cy="66" r="8" fill="#a8efff"/><path d="M203 83 Q218 67 233 83 L237 91 L199 91Z" fill="#75bfe8"/><g stroke="#56d9cb" stroke-width="2" fill="none"><path d="M218 96 V117 H140 V134"/><path d="M218 117 H290 V134"/><path d="M140 157 V174 H218 V184"/><path d="M290 157 V174 H218"/></g><g fill="#174c70" stroke="#4bcab9"><rect x="98" y="134" width="84" height="24" rx="5"/><rect x="248" y="134" width="84" height="24" rx="5"/><rect x="177" y="183" width="82" height="24" rx="5"/></g><g fill="#d5f7ff" font-size="10" font-family="sans-serif" text-anchor="middle"><text x="140" y="149">任务规划</text><text x="290" y="149">员工执行</text><text x="218" y="198">结果核验</text></g></svg></div>
-        <div>
-          <div class="project-title">数字分身与数字员工执行底座 <span class="project-state">MVP 迭代中</span></div>
-          <p class="project-desc">个人项目 · 通用 AI 执行底座，探索分身管理任务、员工执行反馈与结果核验的闭环。</p>
-          <ul>
-            <li>围绕目标拆解、动态任务编排、员工反馈、证据核验与验收设计工作流；坚持单 Agent 优先，仅在任务复杂度、质量或风险需要时再拆分协作。</li>
-            <li>持续完善来源角色与证据用途区分，避免将检索结果或文章直接当作已核实事实；状态接口有响应记录，但启动链路、实时调研、失败后重试和最终验收仍需端到端复测。</li>
-          </ul>
-          <details><summary>个人贡献与关键决策</summary><p>持续梳理分身与员工之间的任务分配、状态反馈、证据分类与独立验收机制；目标是让系统围绕目标持续推进，而不是模拟固定岗位。线上 MVP 已持续迭代，最近版本补充来源角色与证据用途标记；完整启动、真实调研、失败恢复及端到端验收仍待复测，不将部署成功等同于任务已跑通。</p></details>
-        </div>
-        <aside class="project-side"><strong>项目状态</strong><div class="state-line"><span class="dot"></span><span>MVP 迭代中</span></div><strong>项目入口</strong><a href="https://jarvis-loophole-playtest.onrender.com/" target="_blank" rel="noopener noreferrer">在线 MVP（待端到端复测）↗</a><a href="https://github.com/theo-w/my-ai-worker" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a></aside>
-      </article>
-      <article class="project platform" id="project-platform">
-        <div class="number project-thumb thumb-platform" aria-label="游戏舆情分析平台示意图"><span>02</span><svg viewBox="0 0 360 220" role="img" aria-label="评论分析仪表盘"><rect width="360" height="220" rx="10" fill="#f8fbff"/><rect width="360" height="25" rx="10" fill="#dcecff"/><circle cx="14" cy="12" r="3" fill="#4b8df8"/><circle cx="25" cy="12" r="3" fill="#6cb3ff"/><circle cx="36" cy="12" r="3" fill="#75d9c2"/><rect x="10" y="36" width="67" height="174" rx="4" fill="#152e50"/><g fill="#b8cce7"><rect x="20" y="48" width="42" height="4" rx="2"/><rect x="20" y="64" width="32" height="4" rx="2"/><rect x="20" y="80" width="39" height="4" rx="2"/><rect x="20" y="96" width="34" height="4" rx="2"/></g><g fill="#fff" stroke="#dbe6f3"><rect x="88" y="36" width="78" height="36" rx="5"/><rect x="174" y="36" width="78" height="36" rx="5"/><rect x="260" y="36" width="88" height="36" rx="5"/></g><g fill="#1769df"><rect x="98" y="45" width="30" height="5" rx="2"/><rect x="184" y="45" width="30" height="5" rx="2"/><rect x="270" y="45" width="34" height="5" rx="2"/></g><g fill="#61758f" font-size="8" font-family="sans-serif"><text x="98" y="62">评论总量</text><text x="184" y="62">正向占比</text><text x="270" y="62">待跟进</text></g><rect x="88" y="82" width="157" height="118" rx="5" fill="#fff" stroke="#dbe6f3"/><path d="M100 174 L120 157 L140 163 L160 127 L180 140 L201 108 L232 94" fill="none" stroke="#2784f5" stroke-width="3"/><path d="M100 174 L120 157 L140 163 L160 127 L180 140 L201 108 L232 94 L232 188 L100 188Z" fill="#cfe3ff" opacity=".6"/><g stroke="#e8eef6"><path d="M100 111 H232 M100 137 H232 M100 163 H232"/><path d="M126 96 V188 M158 96 V188 M190 96 V188 M220 96 V188"/></g><rect x="253" y="82" width="95" height="118" rx="5" fill="#fff" stroke="#dbe6f3"/><g><rect x="263" y="95" width="75" height="17" rx="4" fill="#e6f7f1"/><rect x="263" y="119" width="75" height="17" rx="4" fill="#eaf2ff"/><rect x="263" y="143" width="75" height="17" rx="4" fill="#fff1df"/><rect x="263" y="167" width="75" height="17" rx="4" fill="#f1eaff"/></g><g fill="#51708f"><circle cx="272" cy="103" r="3"/><circle cx="272" cy="127" r="3"/><circle cx="272" cy="151" r="3"/><circle cx="272" cy="175" r="3"/><rect x="280" y="101" width="45" height="4" rx="2"/><rect x="280" y="125" width="40" height="4" rx="2"/><rect x="280" y="149" width="48" height="4" rx="2"/><rect x="280" y="173" width="36" height="4" rx="2"/></g></svg></div>
-        <div>
-          <div class="project-title">游戏舆情与竞品分析平台 <span class="project-state">在线 Demo</span></div>
-          <p class="project-desc">个人项目 · 将公开玩家评论整理为产品团队可跟进的竞品口碑分析与行动清单。</p>
-          <ul>
-            <li>支持输入游戏名或 AppID，基于 Steam、TapTap、Google Play 公开评论生成竞品口碑报告和 P0 / P1 行动清单。</li>
-            <li>支持 CSV、飞书与 Jira 导出，尝试打通从玩家反馈到产品跟进的工作链路。</li>
-          </ul>
-          <details><summary>个人贡献与关键决策</summary><p>将分析结果导向行动项，并保留数据清洗、来源追溯和规则 / LLM 分工的设计原则。在线 Demo 可供查看；简历不宣称未经证实的商业效果或规模化使用。</p></details>
-        </div>
-        <aside class="project-side"><strong>项目状态</strong><div class="state-line"><span class="dot"></span><span>在线 Demo</span></div><strong>项目入口</strong><a href="https://game-analyzer-eq8i.onrender.com/" target="_blank" rel="noopener noreferrer">在线 Demo ↗</a><a href="https://github.com/theo-w/game-analyzer" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a></aside>
-      </article>
-      <article class="project research" id="project-research">
-        <div class="number project-thumb thumb-research" aria-label="AI 原生游戏玩法概念图示意"><span>03</span><svg viewBox="0 0 360 220" role="img" aria-label="奇幻游戏世界与玩家角色"><defs><linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#6b8ee8"/><stop offset="1" stop-color="#f2c4ff"/></linearGradient><linearGradient id="ground3" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#4f8c9b"/><stop offset="1" stop-color="#203b65"/></linearGradient></defs><rect width="360" height="220" rx="10" fill="url(#sky3)"/><circle cx="277" cy="48" r="24" fill="#fff1c7" opacity=".9"/><path d="M0 130 L54 57 L92 105 L144 34 L205 120 L254 67 L315 124 L360 82 V220 H0Z" fill="#8d9ed8"/><path d="M0 151 L70 92 L118 143 L180 83 L246 152 L303 102 L360 146 V220 H0Z" fill="#5d78aa"/><path d="M0 176 L72 138 L120 169 L186 123 L248 177 L310 139 L360 169 V220 H0Z" fill="url(#ground3)"/><g fill="#b8f0dd" opacity=".8"><path d="M35 177 l10 -24 l10 24Z"/><path d="M295 174 l12 -29 l12 29Z"/><path d="M70 187 l8 -19 l8 19Z"/></g><path d="M179 141 L168 175 L192 175Z" fill="#182b4a"/><circle cx="180" cy="134" r="8" fill="#202b46"/><path d="M172 145 L163 164 L174 168 L180 153 L188 169 L199 163 L188 144Z" fill="#26395d"/><path d="M176 169 L171 197 L181 197 L184 174 L191 197 L201 197 L190 167Z" fill="#1a2948"/><path d="M163 150 L145 162 L150 168 L169 158 M190 150 L207 160 L203 166 L186 158" fill="none" stroke="#1b2d4c" stroke-width="5" stroke-linecap="round"/><path d="M180 126 L180 102" stroke="#f9e5a2" stroke-width="2"/><path d="M180 103 L193 110 L180 116Z" fill="#ffe7a2"/><g fill="#fff" opacity=".8"><circle cx="35" cy="35" r="2"/><circle cx="118" cy="25" r="2"/><circle cx="230" cy="82" r="2"/><circle cx="327" cy="30" r="2"/></g></svg></div>
-        <div>
-          <div class="project-title">AI 原生游戏玩法可行性评估 <span class="project-state">研究与工作流设计</span></div>
-          <p class="project-desc">应用研究方向 · 评估 AI 是否能为核心玩法带来可感知、可持续且成本可控的体验增量。</p>
-          <ul>
-            <li>评估路径：玩家痛点与竞品证据 → 核心玩法假设 → 技术 / 成本 / 安全风险 → 最小原型与 Playtest；设计八个独立维度，分别检查证据、置信度、缺口和验收结果。</li>
-            <li>以 Go / No-Go / 继续研究 / 有条件推进辅助决策；当前仍需验证真实研究结果、八维度完整输出、成本输入与原型证据，不将评估框架写成已完成的玩家验证。</li>
-          </ul>
-          <details><summary>完成标准与待验证证据</summary><p>最终需要多角度验证玩家需求、竞品差异、核心循环、实现成本、推理延迟与安全风险，并通过可玩原型及玩家反馈形成继续 / 停止建议。</p></details>
-        </div>
-        <aside class="project-side"><strong>项目状态</strong><div class="state-line"><span class="dot"></span><span>研究与工作流迭代</span></div><strong>验证重点</strong><span>用户需求 · 玩法增量 · 成本风险</span><a href="https://jarvis-loophole-playtest.onrender.com/" target="_blank" rel="noopener noreferrer">在线评估工作台 ↗</a><a href="https://github.com/theo-w/my-ai-worker" target="_blank" rel="noopener noreferrer">执行底座源码 ↗</a></aside>
-      </article>
-      <article class="project harness" id="project-harness">
-        <div class="number project-thumb thumb-harness" aria-label="Mini Agent Harness 零件与循环示意图"><span>04</span><svg viewBox="0 0 360 220" role="img" aria-label="可拆装 Agent Harness：模型、工具、循环、上下文、护栏、Trace、评测和 Skill"><rect width="360" height="220" rx="10" fill="#102b4b"/><rect width="360" height="25" rx="10" fill="#173d62"/><circle cx="14" cy="12" r="3" fill="#ff7c72"/><circle cx="25" cy="12" r="3" fill="#f8c45b"/><circle cx="36" cy="12" r="3" fill="#5ad5a5"/><text x="50" y="16" fill="#b9d6ef" font-size="9" font-family="monospace" letter-spacing="1">MINI AGENT HARNESS</text><g stroke="#244764" stroke-width="1" opacity=".65"><path d="M20 42H340M20 78H340M20 114H340M20 150H340M20 186H340"/><path d="M42 34V206M104 34V206M166 34V206M228 34V206M290 34V206"/></g><g fill="#c7e6f7" font-size="8" font-family="monospace"><text x="21" y="39">MODEL</text><text x="149" y="39">TOOL</text><text x="277" y="39">LOOP</text></g><g fill="#174c70" stroke="#4bcab9" stroke-width="1.4"><rect x="20" y="44" width="96" height="28" rx="6"/><rect x="130" y="44" width="96" height="28" rx="6"/><rect x="240" y="44" width="100" height="28" rx="6"/></g><g fill="#e7fbff" font-size="10" font-weight="700" text-anchor="middle"><text x="68" y="62">MODEL</text><text x="178" y="62">TOOL</text><text x="290" y="62">LOOP</text></g><g fill="#163e5f" stroke="#4e8fbd" stroke-width="1.2"><rect x="20" y="82" width="100" height="25" rx="5"/><rect x="130" y="82" width="100" height="25" rx="5"/><rect x="240" y="82" width="100" height="25" rx="5"/></g><g fill="#bce9ff" font-size="8.5" font-family="monospace" text-anchor="middle"><text x="70" y="98">CONTEXT</text><text x="180" y="98">GUARDRAIL</text><text x="290" y="98">TRACE</text></g><g fill="#194b5a" stroke="#46c6bc" stroke-width="1.2"><rect x="54" y="120" width="72" height="25" rx="5"/><rect x="144" y="120" width="72" height="25" rx="5"/><rect x="234" y="120" width="72" height="25" rx="5"/></g><g fill="#c9fff7" font-size="8.5" font-family="monospace" text-anchor="middle"><text x="90" y="136">EVAL</text><text x="180" y="136">SKILL</text><text x="270" y="136">MEMORY</text></g><g fill="none" stroke="#64d6e3" stroke-width="2"><path d="M116 58H130"/><path d="M226 58H240"/><path d="M340 64V106H180V120"/><path d="M180 145V171H90V156"/><path d="M180 171V145"/><path d="M340 106H290"/></g><g fill="#64d6e3"><path d="M130 55l6 3-6 3Z"/><path d="M240 55l6 3-6 3Z"/><path d="M180 119l4-6h-8Z"/></g><g fill="#8fb5d1" font-size="9" font-family="monospace"><text x="20" y="188">8 PARTS</text><text x="129" y="188">256 ASSEMBLIES</text><text x="270" y="188">DETERMINISTIC</text></g><g fill="#5ad5a5"><circle cx="78" cy="184" r="2.5"/><circle cx="246" cy="184" r="2.5"/><circle cx="338" cy="184" r="2.5"/></g><rect x="20" y="198" width="320" height="7" rx="3.5" fill="#173d62"/><rect x="20" y="198" width="228" height="7" rx="3.5" fill="#46c6bc"/></svg></div>
-        <div>
-          <div class="project-title">Mini Agent Harness · Agent 工程学习实验室 <span class="project-state">公开教学 Demo</span></div>
-          <p class="project-desc">个人学习项目 · 从最小 ReAct 循环出发，用失败驱动的方式理解每个 Agent 组件为什么出现。</p>
-          <ul>
-            <li>按“模型 → Tool → Loop → 上下文 → 护栏 → Trace / Eval → Skill”逐层迭代，并用 SDD 记录 M1.2–M1.10 的规格、计划、任务、实现与验证证据。</li>
-            <li>公开版提供 7 章从零建造课程与 8 零件、256 种组合的乐高实验，用任务完成、安全、证据三张结论卡对比“有 / 无组件”的差异。</li>
-            <li>95 项确定性测试覆盖 256 组合、A/B 归因与无执行通道；当前是教学模拟，不调用模型 API、不执行真实工具。</li>
-          </ul>
-          <details><summary>能力边界与验证说明</summary><p>这个项目用于学习 Agent 工程和做产品机制验证，不定位为生产级 Agent 平台。公开 Demo 的耗时、Token 与结论只解释确定性模拟中的机制关系，不代表真实模型或工具性能；真实 Trace 深挖视图只在本地数据就绪时开放。</p></details>
-        </div>
-        <aside class="project-side"><strong>项目状态</strong><div class="state-line"><span class="dot"></span><span>公开学习实验</span></div><strong>已验证</strong><span>95 项确定性测试 · 桌面 / 移动端验收</span><a href="https://mini-agent-harness.onrender.com/" target="_blank" rel="noopener noreferrer">在线体验 ↗</a><a href="https://github.com/theo-w/mini-claudecode" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a></aside>
-      </article>
+
+  <section id="projects">
+    <div class="sec-head">
+      <h2>AI 项目 · 验收单</h2>
+      <span class="code">SEC-03</span>
+    </div>
+
+    <article class="sheet">
+      <div class="stamp" aria-hidden="true"><span class="s1">已验证</span><span class="s2">2022–2024</span></div>
+      <div class="sheet-top">
+        <h3>智能客服大模型升级</h3>
+        <span class="ref">PRJ-01 · 核心项目</span>
+      </div>
+      <p class="meta">深圳冰川网络 · 2022 – 2024 · 角色：<b>产品侧负责人 · 需求与效果</b> · 5 个月上线</p>
+      <p>从规则引擎到大模型的客服系统升级。输出 <strong>需求、PRD 与验收标准</strong>，上线后主导效果评估——盯「命中率—解决率—满意度」漏斗，把误判 case 整理成清单反哺算法迭代。</p>
+      <p><strong>关键产品决策：</strong></p>
+      <ul style="list-style:none; padding-left:0; margin-top:8px;">
+        <li style="padding:4px 0;font-size:.9rem;color:var(--muted)">▸ <strong>转人工门槛设计</strong>：定义 AI 无法处理的场景边界（多轮对话中意图漂移、情绪升级、跨业务线问题），设置三级转人工策略——直接转、引导后转、人工主动介入</li>
+        <li style="padding:4px 0;font-size:.9rem;color:var(--muted)">▸ <strong>指标口径统一</strong>：与算法团队对齐「解决率」定义——用户明确表达满意或问题被一次性处理为"解决"，避免算法侧的指标虚高</li>
+        <li style="padding:4px 0;font-size:.9rem;color:var(--muted)">▸ <strong>Badcase 归因闭环</strong>：每周整理误判 / 漏判 case，按意图识别错误、知识缺失、对话策略缺陷分类，反哺模型迭代；用 SQL 做归因分析，用 Python 做批量 case 标注</li>
+        <li style="padding:4px 0;font-size:.9rem;color:var(--muted)">▸ <strong>「AI 预筛 + 人工专席复核」机制</strong>：AI 自动处理高频场景，人工专席复核疑难对话，误判清单按周反哺模型——漏斗越收越窄，模型越跑越准</li>
+      </ul>
+      <div class="metrics">
+        <div class="metric"><div class="v">60% → 80%</div><div class="l">问题解决率</div></div>
+        <div class="metric"><div class="v">70% → 40%</div><div class="l">转人工率</div></div>
+        <div class="metric"><div class="v">82% → 94%</div><div class="l">意图识别准确率</div></div>
+        <div class="metric"><div class="v">−50%</div><div class="l">人力成本</div></div>
+      </div>
+    </article>
+    <div class="sheet-gap"></div>
+
+    <article class="sheet">
+      <div class="stamp" aria-hidden="true"><span class="s1">已验证</span><span class="s2">2026.08–09</span></div>
+      <div class="sheet-top">
+        <h3>游戏舆情产品设计</h3>
+        <span class="ref">PRJ-02</span>
+      </div>
+      <p class="meta">深圳赛刻智能 · 2026.08 – 2026.09 · 角色：<b>产品设计 Owner · 项目制</b> · 1 个月交付</p>
+      <p>舆情监测产品从 0 到 1：<strong>场景定义、PRD、用户旅程、原型与多源采集方案</strong>，与算法、爬虫完成需求评审，产品达到可立项状态。</p>
+      <div class="metrics">
+        <div class="metric"><div class="v">1 个月</div><div class="l">需求侧全流程交付</div></div>
+        <div class="metric"><div class="v">4 大场景</div><div class="l">预警 · 热点 · 竞品 · 口碑</div></div>
+        <div class="metric"><div class="v">5+ 渠道</div><div class="l">多源公网采集方案</div></div>
+      </div>
+    </article>
+    <div class="sheet-gap"></div>
+
+    <article class="sheet">
+      <div class="stamp" aria-hidden="true"><span class="s1">在线运行</span><span class="s2">PERSONAL · 2026</span></div>
+      <div class="sheet-top">
+        <h3>游戏舆情竞品分析平台</h3>
+        <span class="ref">PRJ-03 · 个人项目</span>
+      </div>
+      <p class="meta">个人从 0 到 1 开发 · 持续迭代中 · <b><a href="https://game-analyzer-eq8i.onrender.com/" target="_blank" rel="noopener">访问在线 Demo →</a></b></p>
+      <p>延续游戏舆情方向，亲手搭建的在线分析平台：输入游戏名或 AppID，自动生成<strong>竞品口碑报告与 P0/P1 行动清单</strong>。数据基于 Steam / TapTap / Google Play 公开评论，支持导出 CSV / 飞书 / Jira。</p>
+      <div class="metrics">
+        <div class="metric"><div class="v">3 平台</div><div class="l">公开评论数据源</div></div>
+        <div class="metric"><div class="v">P0/P1</div><div class="l">可执行行动清单</div></div>
+        <div class="metric"><div class="v">CSV / 飞书</div><div class="l">报告导出与协作</div></div>
+      </div>
+    </article>
+  </section>
+
+  <section id="skills">
+    <div class="sec-head">
+      <h2>技能清单</h2>
+      <span class="code">SEC-04</span>
+    </div>
+    <div class="skill-table">
+      <div class="skill-row">
+        <div class="k">产品</div>
+        <div class="v"><span>PRD</span><span>用户旅程</span><span>流程图</span><span>验收标准</span><span>MVP 优先级</span><span>需求评审</span><span>效果评估体系</span></div>
+      </div>
+      <div class="skill-row">
+        <div class="k">AI 产品</div>
+        <div class="v"><span>Agent 工作流设计</span><span>大模型应用设计</span><span>Prompt 工程</span><span>模型效果评估</span><span>Badcase 分析</span><span>意图识别</span></div>
+      </div>
+      <div class="skill-row">
+        <div class="k">数据分析</div>
+        <div class="v"><span>SQL 数据查询</span><span>Python 数据分析</span><span>Power BI 看板</span><span>Badcase 归因</span><span>A/B 实验设计</span><span>召回 / 精确 / F1</span></div>
+      </div>
+      <div class="skill-row">
+        <div class="k">业务</div>
+        <div class="v"><span>SLA 管理</span><span>首解率 / 满意度漏斗</span><span>Case 库与 SOP 沉淀</span><span>BPO 团队管理</span></div>
+      </div>
     </div>
   </section>
-  <div class="bottom-grid section" id="project-relation">
-    <section class="mini-panel"><h3>项目关系 / 能力布局</h3><div class="relation relation-diagram"><svg viewBox="0 0 520 220" role="img" aria-label="项目关系图：数字分身与数字员工是通用执行底座，游戏舆情平台是独立产品交付，AI 原生游戏可行性是应用研究方向" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow-rel" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0 0 L6 3.5 L0 7Z" fill="#7195c4"/></marker></defs><path d="M260 67 V89 H128 V120 M260 89 H392 V120" fill="none" stroke="#7195c4" stroke-width="2" marker-end="url(#arrow-rel)"/><path d="M180 165 H340" fill="none" stroke="#7195c4" stroke-width="2" marker-start="url(#arrow-rel)" marker-end="url(#arrow-rel)"/><rect x="142" y="10" width="236" height="58" rx="14" fill="#1769df"/><text x="260" y="34" font-size="16" font-weight="700" text-anchor="middle" fill="#fff">数字分身与数字员工</text><text x="260" y="53" font-size="12" text-anchor="middle" fill="#e4efff">通用执行底座</text><rect x="8" y="120" width="224" height="70" rx="13" fill="#e5f8f2" stroke="#69cbb7" stroke-width="1.5"/><text x="120" y="149" font-size="15" font-weight="700" text-anchor="middle" fill="#137866">游戏舆情与竞品分析</text><text x="120" y="170" font-size="12" text-anchor="middle" fill="#137866">独立产品交付</text><rect x="288" y="120" width="224" height="70" rx="13" fill="#f2eaff" stroke="#b89aef" stroke-width="1.5"/><text x="400" y="149" font-size="15" font-weight="700" text-anchor="middle" fill="#7045b9">AI 原生游戏可行性</text><text x="400" y="170" font-size="12" text-anchor="middle" fill="#7045b9">应用研究方向</text></svg></div><p class="side-copy">通用执行能力与具体产品案例分层呈现；Mini Agent Harness 作为独立的工程理解实验，不作为上线业务成果。</p></section>
-    <section class="mini-panel"><h3>关键项目进展</h3><div class="milestone"><b>业务实践</b><span>AI 客服指标改善：解决率、转人工率、成本与意图识别准确率均有量化记录。</span></div><div class="milestone"><b>在线产品</b><span>游戏舆情竞品分析平台提供在线 Demo 入口。</span></div><div class="milestone"><b>线上迭代</b><span>数字分身 MVP 已部署来源角色与证据用途分类改动；完整启动、真实研究、失败恢复和端到端验收仍待复测。</span></div><div class="milestone"><b>工程学习</b><span>Mini Agent Harness 已通过 95 项确定性测试并公开教学 Demo；不调用真实模型 API，不执行工具。</span></div></section>
-  </div>
-  <div class="principle">产品判断原则：从真实需求出发，用数据与证据验证 AI 价值；明确能力边界，不夸大未完成的验证。</div>
-  <footer><span>王乐意 · AI 产品经理</span><span>更新于 2026.10.29 · 深圳</span></footer>
-</div>
+
+  <section id="contact">
+    <div class="sec-head">
+      <h2>教育 · 联系</h2>
+      <span class="code">SEC-05</span>
+    </div>
+    <div class="edu-ct">
+      <div class="edu-row">
+        <b>西班牙武康大学</b><span>工商管理（MBA）</span><span class="deg">硕士</span>
+      </div>
+      <div class="edu-row">
+        <b>郑州轻工业大学</b><span>信息与计算科学（数学 / 计算机交叉）· CET-4</span><span class="deg">本科 · 统招</span>
+      </div>
+
+      <p class="closing">想找一个能长期把<em>AI 产品</em>做厚做深的平台。</p>
+
+      <div class="contact-row">
+        <a class="contact-chip" href="tel:18123777416">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          181-2377-7416
+        </a>
+        <span class="contact-chip">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          44727383@qq.com
+          <button class="copy" type="button" id="copyEmail" aria-label="复制邮箱地址">复制</button>
+        </span>
+        <span class="loc">深圳</span>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 王乐意 · 智能客服产品经理</span>
+    <span>UPDATED 2026.10.31 · SHENZHEN</span>
+  </div>
+</footer>
+
 <script>
-(function(){const email='44727383@qq.com';const btn=document.getElementById('copyEmail');if(btn)btn.addEventListener('click',async function(){try{await navigator.clipboard.writeText(email);btn.textContent='邮箱已复制';}catch(e){window.location.href='mailto:'+email;btn.textContent='打开邮件应用';}});})();
+  // 邮箱复制
+  const copyBtn = document.getElementById('copyEmail');
+  const fallbackCopy = text => {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.cssText = 'position:fixed;opacity:0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+  };
+  copyBtn.addEventListener('click', async () => {
+    let ok = false;
+    try {
+      await navigator.clipboard.writeText('44727383@qq.com');
+      ok = true;
+    } catch {
+      try { fallbackCopy('44727383@qq.com'); ok = true; } catch {}
+    }
+    copyBtn.textContent = ok ? '已复制' : '请手动复制';
+    setTimeout(() => { copyBtn.textContent = '复制'; }, 2000);
+  });
+
+  // 导航滚动高亮
+  (function () {
+    const navLinks = document.querySelectorAll('.nav ul a');
+    const sections = Array.from(navLinks).map(link =>
+      document.getElementById(link.getAttribute('href').slice(1))
+    ).filter(Boolean);
+
+    function highlight() {
+      const scrollY = window.scrollY;
+      const offset = window.innerHeight * 0.35;
+      let current = null;
+      for (let i = sections.length - 1; i >= 0; i--) {
+        if (sections[i].offsetTop - offset <= scrollY) {
+          current = i;
+          break;
+        }
+      }
+      navLinks.forEach((link, i) => {
+        link.style.color = (current === null && i === 0) || i === current
+          ? 'var(--ink)'
+          : '';
+        link.style.borderBottomColor = (current === null && i === 0) || i === current
+          ? 'var(--navy)'
+          : '';
+      });
+    }
+
+    window.addEventListener('scroll', highlight, { passive: true });
+    highlight();
+  })();
 </script>
 </body>
 </html>
