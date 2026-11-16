@@ -322,6 +322,7 @@
     <li><a href="#projects">验收项目</a></li>
     <li><a href="#skills">技能</a></li>
     <li><a href="#contact">联系</a></li>
+    <li><a href="https://github.com/theo-w/private-rag" target="_blank" rel="noopener">GitHub</a></li>
   </ul>
 </nav>
 
@@ -333,6 +334,14 @@
       <span class="code">SEC-00.5</span>
     </div>
     <div class="update-list">
+      <div class="update-item">
+        <div class="update-date">2026.11</div>
+        <div class="update-body">
+          <b>private-rag · 完全本地离线中文 RAG 知识库 — 在线演示上线</b>
+          <p>支持文件 / 网页 / 数据库多源知识库的本地 RAG 系统：向量 + BM25 混合召回、RRF 融合、reranker 精排，回答带引用溯源。v5 增加 Parent-Document 父子块上下文与查询改写（多查询 / HyDE）。Ollama 本地推理，Qdrant 本地存储，单 HTML 文件零依赖演示页。</p>
+          <a class="update-link" href="https://github.com/theo-w/private-rag" target="_blank" rel="noopener">GitHub 仓库 →</a>
+        </div>
+      </div>
       <div class="update-item">
         <div class="update-date">2026.11</div>
         <div class="update-body">
@@ -504,6 +513,30 @@
       <h2>AI 项目 · 验收单</h2>
       <span class="code">SEC-03</span>
     </div>
+
+    <article class="sheet">
+      <div class="stamp" aria-hidden="true"><span class="s1">在线运行</span><span class="s2">PERSONAL · 2026</span></div>
+      <div class="sheet-top">
+        <h3>private-rag · 本地离线中文 RAG 知识库</h3>
+        <span class="ref">PRJ-06 · 个人项目</span>
+      </div>
+      <p class="meta">个人从 0 到 1 开发 · 持续迭代中 · <b><a href="https://github.com/theo-w/private-rag" target="_blank" rel="noopener">访问 GitHub 仓库 →</a></b></p>
+      <p>完全本地离线的中文 RAG 系统：支持文件 / 网页 / 数据库多源知识库，向量 + BM25 混合召回、RRF 融合、reranker 精排，回答带引用溯源。v5 增加 Parent-Document 父子块上下文与查询改写（多查询 / HyDE）。Ollama 本地推理，Qdrant 本地存储，单 HTML 文件零依赖演示页。</p>
+      <p><strong>核心能力：</strong></p>
+      <ul style="list-style:none; padding-left:0; margin-top:8px;">
+        <li style="padding:4px 0;font-size:.9rem;color:var(--muted)">▸ <strong>多源知识库</strong>：文件（txt/md/pdf）、网页 URL、SQL 数据库（SQLite/MySQL/PostgreSQL），统一入库管道</li>
+        <li style="padding:4px 0;font-size:.9rem;color:var(--muted)">▸ <strong>混合检索</strong>：向量召回 + BM25 关键词召回 → RRF 融合 → reranker 精排，引用溯源到页码/行</li>
+        <li style="padding:4px 0;font-size:.9rem;color:var(--muted)">▸ <strong>父子块上下文</strong>：子块召回、父块给模型完整上下文，旧库自动回退无需迁移</li>
+        <li style="padding:4px 0;font-size:.9rem;color:var(--muted)">▸ <strong>查询改写</strong>：多查询 / HyDE 假想文档，提升多跳与口语化问题召回率</li>
+        <li style="padding:4px 0;font-size:.9rem;color:var(--muted)">▸ <strong>Ragas 自动评估</strong>：固定评估集量化检索策略增益，faithfulness / answer_relevancy / context_precision / context_recall</li>
+      </ul>
+      <div class="metrics">
+        <div class="metric"><div class="v">3 源</div><div class="l">文件 · 网页 · 数据库</div></div>
+        <div class="metric"><div class="v">混合</div><div class="l">向量 + BM25 + RRF + Rerank</div></div>
+        <div class="metric"><div class="v">零依赖</div><div class="l">单 HTML 演示页，本地 Ollama</div></div>
+      </div>
+    </article>
+    <div class="sheet-gap"></div>
 
     <article class="sheet">
       <div class="stamp" aria-hidden="true"><span class="s1">已验证</span><span class="s2">2022–2024</span></div>
